@@ -1,0 +1,174 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topEdge {
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+    height: 65px;
+    width: 100%;
+    flex-wrap: nowrap;
+    padding: 0 30px;
+    background-color: #D3CDBA;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h1Backdrop {
+    background: url('https://i.imgur.com/264A7Aw.png?3');
+    background-size: cover;
+    width: 35%;
+    h1 {
+        width: 105%;
+        margin-left: -2%;
+        margin-top: -2%;
+        padding: 3%;
+        color: black;
+        font-size: 37px;
+        background: #D3CDBA;
+        mix-blend-mode: lighten;
+    }
+}
+
+.h2Backdrop {
+    background: url('https://i.imgur.com/yJI6iYN.png');
+    background-size: cover;
+    width: 40%;
+    h2 {
+        width: 105%;
+        margin-left: -2%;
+        margin-top: -2%;
+        padding: 3%;
+        font-size: 35px;
+        text-align: right;
+        color: black;
+        background: #D3CDBA;
+        mix-blend-mode: lighten;
+    }
+}
+
+.topEdgePanel {
+    background: url('https://i.imgur.com/wVrzZRC.jpg?3');
+    width: 100%;
+    height: 14px;
+    background-size: cover;
+}
+
+.bottomEdgePanel {
+    background: #BDBDAE;
+    width: 100%;
+    height: 21px;
+    
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: center;
+    width: 100%;
+    height: 620px;
+    background: url('https://i.imgur.com/9tkvEks.png');
+    background-repeat: no-repeat;   
+    background-size: cover;
+    background-position: center;
+}
+
+.photoIdImg { 
+    height: 90px;
+    width: 90px;
+    padding: 6px;
+    margin-top: 210px;  
+    margin-left: 90px;
+    border-radius: 100%; 
+    box-shadow: -8px 8px 10px #808080;
+    background: url('https://i.imgur.com/uGwgioR.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.photoIdFrame {
+    width: 110px;
+    height: 110px;
+    margin-top: -97px;
+    margin-left: 80px;
+    background: url('https://i.imgur.com/ECaBpSU.png?1');
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center;
+    //box-shadow: none;
+}
+
+.plantPhoto {  // todo move leaves on hover
+    background: url('https://i.imgur.com/nR2Ndn3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 14px;
+    margin-left: 180px;
+    height: 320px;
+    width: 200px
+}
+
+/*
+.medium {
+   
+   // background-image: url("D:/Peps koduje/CV/cvBckgrd.png");
+  //  background-color: darkslategrey;
+    background-repeat: no-repeat;
+   // background-size: contain;
+  //  height: 100%;    
+   background-size: cover;
+   // display: flex;
+   height: auto;
+    width: auto;
+    justify-content: center;
+    align-self:center; 
+    @media screen and (min-width: 1024px) {
+       
+            display: none;
+      
+    }
+}
+
+.large {
+    @media screen and (max-width: 1023px) {
+        display: none;
+    }
+    @media screen and (min-width: 1024px) {
+        background-repeat: no-repeat;
+        align-self: center;
+        // background-size: contain;
+        //  height: 100%;    
+        justify-content: center;
+      //  display: flex;
+        height: auto;
+        width: auto;
+    
+      
+    }
+} */
+
+/*
+// For making it happen, I recommend using media queries to select the appropriately sized image from a pool of 2 or 3 sizes.
+ //   background-repeat: no-repeat;
+ //   background-size: cover;
+    //height: 100%;
+    //width: 100%;
+    
+
+
+*/ /*
+
+*/
+/*
+/*.prosto {
+    z-index: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+} */
