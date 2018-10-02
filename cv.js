@@ -1,3 +1,40 @@
+window.onload = function() {
+let canvas = document.getElementById('stairsCanvas');
+let ctx = canvas.getContext("2d");
+let img = document.getElementById("stairsImg");
+
+    if (screen.width <= 425) {
+        canvas.width = 300;
+        ctx.drawImage(img,0,26,300,280); 
+    }
+    else if (screen.width <= 320) {
+        canvas.width = 200;
+        ctx.drawImage(img,0,26,300,280); 
+    }
+    else if (screen.width <= 768) {
+        canvas.width = 330;
+        ctx.drawImage(img,0,6,50,28);
+    }
+    else if (screen.width <= 1024) {
+        canvas.width = 450;
+        ctx.drawImage(img,140,325,257,240); 
+    }
+    else if (screen.width > 1024) {
+        canvas.width = 630;
+        ctx.drawImage(img,240,325,257,240);
+    }
+}
+
+
+
+
+
+
+
+
+/* 
+
+
 const canvas = document.getElementById('prosto');
 const img = document.getElementById('peps');
 
@@ -70,5 +107,4 @@ let x = 10,
     if (isDownArrowPressed) {
         imgY++;
     }
-
-  
+*/
