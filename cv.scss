@@ -32,8 +32,7 @@ header {
         background: #dbd5c3;
         height: 40px;
         width: 420%;
-        margin-left: 0%;
-         
+        margin-left: 0%;   
     }
 
 h1 {
@@ -54,10 +53,19 @@ h1 {
         font-size: 24px;
     }
     @media all and (max-width: 768px) {
-        font-size: 20px;
+        font-size: 24px;
     }
     @media all and (max-width: 425px) {
+        font-size: 19px;
+        padding-left: 6%;
+    }
+    @media all and (max-width: 375px) {
         font-size: 18px;
+        padding-right: 6%;
+    }
+    @media all and (max-width: 320px) {
+        font-size: 17px;
+        padding-left: 6%;
     }
 }
 
@@ -76,7 +84,19 @@ h2 {
         font-size: 23px;
     }
     @media all and (max-width: 768px) {
-        font-size: 19px;
+        font-size: 18px;
+    }
+    @media all and (max-width: 425px) {
+        font-size: 15px;
+        padding-right: 4%;
+    }
+    @media all and (max-width: 375px) {
+        font-size: 13px;
+        padding-right: 4%;
+    }
+    @media all and (max-width: 320px) {
+        font-size: 12px;
+        padding-right: 4%;
     }
 }
 
@@ -94,9 +114,13 @@ h2 {
     height: 620px;
     z-index: -5;
     @media all and (min-width: 1024px) {
-        background: url('https://i.imgur.com/k54Jdwu.png') center / cover no-repeat,
-        //url('https://i.imgur.com/o6ILxdK.jpg') center / cover no-repeat;
-        url('https://i.imgur.com/kdb8moG.png') center / cover no-repeat;
+        background: url('https://i.imgur.com/k54Jdwu.png'), //center / cover no-repeat,
+        url('https://i.imgur.com/o6ILxdK.jpg');// center / cover no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+       // url('https://i.imgur.com/kdb8moG.png') center / cover no-repeat;
+       
     }
     @media all and (min-width: 768px) and (max-width: 1024px) {
         background: url('https://i.imgur.com/uNifkn2.png') center / cover no-repeat,
@@ -110,10 +134,21 @@ h2 {
         background: url('https://i.imgur.com/wlAyS6g.png') center / cover no-repeat;
     }
     @media all and (max-width: 375px) {
-        background: url('https://i.imgur.com/wlAyS6g.png') center / cover no-repeat,
-        url('https://i.imgur.com/9KBO5pQ.png') center / cover no-repeat;
+        background: url('https://i.imgur.com/wlAyS6g.png') center / cover no-repeat;
+       // url('https://i.imgur.com/9KBO5pQ.png') center / cover no-repeat;
     }
 }
+
+/*main {
+    display-grid
+    grid-area
+}
+.mainScreen {
+    grid-area: 3 / 5 / 7 / 7;
+    position: relative;
+    width:200px;
+    height: 100px;
+}*/
 
 aside {
     display: grid;
@@ -123,25 +158,28 @@ aside {
     height: 600px; 
     position: relative;
     }
-
     #stairsCanvas {
         position: absolute;
     }
-
     #stairsImg {
         display: none;
         position: relative;
     }
+    #stairsImg2 {
+        @extend #stairsImg; 
+    }
     .photoIdImg {
-        display: none;
+        grid-area: 2 / 15 / 4 / 30; //1024
+        position: relative;
+        z-index: 1;
         padding: 6px;
         border-radius: 100%;
         box-shadow: -8px 8px 10px #808080;
-        //background: url('https://i.imgur.com/uGwgioR.png');
-        background: #dbd5c3;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        background: url('https://i.imgur.com/uGwgioR.png') center / cover no-repeat;
+       // background: #dbd5c3;
+       // background-size: cover;
+       // background-position: center;
+       // background-repeat: no-repeat;
         @media all and (min-width: 1024px) {
             height: 90px;
             width: 90px;
@@ -156,14 +194,14 @@ aside {
 
         }
         @media all and (max-width: 425px) {
-            display: none;
             height: 50px;
             width: 50px;
         }
     }
     .photoIdFrame {
-        display: none;
-        align-self: center;
+        grid-area: 2 / 15 / 4 / 30; //1024
+        position: relative;
+        z-index: 1;
         justify-content: center;
         height: 90px;
         width: 90px;
@@ -189,69 +227,33 @@ aside {
             width: 50px;
         }
     }
-
     .plantPhoto {
-        display: none;
-        position: relative;
+        margin-top: 337px;
+        position: absolute;
         z-index: 5;
         background: url('https://i.imgur.com/nR2Ndn3.png') center / cover no-repeat;
         @media all and (min-width: 768px) {
-            grid-area: 150 / 1 / 130 / 40;
             height: 270px;
             width: 158px;
         }    
         @media all and (max-width: 768px) {
-            grid-area: 50 / 1 / 10 / 40;
             height: 270px;
             width: 158px;
         }
         @media all and (max-width: 425px) {
-            grid-area: 150 / 1 / 130 / 60;
-            height: 240px;
+            height: 170px;
             width: 140px;
         }  
         @media all and (max-width: 375px) {
-            height: 210px;
+            height: 150px;
             width: 120px;   
-        }     
+        }  
+        @media all and (max-width: 1366px) {
+            height: 270px;
+            width: 158px;
+        }   
 }
-    
-
-
-
-   /* .stairs {
-      //  grid-area: 10 / 1 / 100 / 100;
-     //   height: 385px;
-    //    width: 428px;
-      //  background: url('https://i.imgur.com/TYFLV1U.png') center / contain no-repeat; 
-        @media all and (max-width: 768px) {
-            grid-area: 96 / 30 / 100 / 100;
-            background: url('https://i.imgur.com/TYFLV1U.png') center / contain no-repeat;
-            height: 239px;
-            width: 314px;
-            z-index: 1;
-        }  
-        @media all and (max-width: 425px) {
-            grid-area: 90 / 4 / 100 / 110;
-            background: url('https://i.imgur.com/ihr2mxs.png?2') center / contain no-repeat;
-            height: 375px;
-            width: 405px;
-        }  
-        @media all and (max-width: 375px) {
-            grid-area: 10 / 2 / 100 / 100;
-            background: url('https://i.imgur.com/ihr2mxs.png?2') center / cover no-repeat;
-            height: 305px;
-            width: 360px;
-        }  
-        @media all and (max-width: 320px) {
-            grid-area: 30 / 0 / 100 / 100;
-            background: url('https://i.imgur.com/ihr2mxs.png?2') center / cover no-repeat;
-            height: 305px;
-            width: 300px;
-        }  
-    } 
-   */ 
-    
+       
 footer {
     grid-area: 9 / 1 / 9 / 9;
 }
