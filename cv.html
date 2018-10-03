@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link href='cv.css' type='text/css' rel='stylesheet'>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="typed.min.js"></script>
         <title>
             Keep.Going.
         </title>
@@ -20,18 +21,32 @@
              <div class='topEdgeOverlay'></div>
              <div class='topEdgePanel'></div>
         </header>
-            <section class='background'></section>
-        <main class='mainScreen'></main>
+            <section class='background'>
+                <div class='backgroundScreen'></div>
+            </section>
+           <!--<div class="glitch" data-text="GLITCH">PEPS</div> -->
+           <!--<div class='typed-strings'>
+                <p>helo edfdggg dfdfdfdd fsfsdfsfsdf sdfsdfsd </p>
+                <p>rffsdfsdod dsdksodsk kdsodkskds  dfddfsfs</p>
+            </div>
+            <span id="typed"></span> -->
+            <main>
+                <div class='beamLeft'></div>
+                <div class='beamMiddle'></div>
+            <!--<div class='beamRight'></div> -->
+                <canvas id='mainCanvas' height="400"></canvas>
+            </main>
             <aside>
+                <div class='photoIdMask'></div>
                 <div class='photoIdImg'></div>
-                <div class='photoIdFrame'></div>
                 <div class='plantPhoto'></div>
                 <canvas id='stairsCanvas' height="600"></canvas>
                 <img id='stairsImg' src="https://i.imgur.com/TYFLV1U.png"/>
                 <img id='stairsImg2' src="https://i.imgur.com/ihr2mxs.png?2"/>
             </aside>
         <footer class='bottomEdge'>
-            <div class='bottomEdgePanel'></div>
+                <div class='bottomEdgePanel'></div>
+            <div class='bottomEdgePanelGreen'></div>
         </footer>
         <script type="text/javascript" src="cv.js"></script>
     </body>

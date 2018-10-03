@@ -107,16 +107,13 @@ h2 {
   z-index: -5; }
   @media all and (min-width: 1024px) {
     .background {
-      background: url("https://i.imgur.com/k54Jdwu.png"), url("https://i.imgur.com/o6ILxdK.jpg");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat; } }
+      background: url("https://i.imgur.com/k54Jdwu.png") center/cover no-repeat; } }
   @media all and (min-width: 768px) and (max-width: 1024px) {
     .background {
-      background: url("https://i.imgur.com/uNifkn2.png") center/cover no-repeat, url("https://i.imgur.com/kdb8moG.png") center/cover no-repeat; } }
+      background: url("https://i.imgur.com/uNifkn2.png") center/cover no-repeat; } }
   @media all and (max-width: 768px) {
     .background {
-      background: url("https://i.imgur.com/jsTTTzq.png") center/cover no-repeat, url("https://i.imgur.com/kdb8moG.png") center/cover no-repeat; } }
+      background: url("https://i.imgur.com/jsTTTzq.png") center/cover no-repeat; } }
   @media all and (max-width: 425px) {
     .background {
       background: url("https://i.imgur.com/wlAyS6g.png") center/cover no-repeat; } }
@@ -124,16 +121,64 @@ h2 {
     .background {
       background: url("https://i.imgur.com/wlAyS6g.png") center/cover no-repeat; } }
 
-/*main {
-    display-grid
-    grid-area
-}
-.mainScreen {
-    grid-area: 3 / 5 / 7 / 7;
-    position: relative;
-    width:200px;
-    height: 100px;
-}*/
+.backgroundScreen {
+  grid-area: 3 / 1 / 9 / 9;
+  width: 100%;
+  height: 620px;
+  z-index: -15; }
+  @media all and (min-width: 1024px) {
+    .backgroundScreen {
+      background: url("https://i.imgur.com/k54Jdwu.png") center/cover no-repeat; } }
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    .backgroundScreen {
+      background: url("https://i.imgur.com/uNifkn2.png") center/cover no-repeat; } }
+  @media all and (max-width: 768px) {
+    .backgroundScreen {
+      background: url("https://i.imgur.com/jsTTTzq.png") center/cover no-repeat; } }
+  @media all and (max-width: 425px) {
+    .backgroundScreen {
+      background: url("https://i.imgur.com/wlAyS6g.png") center/cover no-repeat; } }
+  @media all and (max-width: 375px) {
+    .backgroundScreen {
+      background: url("https://i.imgur.com/wlAyS6g.png") center/cover no-repeat; } }
+
+main {
+  display: grid;
+  grid-template-columns: repeat(100, 1fr);
+  grid-template-rows: auto;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
+.beamLeft {
+  grid-area: 5 / 30 / 9 / 90;
+  background: url("https://i.imgur.com/bHIWKMT.png") center/cover no-repeat;
+  width: 400px;
+  z-index: -10; }
+  @media all and (max-width: 700px) {
+    .beamLeft {
+      display: none; } }
+
+.beamMiddle {
+  display: none;
+  grid-area: 2 / 80 / 9 / 90;
+  background: url("https://i.imgur.com/jLddqW4.png") center/contain no-repeat;
+  width: 160px;
+  z-index: -10; }
+  @media all and (max-width: 700px) {
+    .beamMiddle {
+      display: none; } }
+
+.beamRight {
+  grid-area: 2 / 80 / 5 / 19;
+  background: url("https://i.imgur.com/aJXY7f2.png") center/contain no-repeat;
+  width: 330px;
+  z-index: -10; }
+
+#mainCanvas {
+  grid-area: 6 / 30 / 9 / 90;
+  position: relative; }
+
 aside {
   display: grid;
   grid-area: 5 / 1 / 8 / 4;
@@ -147,7 +192,34 @@ aside {
 
 #stairsImg, #stairsImg2 {
   display: none;
-  position: relative; }
+  position: absolute; }
+
+.photoIdMask {
+  grid-area: 2 / 15 / 4 / 30;
+  position: relative;
+  z-index: 1;
+  padding: 3px;
+  border-radius: 100%;
+  box-shadow: -6px 6px 8px #808080;
+  background: url("https://s2.gifyu.com/images/photoImgToggle2.gif");
+  background-size: cover;
+  background-position: center; }
+  @media all and (min-width: 1024px) {
+    .photoIdMask {
+      height: 90px;
+      width: 90px; } }
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    .photoIdMask {
+      height: 70px;
+      width: 70px; } }
+  @media all and (max-width: 768px) {
+    .photoIdMask {
+      height: 60px;
+      width: 60px; } }
+  @media all and (max-width: 425px) {
+    .photoIdMask {
+      height: 50px;
+      width: 50px; } }
 
 .photoIdImg {
   grid-area: 2 / 15 / 4 / 30;
@@ -155,7 +227,7 @@ aside {
   z-index: 1;
   padding: 6px;
   border-radius: 100%;
-  box-shadow: -8px 8px 10px #808080;
+  box-shadow: -6px 6px 8px #808080;
   background: url("https://i.imgur.com/uGwgioR.png") center/cover no-repeat; }
   @media all and (min-width: 1024px) {
     .photoIdImg {
@@ -174,57 +246,24 @@ aside {
       height: 50px;
       width: 50px; } }
 
-.photoIdFrame {
-  grid-area: 2 / 15 / 4 / 30;
-  position: relative;
-  z-index: 1;
-  justify-content: center;
-  height: 90px;
-  width: 90px;
-  background: url("https://i.imgur.com/ECaBpSU.png?2") center/contain no-repeat; }
-  @media all and (min-width: 1024px) {
-    .photoIdFrame {
-      height: 90px;
-      width: 90px; } }
-  @media all and (max-width: 1024px) {
-    .photoIdFrame {
-      height: 70px;
-      width: 70px; } }
-  @media all and (max-width: 768px) {
-    .photoIdFrame {
-      height: 60px;
-      width: 60px; } }
-  @media all and (max-width: 425px) {
-    .photoIdFrame {
-      height: 50px;
-      width: 50px; } }
-  @media all and (max-width: 375px) {
-    .photoIdFrame {
-      height: 50px;
-      width: 50px; } }
-
 .plantPhoto {
   margin-top: 337px;
   position: absolute;
   z-index: 5;
   background: url("https://i.imgur.com/nR2Ndn3.png") center/cover no-repeat; }
-  @media all and (min-width: 768px) {
+  @media all and (max-width: 375px) {
     .plantPhoto {
-      height: 270px;
-      width: 158px; } }
+      height: 120px;
+      width: 50px; } }
+  @media all and (max-width: 425px) {
+    .plantPhoto {
+      height: 130px;
+      width: 60px; } }
   @media all and (max-width: 768px) {
     .plantPhoto {
       height: 270px;
       width: 158px; } }
-  @media all and (max-width: 425px) {
-    .plantPhoto {
-      height: 170px;
-      width: 140px; } }
-  @media all and (max-width: 375px) {
-    .plantPhoto {
-      height: 150px;
-      width: 120px; } }
-  @media all and (max-width: 1366px) {
+  @media all and (min-width: 1024px) {
     .plantPhoto {
       height: 270px;
       width: 158px; } }
@@ -232,9 +271,15 @@ aside {
 footer {
   grid-area: 9 / 1 / 9 / 9; }
 
+.bottomEdgePanelGreen {
+  background: url("https://i.imgur.com/wVrzZRC.jpg?3");
+  background-size: cover;
+  width: 100%;
+  height: 15px; }
+
 .bottomEdgePanel {
   background: #dbd5c3;
   width: 100%;
-  height: 35px; }
+  height: 20px; }
 
 /*# sourceMappingURL=cv.css.map */
