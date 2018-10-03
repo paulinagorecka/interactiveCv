@@ -1,285 +1,46 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+/*
+Error: Invalid CSS after "    z-index: -15": expected "{", was ";"
+        on line 140 of D:\Peps koduje\CV\Dev\cv.scss
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto; }
+135: .backgroundScreen {
+136:     grid-area: 3 / 1 / 9 / 9;
+137:     width: 100%;
+138:     height: 620px;
+139: <<<<<<< HEAD
+140:     z-index: -15;
+141: =======
+142:     z-index: -10;
+143: >>>>>>> d8f5f9a7ecdd58555d0fdc38ef5febc26e8f8fc5
+144:     @media all and (min-width: 1024px) {
+145:         background: url('https://i.imgur.com/k54Jdwu.png') center / cover no-repeat;   
 
-body {
-  grid-area: 1 / 1 / 9 / 9; }
-
-header {
-  grid-area: 1 / 1 / 2 / 9;
-  display: grid; }
-
-.topEdge {
-  grid-area: 1 / 1 / 3 / 9;
-  height: 55px;
-  width: 100%;
-  font-family: 'Montserrat', sans-serif;
-  background: url("https://i.imgur.com/OZdhzIA.png") center/cover no-repeat; }
-
-.topEdgeOverlay {
-  background: #dbd5c3;
-  height: 40px;
-  width: 420%;
-  margin-left: 0%; }
-
-h1 {
-  grid-area: 1 / 1 / 3 / 3;
-  height: 40px;
-  width: 100%;
-  padding-left: 10%;
-  vertical-align: middle;
-  line-height: 40px;
-  color: black;
-  background: #dbd5c3;
-  mix-blend-mode: lighten;
-  font-size: 27px; }
-  @media all and (min-width: 1024px) {
-    h1 {
-      font-size: 27px; } }
-  @media all and (min-width: 768px) and (max-width: 1024px) {
-    h1 {
-      font-size: 24px; } }
-  @media all and (max-width: 768px) {
-    h1 {
-      font-size: 24px; } }
-  @media all and (max-width: 425px) {
-    h1 {
-      font-size: 19px;
-      padding-left: 6%; } }
-  @media all and (max-width: 375px) {
-    h1 {
-      font-size: 18px;
-      padding-right: 6%; } }
-  @media all and (max-width: 320px) {
-    h1 {
-      font-size: 17px;
-      padding-left: 6%; } }
-
-h2 {
-  grid-area: 1 / 7 / 3 / 9;
-  width: 100%;
-  height: 40px;
-  padding-right: 10%;
-  text-align: right;
-  vertical-align: middle;
-  line-height: 40px;
-  color: black;
-  background: #dbd5c3;
-  mix-blend-mode: lighten; }
-  @media all and (min-width: 1024px) {
-    h2 {
-      font-size: 23px; } }
-  @media all and (max-width: 768px) {
-    h2 {
-      font-size: 18px; } }
-  @media all and (max-width: 425px) {
-    h2 {
-      font-size: 15px;
-      padding-right: 4%; } }
-  @media all and (max-width: 375px) {
-    h2 {
-      font-size: 13px;
-      padding-right: 4%; } }
-  @media all and (max-width: 320px) {
-    h2 {
-      font-size: 12px;
-      padding-right: 4%; } }
-
-.topEdgePanel {
-  grid-area: 3 / 1 / 3 / 9;
-  background: url("https://i.imgur.com/wVrzZRC.jpg?3");
-  background-size: cover;
-  width: 100%;
-  height: 15px; }
-
-.background {
-  grid-area: 3 / 1 / 9 / 9;
-  width: 100%;
-  height: 620px;
-  z-index: -5; }
-  @media all and (min-width: 1024px) {
-    .background {
-      background: url("https://i.imgur.com/k54Jdwu.png") center/cover no-repeat; } }
-  @media all and (min-width: 768px) and (max-width: 1024px) {
-    .background {
-      background: url("https://i.imgur.com/uNifkn2.png") center/cover no-repeat; } }
-  @media all and (max-width: 768px) {
-    .background {
-      background: url("https://i.imgur.com/jsTTTzq.png") center/cover no-repeat; } }
-  @media all and (max-width: 425px) {
-    .background {
-      background: url("https://i.imgur.com/wlAyS6g.png") center/cover no-repeat; } }
-  @media all and (max-width: 375px) {
-    .background {
-      background: url("https://i.imgur.com/wlAyS6g.png") center/cover no-repeat; } }
-
-.backgroundScreen {
-  grid-area: 3 / 1 / 9 / 9;
-  width: 100%;
-  height: 620px;
-  z-index: -15; }
-  @media all and (min-width: 1024px) {
-    .backgroundScreen {
-      background: url("https://i.imgur.com/k54Jdwu.png") center/cover no-repeat; } }
-  @media all and (min-width: 768px) and (max-width: 1024px) {
-    .backgroundScreen {
-      background: url("https://i.imgur.com/uNifkn2.png") center/cover no-repeat; } }
-  @media all and (max-width: 768px) {
-    .backgroundScreen {
-      background: url("https://i.imgur.com/jsTTTzq.png") center/cover no-repeat; } }
-  @media all and (max-width: 425px) {
-    .backgroundScreen {
-      background: url("https://i.imgur.com/wlAyS6g.png") center/cover no-repeat; } }
-  @media all and (max-width: 375px) {
-    .backgroundScreen {
-      background: url("https://i.imgur.com/wlAyS6g.png") center/cover no-repeat; } }
-
-main {
-  display: grid;
-  grid-template-columns: repeat(100, 1fr);
-  grid-template-rows: auto;
-  height: 100%;
-  width: 100%;
-  position: absolute; }
-
-.beamLeft {
-  grid-area: 5 / 30 / 9 / 90;
-  background: url("https://i.imgur.com/bHIWKMT.png") center/cover no-repeat;
-  width: 400px;
-  z-index: -10; }
-  @media all and (max-width: 700px) {
-    .beamLeft {
-      display: none; } }
-
-.beamMiddle {
-  display: none;
-  grid-area: 2 / 80 / 9 / 90;
-  background: url("https://i.imgur.com/jLddqW4.png") center/contain no-repeat;
-  width: 160px;
-  z-index: -10; }
-  @media all and (max-width: 700px) {
-    .beamMiddle {
-      display: none; } }
-
-.beamRight {
-  grid-area: 2 / 80 / 5 / 19;
-  background: url("https://i.imgur.com/aJXY7f2.png") center/contain no-repeat;
-  width: 330px;
-  z-index: -10; }
-
-#mainCanvas {
-  grid-area: 6 / 30 / 9 / 90;
-  position: relative; }
-
-aside {
-  display: grid;
-  grid-area: 5 / 1 / 8 / 4;
-  grid-template-columns: repeat(100, 1fr);
-  grid-template-rows: auto;
-  height: 600px;
-  position: relative; }
-
-#stairsCanvas {
-  position: absolute; }
-
-#stairsImg, #stairsImg2 {
-  display: none;
-  position: absolute; }
-
-.photoIdMask {
-  grid-area: 2 / 15 / 4 / 30;
-  position: relative;
-  z-index: 1;
-  padding: 3px;
-  border-radius: 100%;
-  box-shadow: -6px 6px 8px #808080;
-  background: url("https://s2.gifyu.com/images/photoImgToggle2.gif");
-  background-size: cover;
-  background-position: center; }
-  @media all and (min-width: 1024px) {
-    .photoIdMask {
-      height: 90px;
-      width: 90px; } }
-  @media all and (min-width: 768px) and (max-width: 1024px) {
-    .photoIdMask {
-      height: 70px;
-      width: 70px; } }
-  @media all and (max-width: 768px) {
-    .photoIdMask {
-      height: 60px;
-      width: 60px; } }
-  @media all and (max-width: 425px) {
-    .photoIdMask {
-      height: 50px;
-      width: 50px; } }
-
-.photoIdImg {
-  grid-area: 2 / 15 / 4 / 30;
-  position: relative;
-  z-index: 1;
-  padding: 6px;
-  border-radius: 100%;
-  box-shadow: -6px 6px 8px #808080;
-  background: url("https://i.imgur.com/uGwgioR.png") center/cover no-repeat; }
-  @media all and (min-width: 1024px) {
-    .photoIdImg {
-      height: 90px;
-      width: 90px; } }
-  @media all and (min-width: 768px) and (max-width: 1024px) {
-    .photoIdImg {
-      height: 70px;
-      width: 70px; } }
-  @media all and (max-width: 768px) {
-    .photoIdImg {
-      height: 60px;
-      width: 60px; } }
-  @media all and (max-width: 425px) {
-    .photoIdImg {
-      height: 50px;
-      width: 50px; } }
-
-.plantPhoto {
-  margin-top: 337px;
-  position: absolute;
-  z-index: 5;
-  background: url("https://i.imgur.com/nR2Ndn3.png") center/cover no-repeat; }
-  @media all and (max-width: 375px) {
-    .plantPhoto {
-      height: 120px;
-      width: 50px; } }
-  @media all and (max-width: 425px) {
-    .plantPhoto {
-      height: 130px;
-      width: 60px; } }
-  @media all and (max-width: 768px) {
-    .plantPhoto {
-      height: 270px;
-      width: 158px; } }
-  @media all and (min-width: 1024px) {
-    .plantPhoto {
-      height: 270px;
-      width: 158px; } }
-
-footer {
-  grid-area: 9 / 1 / 9 / 9; }
-
-.bottomEdgePanelGreen {
-  background: url("https://i.imgur.com/wVrzZRC.jpg?3");
-  background-size: cover;
-  width: 100%;
-  height: 15px; }
-
-.bottomEdgePanel {
-  background: #dbd5c3;
-  width: 100%;
-  height: 20px; }
-
-/*# sourceMappingURL=cv.css.map */
+Backtrace:
+D:\Peps koduje\CV\Dev\cv.scss:140
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:677:in `block'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:697:in `block_child'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:678:in `block'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files/Koala/bin/sass:22:in `load'
+C:/Program Files/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"    z-index: -15\": expected \"{\", was \";\"\A         on line 140 of D:\Peps koduje\CV\Dev\cv.scss\A \A 135: .backgroundScreen {\A 136:     grid-area: 3 / 1 / 9 / 9;\A 137:     width: 100%;\A 138:     height: 620px;\A 139: <<<<<<< HEAD\A 140:     z-index: -15;\A 141: =======\A 142:     z-index: -10;\A 143: >>>>>>> d8f5f9a7ecdd58555d0fdc38ef5febc26e8f8fc5\A 144:     @media all and (min-width: 1024px) {\A 145:         background: url('https://i.imgur.com/k54Jdwu.png') center / cover no-repeat;   "; }

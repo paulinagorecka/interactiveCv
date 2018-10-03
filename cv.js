@@ -40,6 +40,7 @@ window.onresize = function() {
     location.reload(); 
 }
 
+<<<<<<< HEAD
 window.onclick = function() {
 
     let canvas = document.getElementById('mainCanvas');
@@ -120,6 +121,11 @@ $('body').click(function() {
 
 });
 
+=======
+$('body').click(function() {
+    $('.background').css('backgroundImage','url(https://i.imgur.com/o6ILxdK.jpg)');
+})
+>>>>>>> d8f5f9a7ecdd58555d0fdc38ef5febc26e8f8fc5
 
 
 

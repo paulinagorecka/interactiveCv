@@ -136,7 +136,11 @@ h2 {
     grid-area: 3 / 1 / 9 / 9;
     width: 100%;
     height: 620px;
+<<<<<<< HEAD
     z-index: -15;
+=======
+    z-index: -10;
+>>>>>>> d8f5f9a7ecdd58555d0fdc38ef5febc26e8f8fc5
     @media all and (min-width: 1024px) {
         background: url('https://i.imgur.com/k54Jdwu.png') center / cover no-repeat;   
     }
@@ -154,6 +158,7 @@ h2 {
     }
 }
 
+<<<<<<< HEAD
 main {
     display: grid;
     grid-template-columns: repeat(100, 1fr);
@@ -190,6 +195,12 @@ main {
     #mainCanvas {
         grid-area: 6 / 30 / 9 / 90;
         position: relative;
+=======
+
+/*main {
+    display-grid
+    grid-area
+>>>>>>> d8f5f9a7ecdd58555d0fdc38ef5febc26e8f8fc5
 }
 
 aside {
@@ -216,10 +227,15 @@ aside {
         z-index: 1;
         padding: 3px;
         border-radius: 100%;
+<<<<<<< HEAD
         box-shadow: -6px 6px 8px #808080;
         background: url('https://s2.gifyu.com/images/photoImgToggle2.gif');
         background-size: cover;
         background-position: center;
+=======
+        box-shadow: -8px 8px 10px #808080;
+        background: url('https://i.imgur.com/uGwgioR.png') center / cover no-repeat;
+>>>>>>> d8f5f9a7ecdd58555d0fdc38ef5febc26e8f8fc5
         @media all and (min-width: 1024px) {
             height: 90px;
             width: 90px;
