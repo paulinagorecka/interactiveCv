@@ -107,21 +107,39 @@ h2 {
   z-index: -5; }
   @media all and (min-width: 1024px) {
     .background {
-      background: url("https://i.imgur.com/k54Jdwu.png"), url("https://i.imgur.com/o6ILxdK.jpg");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat; } }
+      background: url("https://i.imgur.com/k54Jdwu.png") center/cover no-repeat; } }
   @media all and (min-width: 768px) and (max-width: 1024px) {
     .background {
-      background: url("https://i.imgur.com/uNifkn2.png") center/cover no-repeat, url("https://i.imgur.com/kdb8moG.png") center/cover no-repeat; } }
+      background: url("https://i.imgur.com/uNifkn2.png") center/cover no-repeat; } }
   @media all and (max-width: 768px) {
     .background {
-      background: url("https://i.imgur.com/jsTTTzq.png") center/cover no-repeat, url("https://i.imgur.com/kdb8moG.png") center/cover no-repeat; } }
+      background: url("https://i.imgur.com/jsTTTzq.png") center/cover no-repeat; } }
   @media all and (max-width: 425px) {
     .background {
       background: url("https://i.imgur.com/wlAyS6g.png") center/cover no-repeat; } }
   @media all and (max-width: 375px) {
     .background {
+      background: url("https://i.imgur.com/wlAyS6g.png") center/cover no-repeat; } }
+
+.backgroundScreen {
+  grid-area: 3 / 1 / 9 / 9;
+  width: 100%;
+  height: 620px;
+  z-index: -10; }
+  @media all and (min-width: 1024px) {
+    .backgroundScreen {
+      background: url("https://i.imgur.com/k54Jdwu.png") center/cover no-repeat; } }
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    .backgroundScreen {
+      background: url("https://i.imgur.com/uNifkn2.png") center/cover no-repeat; } }
+  @media all and (max-width: 768px) {
+    .backgroundScreen {
+      background: url("https://i.imgur.com/jsTTTzq.png") center/cover no-repeat; } }
+  @media all and (max-width: 425px) {
+    .backgroundScreen {
+      background: url("https://i.imgur.com/wlAyS6g.png") center/cover no-repeat; } }
+  @media all and (max-width: 375px) {
+    .backgroundScreen {
       background: url("https://i.imgur.com/wlAyS6g.png") center/cover no-repeat; } }
 
 /*main {
@@ -198,33 +216,25 @@ aside {
     .photoIdFrame {
       height: 50px;
       width: 50px; } }
-  @media all and (max-width: 375px) {
-    .photoIdFrame {
-      height: 50px;
-      width: 50px; } }
 
 .plantPhoto {
   margin-top: 337px;
   position: absolute;
   z-index: 5;
   background: url("https://i.imgur.com/nR2Ndn3.png") center/cover no-repeat; }
-  @media all and (min-width: 768px) {
+  @media all and (max-width: 375px) {
     .plantPhoto {
-      height: 270px;
-      width: 158px; } }
+      height: 120px;
+      width: 50px; } }
+  @media all and (max-width: 425px) {
+    .plantPhoto {
+      height: 130px;
+      width: 60px; } }
   @media all and (max-width: 768px) {
     .plantPhoto {
       height: 270px;
       width: 158px; } }
-  @media all and (max-width: 425px) {
-    .plantPhoto {
-      height: 170px;
-      width: 140px; } }
-  @media all and (max-width: 375px) {
-    .plantPhoto {
-      height: 150px;
-      width: 120px; } }
-  @media all and (max-width: 1366px) {
+  @media all and (min-width: 1024px) {
     .plantPhoto {
       height: 270px;
       width: 158px; } }

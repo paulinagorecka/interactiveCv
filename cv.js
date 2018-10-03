@@ -1,3 +1,4 @@
+
 window.onload = function() {
 let canvas = document.getElementById('stairsCanvas');
 let ctx = canvas.getContext("2d");
@@ -34,7 +35,30 @@ let img2 = this.document.getElementById("stairsImg2");
     }
 }
 
+window.onresize = function() { 
+    location.reload(); 
+}
+
+$('body').click(function() {
+    $('.background').css('backgroundImage','url(https://i.imgur.com/o6ILxdK.jpg)');
+})
+
+
+
+
+//var typed = new Typed('.element', {
+ //   strings: ["First sentence.", "Second sentence."],
+ //   typeSpeed: 30
+ // });
+
+
 /*var typed = new Typed('.mainScreen', {
+
+
+
+
+
+
     strings: ["First sentence.", "Second sentence."],
     typeSpeed: 30
   }); */
