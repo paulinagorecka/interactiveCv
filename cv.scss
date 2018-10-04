@@ -15,13 +15,14 @@
 body {
     grid-area: 1 / 1 / 9 / 9;
 }
+body:hover {
+    cursor: crosshair;
+}
 
 header {
     grid-area: 1 / 1 / 2 / 9;
     display: grid;
 }
-
-//.crosshair       { cursor: crosshair; }
 
 .topEdge { 
     grid-area: 1 / 1 / 3 / 9;
@@ -130,17 +131,14 @@ h2 {
     @media all and (max-width: 375px) {
         background: url('https://i.imgur.com/wlAyS6g.png') center / cover no-repeat;
     }
+    transition: all 2s cubic-bezier(1, 0, 0, 1);
 }
 
 .backgroundScreen {
     grid-area: 3 / 1 / 9 / 9;
     width: 100%;
     height: 620px;
-<<<<<<< HEAD
     z-index: -15;
-=======
-    z-index: -10;
->>>>>>> d8f5f9a7ecdd58555d0fdc38ef5febc26e8f8fc5
     @media all and (min-width: 1024px) {
         background: url('https://i.imgur.com/k54Jdwu.png') center / cover no-repeat;   
     }
@@ -158,7 +156,6 @@ h2 {
     }
 }
 
-<<<<<<< HEAD
 main {
     display: grid;
     grid-template-columns: repeat(100, 1fr);
@@ -168,20 +165,45 @@ main {
     position: absolute;
     }     
     .beamLeft {
-        grid-area: 5 / 30 / 9 / 90; 
-        background: url('https://i.imgur.com/bHIWKMT.png') center / cover no-repeat;
-        width: 400px;
+        grid-area: 5 / 20 / 9 / 90; 
+        background: url('https://i.imgur.com/bHIWKMT.png') center / contain no-repeat;
+        width: 470px;
+        height: 730px;
         z-index: -10;
+        @media all and (min-width: 1024px) {
+            width: 485px;
+            height: 710px;  
+        }
+        @media all and (min-width: 768px) and (max-width: 1024px) {
+            width: 485px;
+            height: 710px;
+        }
+        @media all and (max-width: 768px) {
+            width: 470px;
+            height: 730px;
+        }
         @media all and (max-width: 700px) {
             display:none;
         }
     }
     .beamMiddle {
-        display: none;
-        grid-area: 2 / 80 / 9 / 90; 
-        background: url('https://i.imgur.com/jLddqW4.png') center / contain no-repeat;
+        grid-area: 3 / 80 / 9 / 90; 
+        background: url('https://i.imgur.com/4yyFQRx.png') center / contain no-repeat;
         width: 160px;
+        height: 720px;
         z-index: -10;
+        @media all and (min-width: 1024px) {
+            width: 165px;
+            height: 720px;  
+        }
+        @media all and (min-width: 768px) and (max-width: 1024px) { 
+            width: 165px;
+            height: 710px;
+        }
+        @media all and (max-width: 768px) {
+            width: 160px;
+            height: 720px;
+        }
         @media all and (max-width: 700px) {
             display:none;
         }
@@ -192,16 +214,32 @@ main {
         width: 330px;
         z-index: -10;
     }
-    #mainCanvas {
-        grid-area: 6 / 30 / 9 / 90;
-        position: relative;
-=======
-
-/*main {
-    display-grid
-    grid-area
->>>>>>> d8f5f9a7ecdd58555d0fdc38ef5febc26e8f8fc5
-}
+    #typedStrings {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        z-index: -25;
+        color: transparent;
+    }
+    #typed {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        z-index: 15;
+        color: white;
+        font-size: 23px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .particlesGif {
+        display: none;
+        position: absolute;
+        top: 60%;
+        left: 70%;
+        width: 350px;
+        height: 350px;
+        z-index: 15;
+        background: url('https://s2.gifyu.com/images/transparentwhite.gif') center / cover no-repeat;
+    }
 
 aside {
     display: grid;
@@ -221,21 +259,47 @@ aside {
     #stairsImg2 {
         @extend #stairsImg; 
     }
+    #htmlBall {
+        @extend #stairsImg; 
+        z-index: 5;
+    }
+    #cssBall {
+        @extend #htmlBall;
+    }
+    #jsBall {
+        @extend #htmlBall;
+    }
+    #jqueryBall {
+        @extend #htmlBall;
+    }
+    #sassBall {
+        @extend #htmlBall;
+    }
+    #bootstrapBall {
+        @extend #htmlBall;
+    }
+    #reactBall {
+        @extend #htmlBall;
+    }
+    #gitBall {
+        @extend #htmlBall;
+    }
+    #sqlBall {
+        @extend #htmlBall;
+    }
+    #psBall {
+        @extend #htmlBall;
+    }
     .photoIdMask {
-        grid-area: 2 / 15 / 4 / 30; //1024
+        grid-area: 2 / 15 / 4 / 30; 
         position: relative;
         z-index: 1;
         padding: 3px;
         border-radius: 100%;
-<<<<<<< HEAD
         box-shadow: -6px 6px 8px #808080;
         background: url('https://s2.gifyu.com/images/photoImgToggle2.gif');
         background-size: cover;
         background-position: center;
-=======
-        box-shadow: -8px 8px 10px #808080;
-        background: url('https://i.imgur.com/uGwgioR.png') center / cover no-repeat;
->>>>>>> d8f5f9a7ecdd58555d0fdc38ef5febc26e8f8fc5
         @media all and (min-width: 1024px) {
             height: 90px;
             width: 90px;
@@ -254,7 +318,7 @@ aside {
         }
     }
     .photoIdImg {
-        grid-area: 2 / 15 / 4 / 30; //1024
+        grid-area: 2 / 15 / 4 / 30; 
         position: relative;
         z-index: 1;
         padding: 6px;
