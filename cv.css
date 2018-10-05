@@ -180,7 +180,7 @@ main {
   grid-area: 3 / 80 / 9 / 90;
   background: url("https://i.imgur.com/4yyFQRx.png") center/contain no-repeat;
   width: 160px;
-  height: 720px;
+  height: 712px;
   z-index: -10; }
   @media all and (min-width: 1024px) {
     .beamMiddle {
@@ -213,22 +213,46 @@ main {
 
 #typed {
   position: absolute;
-  top: 50%;
-  left: 35%;
   z-index: 15;
   color: white;
-  font-size: 23px;
   font-family: 'Montserrat', sans-serif; }
+  @media all and (min-width: 1024px) {
+    #typed {
+      top: 50%;
+      left: 35%;
+      font-size: 23px; } }
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    #typed {
+      top: 40%;
+      left: 35%;
+      margin-right: 5%;
+      font-size: 18px; } }
+  @media all and (max-width: 768px) {
+    #typed {
+      top: 38%;
+      left: 26%;
+      font-size: 16px; } }
+  @media all and (max-width: 425px) {
+    #typed {
+      top: 40%;
+      left: 33%;
+      margin-right: 5%;
+      font-size: 14px; } }
+  @media all and (max-width: 375px) {
+    #typed {
+      top: 40%;
+      left: 28%;
+      font-size: 14px; } }
 
-.particlesGif {
+.geometricGif {
   display: none;
   position: absolute;
-  top: 60%;
-  left: 70%;
-  width: 350px;
-  height: 350px;
-  z-index: 15;
-  background: url("https://s2.gifyu.com/images/transparentwhite.gif") center/cover no-repeat; }
+  top: 74%;
+  left: 86%;
+  width: 200px;
+  height: 150px;
+  z-index: 5;
+  background: url("https://media.giphy.com/media/cXVhybsxiJwIc5XiT3/giphy.gif") center/cover no-repeat; }
 
 aside {
   display: grid;
@@ -321,6 +345,29 @@ aside {
     .plantPhoto {
       height: 270px;
       width: 158px; } }
+
+.plantPhoto2 {
+  margin-top: 472px;
+  margin-left: 65px;
+  position: absolute;
+  z-index: 10;
+  background: url("https://i.imgur.com/iwmYPkg.png?2") center/cover no-repeat; }
+  @media all and (max-width: 375px) {
+    .plantPhoto2 {
+      height: 60px;
+      width: 55px; } }
+  @media all and (max-width: 425px) {
+    .plantPhoto2 {
+      height: 65px;
+      width: 55px; } }
+  @media all and (max-width: 768px) {
+    .plantPhoto2 {
+      height: 135px;
+      width: 106px; } }
+  @media all and (min-width: 1024px) {
+    .plantPhoto2 {
+      height: 135px;
+      width: 106px; } }
 
 footer {
   grid-area: 9 / 1 / 9 / 9; }
