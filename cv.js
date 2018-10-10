@@ -123,41 +123,43 @@ let $photoIdToggle = $('.photoIdToggle');
 let $plantImg = $('.plantImg');
 let $plantImg2 = $('.plantImg2');
 
-$('body').click(function() {
+$('body').one('click', function() {
    // $beamLeft.fadeOut(1500);
    // $beamMiddle.fadeOut(1500);
     $photo.fadeOut(1800).toggleClass('photoIdToggle');
 
-    if (screen.width >= 1366) {
+    if (screen.width <= 424) {
         setTimeout(function() {
-            $background.css('backgroundImage','url(https://i.imgur.com/bFRdmfT.png), url(https://i.imgur.com/o6ILxdK.jpg)');
-            }, 1700);
+            $background.css('backgroundImage','url(https://i.imgur.com/VO7Pcha.png), url(https://i.imgur.com/o6ILxdK.jpg)');
+            }, 1700); 
     }
-    else if (screen.width >= 1023) {
+    else if (screen.width <= 769) {
+        setTimeout(function() {
+            $background.css('backgroundImage','url(https://i.imgur.com/8NR5cen.png?2), url(https://i.imgur.com/o6ILxdK.jpg)');
+            }, 1700); 
+    }
+    else if (screen.width >= 1024) {
         setTimeout(function() {
             $background.css('backgroundImage','url(https://i.imgur.com/0Z1E4Ap.png), url(https://i.imgur.com/o6ILxdK.jpg)');
             }, 1700); 
+    }
+    else if (screen.width >= 1366) {
+        setTimeout(function() {
+            $background.css('backgroundImage','url(https://i.imgur.com/bFRdmfT.png), url(https://i.imgur.com/o6ILxdK.jpg)');
+            }, 1700);
     }
     else if (screen.width >= 770) {
         setTimeout(function() {
             $background.css('backgroundImage','url(https://i.imgur.com/YvneonB.png?2), url(https://i.imgur.com/o6ILxdK.jpg)');
             }, 1700); 
     }
-    else if {(screen)
-        setTimeout(function() {
-            $background.css('backgroundImage','url(https://i.imgur.com/8NR5cen.png?2), url(https://i.imgur.com/o6ILxdK.jpg)');
-            }, 1700); 
-    }
-    else {
-        setTimeout(function() {
-            $background.css('backgroundImage','url(), url(https://i.imgur.com/o6ILxdK.jpg)');
-            }, 1700);  
-    }
+    
+    
 
-var typed = new Typed('#typed', {
-    stringsElement: '#typedStrings',
-    typeSpeed: 35
-    });
+    var typed = new Typed('#typed', {
+        stringsElement: '#typedStrings',
+        typeSpeed: 35
+        });
 
 });
 

@@ -129,7 +129,7 @@ main {
   display: grid;
   grid-template-columns: repeat(100, 1fr);
   grid-template-rows: auto;
-  height: 100%;
+  height: auto;
   width: 100%;
   position: absolute; }
 
@@ -222,9 +222,16 @@ main {
       font-size: 14px; } }
   @media all and (max-width: 375px) {
     #typed {
-      top: 40%;
+      top: 50%;
       left: 28%;
       font-size: 14px; } }
+
+.typed-cursor {
+  position: absolute;
+  top: 80%;
+  left: 80%;
+  z-index: -25;
+  color: transparent; }
 
 .geometricGif {
   display: none;
@@ -274,18 +281,31 @@ aside {
       grid-area: 2 / 8 / 4 / 20;
       height: 80px;
       width: 80px; } }
-  @media all and (min-width: 768px) and (max-width: 1024px) {
+  @media all and (min-width: 770px) and (max-width: 1023px) {
     .photoIdToggle {
+      grid-area: 2 / 8 / 4 / 20;
       height: 70px;
       width: 70px; } }
-  @media all and (max-width: 768px) {
+  @media all and (min-width: 600px) and (max-width: 769px) {
     .photoIdToggle {
+      grid-area: 2 / 8 / 4 / 20;
       height: 60px;
       width: 60px; } }
-  @media all and (max-width: 425px) {
+  @media all and (min-width: 425px) and (max-width: 600px) {
     .photoIdToggle {
+      grid-area: 2 / 15 / 4 / 25;
+      height: 60px;
+      width: 60px; } }
+  @media all and (max-width: 424px) {
+    .photoIdToggle {
+      grid-area: 2 / 8 / 4 / 20;
       height: 50px;
       width: 50px; } }
+  @media all and (max-width: 321px) {
+    .photoIdToggle {
+      grid-area: 2 / 8 / 4 / 20;
+      height: 40px;
+      width: 40px; } }
 
 .photoIdImg {
   position: relative;
@@ -304,18 +324,31 @@ aside {
       grid-area: 2 / 8 / 4 / 20;
       height: 80px;
       width: 80px; } }
-  @media all and (min-width: 768px) and (max-width: 1024px) {
+  @media all and (min-width: 770px) and (max-width: 1023px) {
     .photoIdImg {
+      grid-area: 2 / 8 / 4 / 20;
       height: 70px;
       width: 70px; } }
-  @media all and (max-width: 768px) {
+  @media all and (min-width: 600px) and (max-width: 769px) {
     .photoIdImg {
+      grid-area: 2 / 8 / 4 / 20;
       height: 60px;
       width: 60px; } }
-  @media all and (max-width: 425px) {
+  @media all and (min-width: 425px) and (max-width: 600px) {
     .photoIdImg {
+      grid-area: 2 / 15 / 4 / 25;
+      height: 60px;
+      width: 60px; } }
+  @media all and (max-width: 424px) {
+    .photoIdImg {
+      grid-area: 2 / 8 / 4 / 20;
       height: 50px;
       width: 50px; } }
+  @media all and (max-width: 321px) {
+    .photoIdImg {
+      grid-area: 2 / 8 / 4 / 20;
+      height: 40px;
+      width: 40px; } }
 
 .plantImg {
   margin-top: 337px;
@@ -330,7 +363,7 @@ aside {
     .plantImg {
       height: 130px;
       width: 60px; } }
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 1024px) {
     .plantImg {
       height: 270px;
       width: 158px; } }
@@ -352,7 +385,7 @@ aside {
     .plantImgToggle {
       height: 130px;
       width: 60px; } }
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 1024px) {
     .plantImgToggle {
       height: 270px;
       width: 158px; } }
@@ -375,7 +408,7 @@ aside {
     .plantImg2 {
       height: 65px;
       width: 55px; } }
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 1024px) {
     .plantImg2 {
       height: 135px;
       width: 106px; } }
@@ -398,7 +431,7 @@ aside {
     .plantImg2Toggle {
       height: 65px;
       width: 55px; } }
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 1024px) {
     .plantImg2Toggle {
       height: 135px;
       width: 106px; } }
@@ -408,7 +441,8 @@ aside {
       width: 106px; } }
 
 footer {
-  grid-area: 9 / 1 / 9 / 9; }
+  grid-area: 9 / 1 / 9 / 9;
+  overflow: hidden; }
 
 .bottomEdgePanelGreen {
   background: url("https://i.imgur.com/wVrzZRC.jpg?3");
