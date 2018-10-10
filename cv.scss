@@ -230,11 +230,16 @@ main {
             font-size: 14px;     
         }
         @media all and (max-width: 375px) {
+<<<<<<< HEAD
             top: 50%;
+=======
+            top: 40%;
+>>>>>>> a2283c76d8c7c0e873b02a3a234a647decd584b7
             left: 28%; 
             font-size: 14px;     
         }    
     }
+<<<<<<< HEAD
     .typed-cursor {
         position: absolute;
         top: 80%;
@@ -245,6 +250,11 @@ main {
     .geometricGif {
         display: none;
         position: absolute;
+=======
+    .geometricGif {
+        display: none;
+        position: absolute;
+>>>>>>> a2283c76d8c7c0e873b02a3a234a647decd584b7
         top: 74%;
         left: 86%;
         width: 200px;
@@ -412,6 +422,7 @@ aside {
             height: 270px;
             width: 158px;
         } 
+<<<<<<< HEAD
     }
     .plantImgToggle {
         margin-top: 337px;
@@ -481,6 +492,32 @@ aside {
             width: 106px;
         }             
 }   
+=======
+        }
+        .plantPhoto2 {
+            margin-top: 472px;
+            margin-left: 65px;
+            position: absolute;
+            z-index: 10;
+            background: url('https://i.imgur.com/iwmYPkg.png?2') center / cover no-repeat;
+            @media all and (max-width: 375px) {
+                height: 60px;
+                width: 55px;   
+            }  
+            @media all and (max-width: 425px) {
+                height: 65px;
+                width: 55px;
+            }     
+            @media all and (max-width: 768px) {
+                height: 135px;
+                width: 106px;
+            }
+            @media all and (min-width: 1024px) {
+                height: 135px;
+                width: 106px;
+            }             
+}
+>>>>>>> a2283c76d8c7c0e873b02a3a234a647decd584b7
        
 footer {
     grid-area: 9 / 1 / 9 / 9;

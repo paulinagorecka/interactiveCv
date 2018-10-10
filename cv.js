@@ -177,6 +177,16 @@ $plantImg2.click(function() {
 
 });
 
+<<<<<<< HEAD
+=======
+var typed = new Typed('#typed', {
+    stringsElement: '#typedStrings',
+    typeSpeed: 35
+      });
+}); 
+});
+
+>>>>>>> a2283c76d8c7c0e873b02a3a234a647decd584b7
 
 /*
 let $img = document.getElementById("stairsImg");
