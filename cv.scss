@@ -22,14 +22,13 @@ body:hover {
 header {
     grid-area: 1 / 1 / 2 / 9;
     display: grid;
-}
-
-.topEdge { 
-    grid-area: 1 / 1 / 3 / 9;
-    height: 55px;
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    background: url('https://i.imgur.com/OZdhzIA.png') center / cover no-repeat;
+    }
+    .topEdge { 
+        grid-area: 1 / 1 / 3 / 9;
+        height: 55px;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        background: url('https://i.imgur.com/OZdhzIA.png') center / cover no-repeat;
     }
     .topEdgeOverlay {
         background: #dbd5c3;
@@ -37,78 +36,75 @@ header {
         width: 420%;
         margin-left: 0%;   
     }
-
-h1 {
-    grid-area: 1 / 1 / 3 / 3;  
-    height: 40px;
-    width: 100%;
-    padding-left: 10%;
-    vertical-align: middle;
-    line-height: 40px;
-    color: black;
-    background: #dbd5c3;
-    mix-blend-mode: lighten;
-    font-size: 27px;
-    @media all and (min-width: 1024px) {
+    h1 {
+        grid-area: 1 / 1 / 3 / 3;  
+        height: 40px;
+        width: 100%;
+        padding-left: 10%;
+        vertical-align: middle;
+        line-height: 40px;
+        color: black;
+        background: #dbd5c3;
+        mix-blend-mode: lighten;
         font-size: 27px;
+        @media all and (min-width: 1024px) {
+            font-size: 27px;
+        }
+        @media all and (min-width: 768px) and (max-width: 1024px) {
+            font-size: 24px;
+        }
+        @media all and (max-width: 768px) {
+            font-size: 24px;
+        }
+        @media all and (max-width: 425px) {
+            font-size: 19px;
+            padding-left: 6%;
+        }
+        @media all and (max-width: 375px) {
+            font-size: 18px;
+            padding-right: 6%;
+        }
+        @media all and (max-width: 320px) {
+            font-size: 17px;
+            padding-left: 6%;
+        }
     }
-    @media all and (min-width: 768px) and (max-width: 1024px) {
-        font-size: 24px;
+    h2 {
+        grid-area: 1 / 7 / 3 / 9;
+        width: 100%;
+        height: 40px;
+        padding-right: 10%;
+        text-align: right;
+        vertical-align: middle;
+        line-height: 40px;
+        color: black;
+        background: #dbd5c3;
+        mix-blend-mode: lighten;
+        @media all and (min-width: 1024px) {
+            font-size: 23px;
+        }
+        @media all and (max-width: 768px) {
+            font-size: 18px;
+        }
+        @media all and (max-width: 425px) {
+            font-size: 15px;
+            padding-right: 4%;
+        }
+        @media all and (max-width: 375px) {
+            font-size: 13px;
+            padding-right: 4%;
+        }
+        @media all and (max-width: 320px) {
+            font-size: 12px;
+            padding-right: 4%;
+        }
     }
-    @media all and (max-width: 768px) {
-        font-size: 24px;
-    }
-    @media all and (max-width: 425px) {
-        font-size: 19px;
-        padding-left: 6%;
-    }
-    @media all and (max-width: 375px) {
-        font-size: 18px;
-        padding-right: 6%;
-    }
-    @media all and (max-width: 320px) {
-        font-size: 17px;
-        padding-left: 6%;
-    }
-}
-
-h2 {
-    grid-area: 1 / 7 / 3 / 9;
-    width: 100%;
-    height: 40px;
-    padding-right: 10%;
-    text-align: right;
-    vertical-align: middle;
-    line-height: 40px;
-    color: black;
-    background: #dbd5c3;
-    mix-blend-mode: lighten;
-    @media all and (min-width: 1024px) {
-        font-size: 23px;
-    }
-    @media all and (max-width: 768px) {
-        font-size: 18px;
-    }
-    @media all and (max-width: 425px) {
-        font-size: 15px;
-        padding-right: 4%;
-    }
-    @media all and (max-width: 375px) {
-        font-size: 13px;
-        padding-right: 4%;
-    }
-    @media all and (max-width: 320px) {
-        font-size: 12px;
-        padding-right: 4%;
-    }
-}
-
-.topEdgePanel {
-    grid-area: 3 / 1 / 3 / 9;
-    background: url('https://i.imgur.com/wVrzZRC.jpg?3');
-    background-size: cover; 
-    width: 100%;
-    height: 15px;
+    .topEdgePanel {
+        grid-area: 3 / 1 / 3 / 9;
+        background: url('https://i.imgur.com/wVrzZRC.jpg?3');
+        background-size: cover; 
+        width: 100%;
+        height: 15px;
 }
 
 .background {
@@ -134,14 +130,138 @@ h2 {
     }   
 }
 
+#typedStrings {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    z-index: -25;
+    color: transparent;
+}
+
+#typed {
+    position: absolute; 
+    z-index: 15;
+    color: white; 
+    font-family: 'Montserrat', sans-serif;
+    @media all and (min-width: 1024px) {
+        top: 50%;
+        left: 45%; 
+        font-size: 23px;    
+    }
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+        top: 40%;
+        left: 45%; 
+        margin-right: 5%;
+        font-size: 18px;     
+    }
+    @media all and (max-width: 768px) {
+        top: 38%;
+        left: 26%; 
+        font-size: 16px;                 
+    }
+    @media all and (max-width: 425px) {
+        top: 40%;
+        left: 33%; 
+        margin-right: 5%;
+        font-size: 14px;     
+    }
+    @media all and (max-width: 375px) {
+        top: 50%;
+        left: 28%; 
+        font-size: 14px;     
+    }    
+}
+
+.typed-cursor {
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    z-index: -25;
+    color: transparent;
+}
+
 main {
+    grid-area: 2 / 1 / 9 / 9;
     display: grid;
     grid-template-columns: repeat(100, 1fr);
     grid-template-rows: auto;
-    height: auto; 
+    height: 100%; 
     width: 100%;
     position: absolute;
-    }     
+    }   
+    .pulseGif {
+        z-index: -6;
+        background: url('https://s2.gifyu.com/images/pulseGif.gif') center / cover no-repeat; 
+        @media all and (min-width: 1366px) {
+            grid-area: 4 / 50 / 7 / 70;
+            height: 160px;
+            width: 213px;    
+        }
+        @media all and (min-width: 1024px) and (max-width: 1355px) {
+            grid-area: 3 / 48 / 5 / 68;
+            height: 140px;
+            width: 186px; 
+        }
+        @media all and (min-width: 770px) and (max-width: 1023px) {
+            grid-area: 3 / 48 / 5 / 68;
+            height: 140px;
+            width: 186px; 
+        }
+        @media all and (min-width: 760px) and (max-width: 769px) {
+            grid-area: 4 / 45 / 7 / 65;
+            height: 140px;
+            width: 186px; 
+        }
+        @media all and (min-width: 548px) and (max-width: 759px) {
+            grid-area: 4 / 62 / 7 / 92;
+            height: 140px;
+            width: 186px; 
+        }
+        @media all and (max-width: 547px) {
+            grid-area: 3 / 60 / 6 / 80;
+            height: 80px;
+            width: 106px; 
+        }   
+    }
+    .skipIntroButton {
+        display: none;
+        grid-area: 8 / 90 / 10 / 100;
+        height: 25px;
+        width: 122px;
+        z-index: 10;
+        margin: 15px;
+        background: url('https://i.imgur.com/sNwVWIx.png') center / cover no-repeat;
+   /*     @media all and (min-width: 1024px) {
+            top: 50%;
+            left: 45%; 
+            font-size: 23px;    
+        }
+        @media all and (min-width: 768px) and (max-width: 1024px) {
+            top: 40%;
+            left: 45%; 
+            margin-right: 5%;
+            font-size: 18px;     
+        }
+        @media all and (max-width: 768px) {
+            top: 38%;
+            left: 26%; 
+            font-size: 16px;                 
+        }
+        @media all and (max-width: 425px) {
+            top: 40%;
+            left: 33%; 
+            margin-right: 5%;
+            font-size: 14px;     
+        }
+        @media all and (max-width: 375px) {
+            top: 50%;
+            left: 28%; 
+            font-size: 14px;     
+        }  */  
+    }
+    .skipIntroButton:hover {
+        background: url('https://i.imgur.com/6YIRuRc.png') center / cover no-repeat;
+    }  
     .beamLeft {
         display: none;
         grid-area: 5 / 20 / 9 / 90; 
@@ -195,66 +315,9 @@ main {
         width: 330px;
         z-index: -10;
     }
-    #typedStrings {
-        position: absolute;
-        top: 50%;
-        left: 35%;
-        z-index: -25;
-        color: transparent;
-    }
-    #typed {
-        position: absolute; 
-        z-index: 15;
-        color: white; 
-        font-family: 'Montserrat', sans-serif;
-        @media all and (min-width: 1024px) {
-            top: 50%;
-            left: 35%; 
-            font-size: 23px;    
-        }
-        @media all and (min-width: 768px) and (max-width: 1024px) {
-            top: 40%;
-            left: 35%; 
-            margin-right: 5%;
-            font-size: 18px;     
-        }
-        @media all and (max-width: 768px) {
-            top: 38%;
-            left: 26%; 
-            font-size: 16px;                 
-        }
-        @media all and (max-width: 425px) {
-            top: 40%;
-            left: 33%; 
-            margin-right: 5%;
-            font-size: 14px;     
-        }
-        @media all and (max-width: 375px) {
-<<<<<<< HEAD
-            top: 50%;
-=======
-            top: 40%;
->>>>>>> a2283c76d8c7c0e873b02a3a234a647decd584b7
-            left: 28%; 
-            font-size: 14px;     
-        }    
-    }
-<<<<<<< HEAD
-    .typed-cursor {
-        position: absolute;
-        top: 80%;
-        left: 80%;
-        z-index: -25;
-        color: transparent;
-    }
     .geometricGif {
         display: none;
         position: absolute;
-=======
-    .geometricGif {
-        display: none;
-        position: absolute;
->>>>>>> a2283c76d8c7c0e873b02a3a234a647decd584b7
         top: 74%;
         left: 86%;
         width: 200px;
@@ -262,7 +325,7 @@ main {
         z-index: 5;
         background: url('https://media.giphy.com/media/cXVhybsxiJwIc5XiT3/giphy.gif') center / cover no-repeat;
 }
-
+   
 aside {
     display: grid;
     grid-area: 5 / 1 / 8 / 4;
@@ -422,7 +485,6 @@ aside {
             height: 270px;
             width: 158px;
         } 
-<<<<<<< HEAD
     }
     .plantImgToggle {
         margin-top: 337px;
@@ -492,32 +554,6 @@ aside {
             width: 106px;
         }             
 }   
-=======
-        }
-        .plantPhoto2 {
-            margin-top: 472px;
-            margin-left: 65px;
-            position: absolute;
-            z-index: 10;
-            background: url('https://i.imgur.com/iwmYPkg.png?2') center / cover no-repeat;
-            @media all and (max-width: 375px) {
-                height: 60px;
-                width: 55px;   
-            }  
-            @media all and (max-width: 425px) {
-                height: 65px;
-                width: 55px;
-            }     
-            @media all and (max-width: 768px) {
-                height: 135px;
-                width: 106px;
-            }
-            @media all and (min-width: 1024px) {
-                height: 135px;
-                width: 106px;
-            }             
-}
->>>>>>> a2283c76d8c7c0e873b02a3a234a647decd584b7
        
 footer {
     grid-area: 9 / 1 / 9 / 9;

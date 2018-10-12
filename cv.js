@@ -37,10 +37,10 @@ $(document).ready(function() {
             $ctx.drawImage($img, 245, 327, 249, 239);
         }
 }*/
-
+/*
     window.onresize = function() { 
         location.reload(); 
-}
+}*/
    
     window.onclick = function() {
 
@@ -117,76 +117,79 @@ $(document).ready(function() {
 
 //let $beamLeft = $('.beamLeft');
 //let $beamMiddle = $('.beamMiddle');
+let $pulseGif = $('.pulseGif');
 let $background = $('.background');
 let $photo = $('.photoIdImg'); 
 let $photoIdToggle = $('.photoIdToggle');
+let $skipIntro = $('.skipIntroButton');
 let $plantImg = $('.plantImg');
 let $plantImg2 = $('.plantImg2');
 
 $('body').one('click', function() {
    // $beamLeft.fadeOut(1500);
    // $beamMiddle.fadeOut(1500);
+    $pulseGif.fadeOut(500);
     $photo.fadeOut(1800).toggleClass('photoIdToggle');
 
     if (screen.width <= 424) {
         setTimeout(function() {
             $background.css('backgroundImage','url(https://i.imgur.com/VO7Pcha.png), url(https://i.imgur.com/o6ILxdK.jpg)');
-            }, 1700); 
+            }, 1200); 
     }
     else if (screen.width <= 769) {
         setTimeout(function() {
             $background.css('backgroundImage','url(https://i.imgur.com/8NR5cen.png?2), url(https://i.imgur.com/o6ILxdK.jpg)');
-            }, 1700); 
+            }, 1200); 
     }
     else if (screen.width >= 1024) {
         setTimeout(function() {
             $background.css('backgroundImage','url(https://i.imgur.com/0Z1E4Ap.png), url(https://i.imgur.com/o6ILxdK.jpg)');
-            }, 1700); 
+            }, 1200); 
     }
     else if (screen.width >= 1366) {
         setTimeout(function() {
             $background.css('backgroundImage','url(https://i.imgur.com/bFRdmfT.png), url(https://i.imgur.com/o6ILxdK.jpg)');
-            }, 1700);
+            }, 1200);
     }
     else if (screen.width >= 770) {
         setTimeout(function() {
             $background.css('backgroundImage','url(https://i.imgur.com/YvneonB.png?2), url(https://i.imgur.com/o6ILxdK.jpg)');
-            }, 1700); 
+            }, 1200); 
     }
     
-    
-
     var typed = new Typed('#typed', {
         stringsElement: '#typedStrings',
-        typeSpeed: 35
-        });
+        typeSpeed: 25
+    });
 
+    setTimeout(function() {
+        $skipIntro.fadeIn(1200);
+        }, 9700);
+        //  }, 1000);
+
+});
+
+$skipIntro.click(function() {
+    $('#typed').fadeOut(1000);
+   // setTimeout(function() {
+        $skipIntro.fadeOut(1200);
+   // }, 1700);
 });
 
 $photoIdToggle.click(function() {
     $photoIdToggle.toggleClass('photoIdImg');
-})
+});
 
 $plantImg.click(function() {
     $plantImg.toggleClass('plantImgToggle');
-})
+});
 
 $plantImg2.click(function() {
     $plantImg2.toggleClass('plantImg2Toggle');
-})
+});
 
 });
 
-<<<<<<< HEAD
-=======
-var typed = new Typed('#typed', {
-    stringsElement: '#typedStrings',
-    typeSpeed: 35
-      });
-}); 
-});
-
->>>>>>> a2283c76d8c7c0e873b02a3a234a647decd584b7
 
 /*
 let $img = document.getElementById("stairsImg");
