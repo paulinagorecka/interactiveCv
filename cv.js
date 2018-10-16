@@ -133,29 +133,30 @@ $('body').one('click', function() {
 
     if (screen.width <= 424) {
         setTimeout(function() {
-            $background.css('backgroundImage','url(https://i.imgur.com/VO7Pcha.png), url(https://i.imgur.com/o6ILxdK.jpg)');
+            $background.css('backgroundImage','url(https://i.imgur.com/jXMSkVl.png), url(https://i.imgur.com/o6ILxdK.jpg)');
             }, 1200); 
     }
     else if (screen.width <= 769) {
         setTimeout(function() {
-            $background.css('backgroundImage','url(https://i.imgur.com/8NR5cen.png?2), url(https://i.imgur.com/o6ILxdK.jpg)');
+            $background.css('backgroundImage','url(https://i.imgur.com/yPY1AWm.png), url(https://i.imgur.com/o6ILxdK.jpg)');
             }, 1200); 
     }
-    else if (screen.width >= 1024) {
+    else if (screen.width <= 1022) {
         setTimeout(function() {
-            $background.css('backgroundImage','url(https://i.imgur.com/0Z1E4Ap.png), url(https://i.imgur.com/o6ILxdK.jpg)');
+            $background.css('backgroundImage','url(https://i.imgur.com/CqeWz9c.png), url(https://i.imgur.com/o6ILxdK.jpg)');
+            }, 1200); 
+    } 
+    else if (screen.width <= 1363) {
+        setTimeout(function() {
+            $background.css('backgroundImage','url(https://i.imgur.com/c5SvPV8.png), url(https://i.imgur.com/o6ILxdK.jpg)');
             }, 1200); 
     }
-    else if (screen.width >= 1366) {
+    else {
         setTimeout(function() {
-            $background.css('backgroundImage','url(https://i.imgur.com/bFRdmfT.png), url(https://i.imgur.com/o6ILxdK.jpg)');
+            $background.css('backgroundImage','url(https://i.imgur.com/dSKMukN.png?1), url(https://i.imgur.com/o6ILxdK.jpg)');
             }, 1200);
     }
-    else if (screen.width >= 770) {
-        setTimeout(function() {
-            $background.css('backgroundImage','url(https://i.imgur.com/YvneonB.png?2), url(https://i.imgur.com/o6ILxdK.jpg)');
-            }, 1200); 
-    }
+  
     
     var typed = new Typed('#typed', {
         stringsElement: '#typedStrings',
@@ -164,8 +165,8 @@ $('body').one('click', function() {
 
     setTimeout(function() {
         $skipIntro.fadeIn(1200);
-        }, 9700);
-        //  }, 1000);
+      //  }, 9700); //here change button delay
+          }, 1000);
 
 });
 
