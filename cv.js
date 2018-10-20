@@ -1,135 +1,39 @@
-
 $(document).ready(function() {
-
-/*window.onload = function() {
-
-    let $canvas = document.getElementById('stairsCanvas');
-    let $ctx = $canvas.getContext("2d");
-    let $img = document.getElementById("stairsImg");
-    let $img2 = document.getElementById('stairsImg2')
-
-        if (this.screen.width <= 320) {
-            $canvas.width = 300;
-            $ctx.drawImage($img2, -21, 285, 340, 310);    
-        }
-        else if (screen.width <= 375) {
-            $canvas.width = 330;
-            $ctx.drawImage($img2, -4, 255, 380, 350);    
-        }
-        else if (screen.width <= 425) {
-            $canvas.width = 400;
-            $ctx.drawImage($img2, 3, 237, 410, 380); 
-        }
-        else if (screen.width <= 768) {
-            $canvas.width = 420;
-            $ctx.drawImage($img, 118, 326, 258, 240);
-        }
-        else if (screen.width <= 1024) {
-            $canvas.width = 450;
-            $ctx.drawImage($img, 155, 326, 250, 239); 
-        }
-        else if (screen.width <= 1366) {
-            $canvas.width = 630;
-            $ctx.drawImage($img, 202, 326, 248, 239);
-        }
-        else if (screen.width > 1366) {
-            $canvas.width = 630;
-            $ctx.drawImage($img, 245, 327, 249, 239);
-        }
-}*/
-/*
-    window.onresize = function() { 
-        location.reload(); 
-}*/
-   
-    window.onclick = function() {
-
-        let $canvas = document.getElementById('stairsCanvas');
-        let $ctx = $canvas.getContext("2d");
-        let $htmlBall = document.getElementById('htmlBall');
-        let $cssBall = document.getElementById('cssBall');
-        let $jsBall = document.getElementById('jsBall');
-        let $sassBall = document.getElementById('sassBall');
-        let $jqueryBall = document.getElementById('jqueryBall');
-        let $bootstrapBall = document.getElementById('bootstrapBall');
-        let $reactBall = document.getElementById('reactBall');
-        let $gitBall = document.getElementById('gitBall');
-        let $sqlBall = document.getElementById('sqlBall');
-        let $psBall = document.getElementById('psBall');
-        
-            if (screen.width <= 768) {
-                setTimeout(function() {
-                    $ctx.drawImage($htmlBall, 165, 253, 42, 42);
-                    $ctx.drawImage($cssBall, 203, 274, 42, 42);
-                    $ctx.drawImage($jsBall, 242, 298, 42, 42);
-                    $ctx.drawImage($jqueryBall, 280, 320, 45, 45);
-                    $ctx.drawImage($bootstrapBall, 302, 365, 48, 48);
-                    $ctx.drawImage($reactBall, 266, 393, 49, 49);
-                    $ctx.drawImage($gitBall, 231, 421, 49, 49);
-                    $ctx.drawImage($sqlBall, 195, 457, 49, 49);
-                    $ctx.drawImage($psBall, 154, 488, 51, 51);
-                    //$ctx.drawImage($sassBall, 107, 528, 51, 51);
-                }, 3000); 
-            }
-            else if (screen.width <= 1024) {
-                setTimeout(function() {
-                    $ctx.drawImage($htmlBall, 185, 250, 47, 47);
-                    $ctx.drawImage($cssBall, 223, 271, 47, 47);
-                    $ctx.drawImage($jsBall, 265, 295, 47, 47);
-                    $ctx.drawImage($jqueryBall, 307, 318, 50, 50);
-                    $ctx.drawImage($bootstrapBall, 322, 363, 52, 52);
-                    $ctx.drawImage($reactBall, 286, 391, 52, 52);
-                    $ctx.drawImage($gitBall, 251, 420, 54, 54);
-                    $ctx.drawImage($sqlBall, 208, 451, 54, 54);
-                    $ctx.drawImage($psBall, 167, 482, 56, 56);
-                    //$ctx.drawImage($sassBall, 120, 522, 56, 56);
-                }, 3000); 
-            }
-            else if (screen.width <= 1366) {
-                setTimeout(function() {
-                    $ctx.drawImage($htmlBall, 235, 252, 47, 47);
-                    $ctx.drawImage($cssBall, 273, 273, 47, 47);
-                    $ctx.drawImage($jsBall, 317, 298, 47, 47);
-                    $ctx.drawImage($jqueryBall, 357, 318, 50, 50);
-                    $ctx.drawImage($bootstrapBall, 372, 363, 52, 52);
-                    $ctx.drawImage($reactBall, 336, 391, 52, 52);
-                    $ctx.drawImage($gitBall, 301, 420, 54, 54);
-                    $ctx.drawImage($sqlBall, 258, 451, 54, 54);
-                    $ctx.drawImage($psBall, 217, 482, 56, 56);
-                    //$ctx.drawImage($sassBall, 170, 522, 56, 56);
-                }, 3000);
-            }
-            else if (screen.width > 1366) {
-                setTimeout(function() {
-                    $ctx.drawImage($htmlBall, 265, 249, 47, 47);
-                    $ctx.drawImage($cssBall, 303, 270, 47, 47);
-                    $ctx.drawImage($jsBall, 348, 291, 47, 47);
-                    $ctx.drawImage($jqueryBall, 387, 318, 50, 50);
-                    $ctx.drawImage($bootstrapBall, 402, 365, 52, 52);
-                    $ctx.drawImage($reactBall, 366, 391, 52, 52);
-                    $ctx.drawImage($gitBall, 331, 422, 54, 54);
-                    $ctx.drawImage($sqlBall, 288, 449, 54, 54);
-                    $ctx.drawImage($psBall, 247, 482, 56, 56);
-                    //$ctx.drawImage($sassBall, 197, 522, 56, 56);
-                }, 3000); 
-            }
-}
 
 //let $beamLeft = $('.beamLeft');
 //let $beamMiddle = $('.beamMiddle');
 let $pulseGif = $('.pulseGif');
 let $background = $('.background');
-let $photo = $('.photoIdImg'); 
+let $photoId = $('.photoIdImg'); 
 let $photoIdToggle = $('.photoIdToggle');
 let $skipIntro = $('.skipIntroButton');
+
+let $skills = $('.skills');
+let $htmlBall = $('.htmlBall');
+let $cssBall = $('.cssBall');
+let $jsBall = $('.jsBall');
+let $sassBall = $('.sassBall');
+let $jqueryBall = $('.jqueryBall');
+let $bootstrapBall = $('.bootstrapBall');
+let $reactBall = $('.reactBall');
+let $gitBall = $('.gitBall');
+let $sqlBall = $('.sqlBall');
+let $psBall = $('.psBall');
+
+let $contactMe = $('.contactMeButton');
 let $plantImg = $('.plantImg');
 let $plantImg2 = $('.plantImg2');
+let $formExitButton = $('.formExitButton');
+let $contactForm = $('#contactForm');
+let $topEdgePanel = $('.topEdgePanel');
+let $bottomEdgePanelGreen = $('.bottomEdgePanelGreen');
+
 
 $('body').one('click', function() {
    // $beamLeft.fadeOut(1500);
    // $beamMiddle.fadeOut(1500);
     $pulseGif.fadeOut(500);
-    $photo.fadeOut(1800).toggleClass('photoIdToggle');
+    $photoId.fadeOut(1800).toggleClass('photoIdToggle');
 
     if (screen.width <= 424) {
         setTimeout(function() {
@@ -141,7 +45,7 @@ $('body').one('click', function() {
             $background.css('backgroundImage','url(https://i.imgur.com/yPY1AWm.png), url(https://i.imgur.com/o6ILxdK.jpg)');
             }, 1200); 
     }
-    else if (screen.width <= 1022) {
+    else if (screen.width <= 1023) {
         setTimeout(function() {
             $background.css('backgroundImage','url(https://i.imgur.com/CqeWz9c.png), url(https://i.imgur.com/o6ILxdK.jpg)');
             }, 1200); 
@@ -156,7 +60,6 @@ $('body').one('click', function() {
             $background.css('backgroundImage','url(https://i.imgur.com/dSKMukN.png?1), url(https://i.imgur.com/o6ILxdK.jpg)');
             }, 1200);
     }
-  
     
     var typed = new Typed('#typed', {
         stringsElement: '#typedStrings',
@@ -168,13 +71,27 @@ $('body').one('click', function() {
       //  }, 9700); //here change button delay
           }, 1000);
 
+    if (screen.width > 770) {
+        setTimeout(function() {
+            $skills.fadeIn(2300);
+        }, 23000); 
+    }     
+
 });
 
 $skipIntro.click(function() {
     $('#typed').fadeOut(1000);
-   // setTimeout(function() {
         $skipIntro.fadeOut(1200);
-   // }, 1700);
+
+    setTimeout(function() {
+        $contactMe.fadeIn(1200);
+    }, 2000);
+
+    if (screen.width > 770) {    
+        setTimeout(function() {
+            $skills.fadeIn(2300);
+    }, 1000); 
+    }     
 });
 
 $photoIdToggle.click(function() {
@@ -189,15 +106,83 @@ $plantImg2.click(function() {
     $plantImg2.toggleClass('plantImg2Toggle');
 });
 
+$topEdgePanel.click(function() {
+
+    $(this).toggleClass('topEdgePanelToggle');
+
+   /* if ($(this).hasClass('topEdgePanel')) {
+        ($(this).removeClass('topEdgePanel').addClass('topEdgePanelToggle1'));
+    } 
+    else if ($(this).hasClass('topEdgePanelToggle1')) {
+        ($(this).removeClass('topEdgePanelTogglel').addClass('topEdgePanelToggle2'));
+    }
+    else {
+        ($(this).addClass('topEdgePanel'));
+    }
+   */
+
+});
+
+$bottomEdgePanelGreen.click(function() {
+    $bottomEdgePanelGreen.toggleClass('bottomEdgePanelGreenToggle'); 
+});
+
+$htmlBall.click(function() {
+    $htmlBall.toggleClass('htmlBallColor');
+});
+
+$cssBall.click(function() {
+    $cssBall.toggleClass('cssBallColor');
+});
+
+$jsBall.click(function() {
+    $jsBall.toggleClass('jsBallColor');
+});
+
+$sassBall.click(function() {
+    $sassBall.toggleClass('sassBallColor');
+});
+
+$jqueryBall.click(function() {
+    $jqueryBall.toggleClass('jqueryBallColor');
+});
+
+$bootstrapBall.click(function() {
+    $bootstrapBall.toggleClass('bootstrapBallColor');
+});
+
+$reactBall.click(function() {
+    $reactBall.toggleClass('reactBallColor');
+});
+
+$gitBall.click(function() {
+    $gitBall.toggleClass('gitBallColor');
+});
+
+$sqlBall.click(function() {
+    $sqlBall.toggleClass('sqlBallColor');
+});
+
+$psBall.click(function() {
+    $psBall.toggleClass('psBallColor');
+});
+
+$contactMe.click(function() {
+    $contactForm.fadeIn(600);
+});
+
+$formExitButton.click(function() {
+    $contactForm.fadeOut(600);
+});
+
 });
 
 
+
 /*
-let $img = document.getElementById("stairsImg");
-$img.animate({ "right": "+=50px" }, 1500 );
-
-    }); 
-
+    window.onresize = function() { 
+        location.reload(); 
+}
 
 
 let $cssBall = $('#cssBall');
