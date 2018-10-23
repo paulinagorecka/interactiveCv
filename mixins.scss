@@ -1,0 +1,39 @@
+@mixin skills ($height, $width, $position, $top, $left, $border-radius) {
+    height: $height;
+    width: $width;
+    position: $position;
+    top: $top;
+    left: $left;
+    border-radius: $border-radius;
+}
+
+@mixin typed ($top, $left, $margin-r, $font-size) {
+    top: $top;
+    left: $left; 
+    margin-right: $margin-r;
+    font-size: $font-size;   
+}
+
+@mixin plants ($height, $width, $top) {
+    width: $width;
+    height: $height;
+    top: $top;
+}
+    
+@mixin photoId ($height, $width, $left) {
+    width: $width;
+    height: $height;
+    left: $left;
+}
+
+@mixin resumeIcons ($top, $left, $height, $width, $margin) {
+    top: $top;
+    left: $left;
+    height: $height;
+    width: $width;
+    margin: $margin;
+}
+    
+
+
+

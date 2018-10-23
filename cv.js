@@ -7,6 +7,11 @@ let $background = $('.background');
 let $photoId = $('.photoIdImg'); 
 let $photoIdToggle = $('.photoIdToggle');
 let $skipIntro = $('.skipIntroButton');
+let $showIntro = $('.showIntroButton');
+let $showResume = $('.showResumeButton');
+let $intro = $('.intro');
+let $resume = $('.resume');
+let $nextIcon = $('.nextIcon');
 
 let $skills = $('.skills');
 let $htmlBall = $('.htmlBall');
@@ -68,20 +73,17 @@ $('body').one('click', function() {
 
     setTimeout(function() {
         $skipIntro.fadeIn(1200);
+        $showIntro.fadeIn(1200);
       //  }, 9700); //here change button delay
-          }, 1000);
-
-    if (screen.width > 770) {
-        setTimeout(function() {
-            $skills.fadeIn(2300);
-        }, 23000); 
-    }     
+    }, 1000);
 
 });
 
 $skipIntro.click(function() {
     $('#typed').fadeOut(1000);
-        $skipIntro.fadeOut(1200);
+    $(this).fadeOut(1200);
+    $intro.fadeOut(1200);
+    $resume.fadeIn(1200);
 
     setTimeout(function() {
         $contactMe.fadeIn(1200);
@@ -90,20 +92,55 @@ $skipIntro.click(function() {
     if (screen.width > 770) {    
         setTimeout(function() {
             $skills.fadeIn(2300);
-    }, 1000); 
+        }, 1000); 
     }     
 });
 
+$showIntro.click(function() {
+    $('#typed').fadeOut(1000);
+    $resume.fadeOut(1000);
+    $intro.fadeIn(1000);
+    $(this).fadeOut(1000);
+    $skipIntro.fadeOut(1000);
+    $contactMe.fadeIn(1000);
+    $showResume.fadeIn(1000);
+
+    if (screen.width > 770) {    
+        setTimeout(function() {
+            $skills.fadeIn(2300);
+        }, 1000);   
+    }
+});
+
+$showResume.click(function() {
+    $intro.fadeOut(1000);
+    $resume.fadeIn(1000); 
+    $(this).fadeOut(1000);
+    $skipIntro.fadeOut(1000);
+    $contactMe.fadeIn(1100);
+    $showIntro.fadeIn(1000);
+
+    if (screen.width > 770) {    
+        setTimeout(function() {
+            $skills.fadeIn(2300);
+        }, 1000); 
+    }     
+});
+
+$nextIcon.click(function() {
+    $resume.toggleClass('resume2'); 
+});
+
 $photoIdToggle.click(function() {
-    $photoIdToggle.toggleClass('photoIdImg');
+    $(this).toggleClass('photoIdImg');
 });
 
 $plantImg.click(function() {
-    $plantImg.toggleClass('plantImgToggle');
+    $(this).toggleClass('plantImgToggle');
 });
 
 $plantImg2.click(function() {
-    $plantImg2.toggleClass('plantImg2Toggle');
+    $(this).toggleClass('plantImg2Toggle');
 });
 
 $topEdgePanel.click(function() {
@@ -124,47 +161,47 @@ $topEdgePanel.click(function() {
 });
 
 $bottomEdgePanelGreen.click(function() {
-    $bottomEdgePanelGreen.toggleClass('bottomEdgePanelGreenToggle'); 
+    $(this).toggleClass('bottomEdgePanelGreenToggle'); 
 });
 
 $htmlBall.click(function() {
-    $htmlBall.toggleClass('htmlBallColor');
+    $(this).toggleClass('htmlBallColor');
 });
 
 $cssBall.click(function() {
-    $cssBall.toggleClass('cssBallColor');
+    $(this).toggleClass('cssBallColor');
 });
 
 $jsBall.click(function() {
-    $jsBall.toggleClass('jsBallColor');
+    $(this).toggleClass('jsBallColor');
 });
 
 $sassBall.click(function() {
-    $sassBall.toggleClass('sassBallColor');
+    $(this).toggleClass('sassBallColor');
 });
 
 $jqueryBall.click(function() {
-    $jqueryBall.toggleClass('jqueryBallColor');
+    $(this).toggleClass('jqueryBallColor');
 });
 
 $bootstrapBall.click(function() {
-    $bootstrapBall.toggleClass('bootstrapBallColor');
+    $(this).toggleClass('bootstrapBallColor');
 });
 
 $reactBall.click(function() {
-    $reactBall.toggleClass('reactBallColor');
+    $(this).toggleClass('reactBallColor');
 });
 
 $gitBall.click(function() {
-    $gitBall.toggleClass('gitBallColor');
+    $(this).toggleClass('gitBallColor');
 });
 
 $sqlBall.click(function() {
-    $sqlBall.toggleClass('sqlBallColor');
+    $(this).toggleClass('sqlBallColor');
 });
 
 $psBall.click(function() {
-    $psBall.toggleClass('psBallColor');
+    $(this).toggleClass('psBallColor');
 });
 
 $contactMe.click(function() {
@@ -182,12 +219,4 @@ $formExitButton.click(function() {
 /*
     window.onresize = function() { 
         location.reload(); 
-}
-
-
-let $cssBall = $('#cssBall');
-$('body').click(function() {
-setTimeout(function() {
-    $cssBall.fadeOut(2000);
-}, 7700);             
-})  */
+} */
