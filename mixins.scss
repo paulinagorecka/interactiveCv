@@ -33,6 +33,15 @@
     width: $width;
     margin: $margin;
 }
+
+@mixin h2 ($line-h, $v-align, $color, $background, $m-b-m) {
+    line-height: $line-h;
+    vertical-align: $v-align;
+    color: $color;
+    background: $background;
+    mix-blend-mode: $m-b-m;
+}
+
     
 
 
