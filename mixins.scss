@@ -1,3 +1,11 @@
+@mixin h2 ($line-h, $v-align, $color, $background, $m-b-m) {
+    line-height: $line-h;
+    vertical-align: $v-align;
+    color: $color;
+    background: $background;
+    mix-blend-mode: $m-b-m;
+}
+
 @mixin skills ($height, $width, $position, $top, $left, $border-radius) {
     height: $height;
     width: $width;
@@ -14,10 +22,18 @@
     font-size: $font-size;   
 }
 
-@mixin plants ($height, $width, $top) {
-    width: $width;
+@mixin buttons ($z-index, $height, $width, $align-s) {
+    z-index: $z-index;
     height: $height;
+    width: $width;
+    align-self: $align-s;
+}
+
+@mixin resumeIcons ($top, $left, $height, $width) {
     top: $top;
+    left: $left;
+    height: $height;
+    width: $width;
 }
     
 @mixin photoId ($height, $width, $left) {
@@ -26,21 +42,16 @@
     left: $left;
 }
 
-@mixin resumeIcons ($top, $left, $height, $width, $margin) {
-    top: $top;
-    left: $left;
-    height: $height;
+@mixin plants ($height, $width, $top) {
     width: $width;
-    margin: $margin;
+    height: $height;
+    top: $top;
 }
 
-@mixin h2 ($line-h, $v-align, $color, $background, $m-b-m) {
-    line-height: $line-h;
-    vertical-align: $v-align;
-    color: $color;
-    background: $background;
-    mix-blend-mode: $m-b-m;
-}
+
+
+
+
 
     
 

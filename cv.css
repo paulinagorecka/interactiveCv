@@ -25,13 +25,12 @@ header {
   height: 55px;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
-  background: url("https://i.imgur.com/OZdhzIA.png") center/cover no-repeat; }
+  background: url("img/edges/topEdgeBackground.png") top/cover no-repeat; }
 
 .topEdgeOverlay {
   background: #dbd5c3;
   height: 40px;
-  width: 420%;
-  margin-left: 0%; }
+  width: 420%; }
 
 h1 {
   grid-area: 1 / 1 / 3 / 3;
@@ -96,55 +95,55 @@ h2 {
       padding-right: 4%; } }
 
 .topEdgePanel, .topEdgePanelToggle {
-  z-index: 5;
   grid-area: 3 / 1 / 3 / 9;
-  background: url("https://i.imgur.com/wVrzZRC.jpg?3");
-  background-size: cover;
+  z-index: 5;
+  height: 15px;
   width: 100%;
-  height: 15px; }
+  background: url("img/edges/edgePanel.jpg");
+  background-size: cover; }
 
 .topEdgePanel:hover, .topEdgePanelToggle:hover {
   cursor: default; }
 
 .topEdgePanelToggle {
-  background: url("https://i.imgur.com/0b4x9Sc.jpg?1"); }
+  background: url("img/edges/edgePanelToggle.jpg"); }
 
 .background {
   grid-area: 5 / 1 / 15 / 9;
-  width: 100%;
   z-index: 1;
+  width: 100%;
   transition: all 0.5s linear; }
   @media all and (min-width: 1800px) {
     .background {
-      background: url("https://i.imgur.com/FZyaDUd.png") left/cover no-repeat;
+      background: url("img/backgrounds/min1364px.png") left/cover no-repeat;
       height: 1300px; } }
   @media all and (min-width: 1364px) and (max-width: 1799px) {
     .background {
-      background: url("https://i.imgur.com/FZyaDUd.png") left/cover no-repeat;
+      background: url("img/backgrounds/min1364px.png") left/cover no-repeat;
       height: 820px; } }
   @media all and (min-width: 1024px) and (max-width: 1363px) {
     .background {
-      background: url("https://i.imgur.com/f4MAFfS.png") center/cover no-repeat;
+      background: url("img/backgrounds/min1024px.png") center/cover no-repeat;
       height: 1000px; } }
   @media all and (min-width: 1024px) and (max-width: 1363px) and (orientation: landscape) {
     .background {
-      background: url("https://i.imgur.com/f4MAFfS.png") center/cover no-repeat;
+      background: url("img/backgrounds/min1024px.png") center/cover no-repeat;
       height: 780px; } }
   @media all and (min-width: 770px) and (max-width: 1023px) {
     .background {
-      background: url("https://i.imgur.com/MMrSgOX.png") left/cover no-repeat;
+      background: url("img/backgrounds/min770px.png") left/cover no-repeat;
       height: 1200px; } }
   @media all and (min-width: 770px) and (max-width: 1023px) and (orientation: landscape) {
     .background {
-      background: url("https://i.imgur.com/MMrSgOX.png") left/cover no-repeat;
+      background: url("img/backgrounds/min770px.png") left/cover no-repeat;
       height: 800px; } }
   @media all and (min-width: 425px) and (max-width: 769px) {
     .background {
-      background: url("https://i.imgur.com/arsK0BQ.png") left/cover no-repeat;
+      background: url("img/backgrounds/min425px.png") left/cover no-repeat;
       height: 900px; } }
   @media all and (max-width: 424px) {
     .background {
-      background: url("https://i.imgur.com/Fm4Csxd.png") center/cover no-repeat;
+      background: url("img/backgrounds/max424px.png") center/cover no-repeat;
       height: 699px; } }
 
 .skills {
@@ -201,47 +200,47 @@ h2 {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 61.2%;
+  top: 61.3%;
   left: 42%;
   border-radius: 50%;
-  background: url("https://i.imgur.com/T1YEvK2.png?1") center/cover no-repeat;
-  animation: greenPulse 5s infinite; }
+  background: url("img/skills/b&w/html.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
 
 .htmlBall:hover {
   cursor: default;
-  background: url("https://i.imgur.com/mN4m3Ep.png?1") center/cover no-repeat; }
+  background: url("img/skills/color/html.png") center/cover no-repeat; }
 
 .htmlBallColor {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 61.2%;
+  top: 61.3%;
   left: 42%;
-  border-radius: 0;
-  background: url("https://i.imgur.com/mN4m3Ep.png?1") center/cover no-repeat; }
+  border-radius: 50%;
+  background: url("img/skills/color/html.png") center/cover no-repeat; }
 
 .cssBall {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 61.5%;
+  top: 61.6%;
   left: 52%;
   border-radius: 50%;
-  background: url("https://i.imgur.com/H9o6qb2.png?3") center/cover no-repeat;
-  animation: greenPulse 5s infinite; }
+  background: url("img/skills/b&w/css.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
 
 .cssBall:hover {
   cursor: default;
-  background: url("https://i.imgur.com/ojZcFas.png?1") center/cover no-repeat; }
+  background: url("img/skills/color/css.png") center/cover no-repeat; }
 
 .cssBallColor {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 61.5%;
+  top: 61.6%;
   left: 52%;
-  border-radius: 0;
-  background: url("https://i.imgur.com/ojZcFas.png?1") center/cover no-repeat; }
+  border-radius: 50%;
+  background: url("img/skills/color/css.png") center/cover no-repeat; }
 
 .jsBall {
   height: 37px;
@@ -250,12 +249,12 @@ h2 {
   top: 61.9%;
   left: 62%;
   border-radius: 50%;
-  background: url("https://i.imgur.com/i7FYSyW.png?1") center/cover no-repeat;
-  animation: greenPulse 5s infinite; }
+  background: url("img/skills/b&w/js.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
 
 .jsBall:hover {
   cursor: default;
-  background: url("https://i.imgur.com/RiC9xJn.png?1") center/cover no-repeat; }
+  background: url("img/skills/color/js.png") center/cover no-repeat; }
 
 .jsBallColor {
   height: 37px;
@@ -263,146 +262,146 @@ h2 {
   position: absolute;
   top: 61.9%;
   left: 62%;
-  border-radius: 0;
-  background: url("https://i.imgur.com/RiC9xJn.png?1") center/cover no-repeat; }
+  border-radius: 50%;
+  background: url("img/skills/color/js.png") center/cover no-repeat; }
 
 .jqueryBall {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 68.8%;
+  top: 68.6%;
   left: 39%;
   border-radius: 50%;
-  background: url("https://i.imgur.com/bSren41.png") center/cover no-repeat;
-  animation: greenPulse 5s infinite; }
+  background: url("img/skills/b&w/jquery.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
 
 .jqueryBall:hover {
   cursor: default;
-  background: url("https://i.imgur.com/ZjI7ZjB.png") center/cover no-repeat; }
+  background: url("img/skills/color/jquery.png") center/cover no-repeat; }
 
 .jqueryBallColor {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 68.8%;
+  top: 68.6%;
   left: 39%;
-  border-radius: 0;
-  background: url("https://i.imgur.com/ZjI7ZjB.png") center/cover no-repeat; }
+  border-radius: 50%;
+  background: url("img/skills/color/jquery.png") center/cover no-repeat; }
 
 .sassBall {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 68.8%;
+  top: 68.6%;
   left: 48%;
   border-radius: 50%;
-  background: url("https://i.imgur.com/stPZQUY.png") center/cover no-repeat;
-  animation: greenPulse 5s infinite; }
+  background: url("img/skills/b&w/sass.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
 
 .sassBall:hover {
   cursor: default;
-  background: url("https://i.imgur.com/hHnZCVH.png") center/cover no-repeat; }
+  background: url("img/skills/color/sass.png") center/cover no-repeat; }
 
 .sassBallColor {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 68.8%;
+  top: 68.6%;
   left: 48%;
-  border-radius: 0;
-  background: url("https://i.imgur.com/hHnZCVH.png") center/cover no-repeat; }
+  border-radius: 50%;
+  background: url("img/skills/color/sass.png") center/cover no-repeat; }
 
 .bootstrapBall {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 68.8%;
+  top: 68.6%;
   left: 57%;
   border-radius: 50%;
-  background: url("https://i.imgur.com/ZB4EjFv.png") center/cover no-repeat;
-  animation: greenPulse 5s infinite; }
+  background: url("img/skills/b&w/bootstrap.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
 
 .bootstrapBall:hover {
   cursor: default;
-  background: url("https://i.imgur.com/bYg4b3c.png") center/cover no-repeat; }
+  background: url("img/skills/color/bootstrap.png") center/cover no-repeat; }
 
 .bootstrapBallColor {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 68.8%;
+  top: 68.6%;
   left: 57%;
-  border-radius: 0;
-  background: url("https://i.imgur.com/bYg4b3c.png") center/cover no-repeat; }
+  border-radius: 50%;
+  background: url("img/skills/color/bootstrap.png") center/cover no-repeat; }
 
 .reactBall {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 68.7%;
+  top: 68.5%;
   left: 66%;
   border-radius: 50%;
-  background: url("https://i.imgur.com/rQyJDDO.png") center/cover no-repeat;
-  animation: greenPulse 5s infinite; }
+  background: url("img/skills/b&w/react.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
 
 .reactBall:hover {
   cursor: default;
-  background: url("https://i.imgur.com/OfzZq41.png") center/cover no-repeat; }
+  background: url("img/skills/color/react.png") center/cover no-repeat; }
 
 .reactBallColor {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 68.7%;
+  top: 68.5%;
   left: 66%;
-  border-radius: 0;
-  background: url("https://i.imgur.com/OfzZq41.png") center/cover no-repeat; }
+  border-radius: 50%;
+  background: url("img/skills/color/react.png") center/cover no-repeat; }
 
 .gitBall {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 77%;
+  top: 76.6%;
   left: 34%;
   border-radius: 50%;
-  background: url("https://i.imgur.com/a5a7Zhe.png") center/cover no-repeat;
-  animation: greenPulse 5s infinite; }
+  background: url("img/skills/b&w/git.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
 
 .gitBall:hover {
   cursor: default;
-  background: url("https://i.imgur.com/D53oliB.png") center/cover no-repeat; }
+  background: url("img/skills/color/git.png") center/cover no-repeat; }
 
 .gitBallColor {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 77%;
+  top: 76.6%;
   left: 34%;
-  border-radius: 0;
-  background: url("https://i.imgur.com/D53oliB.png") center/cover no-repeat; }
+  border-radius: 50%;
+  background: url("img/skills/color/git.png") center/cover no-repeat; }
 
 .sqlBall {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 76.7%;
+  top: 76.5%;
   left: 44%;
   border-radius: 50%;
-  background: url("https://i.imgur.com/KaxYm1O.png") center/cover no-repeat;
-  animation: greenPulse 5s infinite; }
+  background: url("img/skills/b&w/sql.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
 
 .sqlBall:hover {
   cursor: default;
-  background: url("https://i.imgur.com/YpNeaNa.png") center/cover no-repeat; }
+  background: url("img/skills/color/sql.png") center/cover no-repeat; }
 
 .sqlBallColor {
   height: 37px;
   width: 37px;
   position: absolute;
-  top: 76.7%;
+  top: 76.5%;
   left: 44%;
-  border-radius: 0;
-  background: url("https://i.imgur.com/YpNeaNa.png") center/cover no-repeat; }
+  border-radius: 50%;
+  background: url("img/skills/color/sql.png") center/cover no-repeat; }
 
 .psBall {
   height: 37px;
@@ -411,12 +410,12 @@ h2 {
   top: 76.5%;
   left: 54%;
   border-radius: 50%;
-  background: url("https://i.imgur.com/33mA374.png") center/cover no-repeat;
-  animation: greenPulse 5s infinite; }
+  background: url("img/skills/b&w/ps.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
 
 .psBall:hover {
   cursor: default;
-  background: url("https://i.imgur.com/duMjAaW.png") center/cover no-repeat; }
+  background: url("img/skills/color/ps.png") center/cover no-repeat; }
 
 .psBallColor {
   height: 37px;
@@ -424,14 +423,15 @@ h2 {
   position: absolute;
   top: 76.5%;
   left: 54%;
-  border-radius: 0;
-  background: url("https://i.imgur.com/duMjAaW.png") center/cover no-repeat; }
+  border-radius: 50%;
+  background: url("img/skills/color/ps.png") center/cover no-repeat; }
 
-#typedStrings {
+#typedStrings, .typed-cursor {
+  display: none;
   position: absolute;
+  z-index: -25;
   top: 50%;
   left: 35%;
-  z-index: -25;
   color: transparent; }
 
 #typed {
@@ -494,25 +494,18 @@ h2 {
       margin-right: 5%;
       font-size: 11px; } }
 
-.typed-cursor {
-  position: absolute;
-  top: 80%;
-  left: 80%;
-  z-index: -25;
-  color: transparent; }
-
 main {
   grid-area: 2 / 1 / 15 / 9;
+  height: 100%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(100, 1fr);
   grid-template-rows: auto;
-  height: 100%;
-  width: 100%;
   overflow: hidden; }
 
 .pulseGif {
   z-index: -6;
-  background: url("https://s2.gifyu.com/images/pulseGif.gif") center/cover no-repeat; }
+  background: url("img/buttons/pulseGif.gif") center/cover no-repeat; }
   @media all and (min-width: 1366px) {
     .pulseGif {
       grid-area: 4 / 55 / 7 / 70;
@@ -549,11 +542,11 @@ main {
 
 .showIntroButton, .showResumeButton {
   display: none;
+  z-index: 5;
   height: 27.5px;
   width: 151px;
-  z-index: 5;
   align-self: center;
-  background: url("https://i.imgur.com/JItIDn6.png") center/cover no-repeat; }
+  background: url("img/buttons/showIntro.png") center/cover no-repeat; }
   @media all and (min-width: 1366px) {
     .showIntroButton, .showResumeButton {
       grid-area: 8 / 64 / 9 / 84;
@@ -580,12 +573,12 @@ main {
 
 .showIntroButton:hover, .showResumeButton:hover {
   cursor: default;
-  background: url("https://i.imgur.com/FSpXdVA.png") center/cover no-repeat; }
+  background: url("img/buttons/showIntroHover.png") center/cover no-repeat; }
 
 .intro {
   display: none;
   z-index: 15;
-  background: url("https://i.imgur.com/3ozUY89.png") center/contain no-repeat; }
+  background: url("img/text-screens/introLarge.png") center/contain no-repeat; }
   @media all and (min-width: 1800px) {
     .intro {
       grid-area: 4 / 53 / 9 / 100;
@@ -620,28 +613,28 @@ main {
       height: 90%;
       width: 90%;
       margin-top: 5%;
-      background: url("https://i.imgur.com/SoKupT7.png") center/contain no-repeat; } }
+      background: url("img/text-screens/introSmall.png") center/contain no-repeat; } }
   @media all and (min-width: 425px) and (max-width: 559px) {
     .intro {
       grid-area: 3 / 36 / 8 / 100;
       height: 100%;
       width: 100%;
-      background: url("https://i.imgur.com/SoKupT7.png") center/contain no-repeat; } }
+      background: url("img/text-screens/introSmall.png") center/contain no-repeat; } }
   @media all and (max-width: 424px) {
     .intro {
       grid-area: 3 / 30 / 8 / 100;
       height: 90%;
       width: 90%;
-      background: url("https://i.imgur.com/SoKupT7.png") center/contain no-repeat; } }
+      background: url("img/text-screens/introSmall.png") center/contain no-repeat; } }
 
 .skipIntroButton, .contactMeButton {
   display: none;
-  height: 28px;
-  width: 151px;
   margin-top: 100%;
   z-index: 25;
+  height: 28px;
+  width: 151px;
   align-self: center;
-  background: url("https://i.imgur.com/ka5PwMd.png") center/cover no-repeat; }
+  background: url("img/buttons/skipIntro.png") center/cover no-repeat; }
   @media all and (min-width: 1366px) {
     .skipIntroButton, .contactMeButton {
       grid-area: 8 / 79 / 9 / 91;
@@ -667,12 +660,19 @@ main {
 
 .skipIntroButton:hover, .contactMeButton:hover {
   cursor: default;
-  background: url("https://i.imgur.com/s4G7c66.png") center/cover no-repeat; }
+  background: url("img/buttons/skipIntroHover.png") center/cover no-repeat; }
+
+.showResumeButton {
+  background: url("img/buttons/showResume.png") center/cover no-repeat; }
+
+.showResumeButton:hover {
+  cursor: default;
+  background: url("img/buttons/showResumeHover.png") center/cover no-repeat; }
 
 .resume, .resume2 {
   display: none;
   z-index: 15;
-  background: url("https://i.imgur.com/HIl4z5B.png") center/contain no-repeat; }
+  background: url("img/text-screens/resume.png") center/contain no-repeat; }
   @media all and (min-width: 1800px) {
     .resume, .resume2 {
       grid-area: 4 / 53 / 9 / 100;
@@ -690,11 +690,16 @@ main {
       grid-area: 3 / 43 / 9 / 100;
       height: 79%;
       width: 79%; } }
-  @media all and (min-width: 770px) and (max-width: 1025px) {
+  @media all and (min-width: 770px) and (max-width: 1025px) and (orientation: landscape) {
     .resume, .resume2 {
       grid-area: 3 / 43 / 9 / 100;
       height: 83%;
       width: 83%; } }
+  @media all and (min-width: 770px) and (max-width: 1025px) and (orientation: portrait) {
+    .resume, .resume2 {
+      grid-area: 2 / 43 / 7 / 100;
+      height: 100%;
+      width: 100%; } }
   @media all and (min-width: 681px) and (max-width: 769px) {
     .resume, .resume2 {
       grid-area: 3 / 23 / 8 / 100;
@@ -718,17 +723,47 @@ main {
       height: 110%;
       width: 110%; } }
 
+      
+.resume2 {
+  background: url("img/text-screens/resume2.png") center/contain no-repeat; }
+
+.resumeIcons {
+  z-index: inherit;
+  position: relative; }
+  @media all and (min-width: 760px) {
+    .resumeIcons {
+      top: 90%;
+      left: 85%;
+      height: 30px;
+      width: 100px; } }
+  @media all and (min-width: 550px) and (max-width: 759px) {
+    .resumeIcons {
+      top: 98%;
+      left: 78%;
+      height: 30px;
+      width: 100px; } }
+  @media all and (min-width: 360px) and (max-width: 549px) {
+    .resumeIcons {
+      top: 93%;
+      left: 65%;
+      height: 30px;
+      width: 100px; } }
+  @media all and (max-width: 359px) {
+    .resumeIcons {
+      top: 88%;
+      left: 63%;
+      height: 30px;
+      width: 100px; } }
+
 .nextIcon {
-  z-index: 25;
-  position: relative;
+  position: absolute;
   border-radius: 50%;
-  top: 86%;
-  left: 85%;
+  background: url("img/buttons/nextIcon.png") center/contain no-repeat;
+  animation: greenPulse 2s infinite;
+  top: 10%;
+  left: 5%;
   height: 20px;
-  width: 20px;
-  margin: 5%;
-  background: url("https://i.imgur.com/RtSS8tw.png") center/contain no-repeat;
-  animation: greenPulse 2s infinite; }
+  width: 20px; }
 
 @keyframes greenPulse {
   from {
@@ -739,30 +774,14 @@ main {
     box-shadow: 0 0 7px #333; } }
 .nextIcon:hover {
   cursor: default;
-  z-index: 25;
-  position: relative;
-  top: 86%;
-  left: 85%;
-  height: 20px;
-  width: 20px;
-  margin: 5%;
-  background: url("https://i.imgur.com/cpsmSIl.png") center/cover no-repeat; }
+  background: url("img/buttons/nextIconHover.png") center/cover no-repeat; }
 
 .pdfDownload {
-  z-index: 25;
-  position: relative;
-  top: 77.3%;
-  left: 90%;
+  position: absolute;
+  top: 3.9%;
+  left: 40%;
   height: 25px;
-  width: 22px;
-  margin: 5%; }
-  @media all and (min-width: 1366px) {
-    .pdfDownload {
-      top: 80.2%;
-      left: 90%;
-      height: 25px;
-      width: 22px;
-      margin: 5%; } }
+  width: 22px; }
 
 .pdfDownload img {
   position: relative;
@@ -772,23 +791,13 @@ main {
 .pdfDownload a:hover {
   cursor: default; }
 
-.resume2 {
-  background: url("https://i.imgur.com/g0G09dq.png") center/contain no-repeat; }
-
-.showResumeButton {
-  background: url("https://i.imgur.com/Tr79D6n.png") center/cover no-repeat; }
-
-.showResumeButton:hover {
-  cursor: default;
-  background: url("https://i.imgur.com/QIqZGED.png") center/cover no-repeat; }
-
 .contactMeButton {
   z-index: 5;
-  background: url("https://i.imgur.com/Psj0wL1.png") center/cover no-repeat; }
+  background: url("img/buttons/contact.png") center/cover no-repeat; }
 
 .contactMeButton:hover {
   cursor: default;
-  background: url("https://i.imgur.com/GT5Tkbs.png") center/cover no-repeat; }
+  background: url("img/buttons/contactHover.png") center/cover no-repeat; }
 
 #contactForm {
   display: none;
@@ -800,7 +809,7 @@ main {
   margin: 20px auto;
   box-shadow: 0px 0px 0px 30px rgba(0, 0, 0, 0.3);
   font-family: 'Montserrat', sans-serif;
-  background: url("https://i.imgur.com/o6ILxdK.jpg") center/cover no-repeat; }
+  background: url("img/text-screens/formBackground.jpg") center/cover no-repeat; }
   @media all and (min-width: 417px) and (max-width: 980px) {
     #contactForm {
       width: 110%;
@@ -835,11 +844,11 @@ main {
 
 .formExitButton {
   z-index: 40;
-  color: white;
-  font-size: 21px;
   position: relative;
   top: -15%;
-  left: 98%; }
+  left: 98%;
+  color: white;
+  font-size: 21px; }
   @media all and (max-width: 950px) {
     .formExitButton {
       top: -12%;
@@ -866,10 +875,10 @@ main {
       margin-top: 7px; } }
 
 input, textarea {
-  padding: 5px;
   width: 80%;
-  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px;
   margin: 0px 0px 10px 0px;
   border: 2px solid #ccc; }
   @media all and (max-width: 980px) {
@@ -909,16 +918,16 @@ textarea:focus, input:focus {
       margin-right: 10%; } }
 
 label {
-  float: left;
-  text-align: right;
-  margin-right: 15px;
   width: 100px;
+  margin-right: 15px;
   padding-top: 5px;
-  font-size: 12px; }
+  font-size: 12px;
+  float: left;
+  text-align: right; }
 
 .emailAddress {
-  font-size: 12px;
   margin-left: 7%;
+  font-size: 12px;
   text-align: center; }
 
 a {
@@ -931,12 +940,12 @@ aside {
 
 .photoIdToggle, .photoIdImg {
   position: absolute;
-  top: 230px;
   z-index: 1;
+  top: 230px;
   padding: 3px;
   border-radius: 100%;
   box-shadow: -6px 6px 8px #808080;
-  background: url("https://s2.gifyu.com/images/photoImgToggle2.gif") center/cover no-repeat; }
+  background: url("img/aside/photoIdToggle.gif") center/cover no-repeat; }
   @media all and (min-width: 1800px) {
     .photoIdToggle, .photoIdImg {
       top: 270px;
@@ -983,7 +992,7 @@ aside {
   cursor: default; }
 
 .photoIdImg {
-  background: url("https://i.imgur.com/uGwgioR.png") center/cover no-repeat; }
+  background: url("img/aside/photoIdImg.png") center/cover no-repeat; }
 
 .photoIdImg:hover {
   cursor: default; }
@@ -991,7 +1000,7 @@ aside {
 .plantImg, .plantImgToggle {
   position: absolute;
   z-index: 10;
-  background: url("https://i.imgur.com/nR2Ndn3.png") center/cover no-repeat; }
+  background: url("img/aside/plantImg.png") center/cover no-repeat; }
   @media all and (min-width: 1800px) {
     .plantImg, .plantImgToggle {
       width: 158px;
@@ -1037,16 +1046,16 @@ aside {
   cursor: default; }
 
 .plantImgToggle {
-  background: url("https://i.imgur.com/gJowXXK.png") center/cover no-repeat; }
+  background: url("img/aside/plantImgToggle.png") center/cover no-repeat; }
 
 .plantImgToggle:hover {
   cursor: default; }
 
 .plantImg2, .plantImg2Toggle {
   position: absolute;
-  left: 72px;
   z-index: 15;
-  background: url("https://i.imgur.com/pgtPXAB.png") center/cover no-repeat; }
+  left: 72px;
+  background: url("img/aside/plantImg2.png") center/cover no-repeat; }
   @media all and (min-width: 1800px) {
     .plantImg2, .plantImg2Toggle {
       width: 106px;
@@ -1094,7 +1103,7 @@ aside {
   cursor: default; }
 
 .plantImg2Toggle {
-  background: url("https://i.imgur.com/DNQSZ5u.png") center/cover no-repeat; }
+  background: url("img/aside/plantImg2Toggle.png") center/cover no-repeat; }
 
 .plantImg2Toggle:hover {
   cursor: default; }
@@ -1103,22 +1112,22 @@ footer {
   grid-area: 15 / 1 / 16 / 9;
   overflow: hidden; }
 
-.bottomEdgePanelGreen, .bottomEdgePanelGreenToggle {
+.bottomEdgePanel, .bottomEdgePanelToggle {
   z-index: 2;
-  background: url("https://i.imgur.com/wVrzZRC.jpg?3");
-  background-size: cover;
+  height: 15px;
   width: 100%;
-  height: 15px; }
+  background: url("img/edges/edgePanel.jpg");
+  background-size: cover; }
 
 .bottomEdgePanel:hover {
   cursor: default; }
 
-.bottomEdgePanelGreenToggle {
-  background: url("https://i.imgur.com/0b4x9Sc.jpg?1"); }
+.bottomEdgePanelToggle {
+  background: url("img/edges/edgePanelToggle.jpg"); }
 
 .bottomEdgePanelGray {
-  background: #dbd5c3;
   width: 100%;
-  height: 20px; }
+  height: 20px;
+  background: #dbd5c3; }
 
 /*# sourceMappingURL=cv.css.map */

@@ -30,87 +30,86 @@ header {
         height: 55px;
         width: 100%;
         font-family: 'Montserrat', sans-serif;
-        background: url('https://i.imgur.com/OZdhzIA.png') center / cover no-repeat;
-    }
-    .topEdgeOverlay {
-        background: #dbd5c3;
-        height: 40px;
-        width: 420%;
-        margin-left: 0%;   
-    }
-    h1 {
-        grid-area: 1 / 1 / 3 / 3;  
-        height: 40px;
-        width: 100%;
-        padding-left: 10%;
-        @include h2 (40px, middle, black, #dbd5c3, lighten);
-        @media all and (min-width: 1024px) {
-            font-size: 27px;
+        background: url('https://i.imgur.com/OZdhzIA.png') top / cover no-repeat;
         }
-        @media all and (min-width: 768px) and (max-width: 1024px) {
-            font-size: 24px;
+        .topEdgeOverlay {
+            background: #dbd5c3;
+            height: 40px;
+            width: 420%;
         }
-        @media all and (max-width: 768px) {
-            font-size: 24px;
+        h1 {
+            grid-area: 1 / 1 / 3 / 3;  
+            height: 40px;
+            width: 100%;
+            padding-left: 10%;
+            @include h2 (40px, middle, black, #dbd5c3, lighten);
+            @media all and (min-width: 1024px) {
+                font-size: 27px;
+            }
+            @media all and (min-width: 768px) and (max-width: 1024px) {
+                font-size: 24px;
+            }
+            @media all and (max-width: 768px) {
+                font-size: 24px;
+            }
+            @media all and (max-width: 425px) {
+                font-size: 19px;
+                padding-left: 6%;
+            }
+            @media all and (max-width: 375px) {
+                font-size: 18px;
+                padding-right: 6%;
+            }
+            @media all and (max-width: 320px) {
+                font-size: 17px;
+                padding-left: 6%;
+            }
         }
-        @media all and (max-width: 425px) {
-            font-size: 19px;
-            padding-left: 6%;
+        h2 {
+            grid-area: 1 / 7 / 3 / 9;
+            height: 40px;
+            width: 100%;
+            padding-right: 10%;
+            text-align: right;
+            @include h2 (40px, middle, black, #dbd5c3, lighten);
+            @media all and (min-width: 1024px) {
+                font-size: 23px;
+            }
+            @media all and (max-width: 768px) {
+                font-size: 18px;
+            }
+            @media all and (max-width: 425px) {
+                font-size: 15px;
+                padding-right: 4%;
+            }
+            @media all and (max-width: 375px) {
+                font-size: 13px;
+                padding-right: 4%;
+            }
+            @media all and (max-width: 320px) {
+                font-size: 12px;
+                padding-right: 4%;
+            }
         }
-        @media all and (max-width: 375px) {
-            font-size: 18px;
-            padding-right: 6%;
+        .topEdgePanel {
+            grid-area: 3 / 1 / 3 / 9;
+            z-index: 5;
+            height: 15px;
+            width: 100%;
+            background: url('https://i.imgur.com/wVrzZRC.jpg?3');
+            background-size: cover; 
         }
-        @media all and (max-width: 320px) {
-            font-size: 17px;
-            padding-left: 6%;
+        .topEdgePanel:hover {
+            cursor: default;
         }
-    }
-    h2 {
-        grid-area: 1 / 7 / 3 / 9;
-        height: 40px;
-        width: 100%;
-        padding-right: 10%;
-        text-align: right;
-        @include h2 (40px, middle, black, #dbd5c3, lighten);
-        @media all and (min-width: 1024px) {
-            font-size: 23px;
-        }
-        @media all and (max-width: 768px) {
-            font-size: 18px;
-        }
-        @media all and (max-width: 425px) {
-            font-size: 15px;
-            padding-right: 4%;
-        }
-        @media all and (max-width: 375px) {
-            font-size: 13px;
-            padding-right: 4%;
-        }
-        @media all and (max-width: 320px) {
-            font-size: 12px;
-            padding-right: 4%;
-        }
-    }
-    .topEdgePanel {
-        z-index: 5;
-        grid-area: 3 / 1 / 3 / 9;
-        background: url('https://i.imgur.com/wVrzZRC.jpg?3');
-        background-size: cover; 
-        width: 100%;
-        height: 15px;
-    }
-    .topEdgePanel:hover {
-        cursor: default;
-    }
-    .topEdgePanelToggle {
-        @extend .topEdgePanel;
-        background: url('https://i.imgur.com/0b4x9Sc.jpg?1');    
-    }
+        .topEdgePanelToggle {
+            @extend .topEdgePanel;
+            background: url('https://i.imgur.com/0b4x9Sc.jpg?1');    
+}
 .background {
     grid-area: 5 / 1 / 15 / 9;
-    width: 100%;
     z-index: 1;
+    width: 100%;
     transition: all 0.5s linear;
     @media all and (min-width: 1800px) {
         background: url('https://i.imgur.com/FZyaDUd.png') left / cover no-repeat;
@@ -196,141 +195,142 @@ header {
         } 
         }
         .htmlBall {
-            @include skills (37px, 37px, absolute, 61.2%, 42%, 50%);
+            @include skills (37px, 37px, absolute, 61.3%, 42%, 50%);
             background: url('https://i.imgur.com/T1YEvK2.png?1') center / cover no-repeat;
-            animation: greenPulse 5s infinite;
+            animation: greenPulse 4s infinite;
         }
         .htmlBall:hover {
             cursor: default;
             background: url('https://i.imgur.com/mN4m3Ep.png?1') center / cover no-repeat;
         }
         .htmlBallColor {
-            @include skills (37px, 37px, absolute, 61.2%, 42%, 0);
+            @include skills (37px, 37px, absolute, 61.3%, 42%, 50%);
             background: url('https://i.imgur.com/mN4m3Ep.png?1') center / cover no-repeat;
         }
         .cssBall {
-            @include skills (37px, 37px, absolute, 61.5%, 52%, 50%);
+            @include skills (37px, 37px, absolute, 61.6%, 52%, 50%);
             background: url('https://i.imgur.com/H9o6qb2.png?3') center / cover no-repeat;
-            animation: greenPulse 5s infinite;
+            animation: greenPulse 4s infinite;
         }
         .cssBall:hover {
             cursor: default;
             background: url('https://i.imgur.com/ojZcFas.png?1') center / cover no-repeat;
         }
         .cssBallColor {
-            @include skills (37px, 37px, absolute, 61.5%, 52%, 0);
+            @include skills (37px, 37px, absolute, 61.6%, 52%, 50%);
             background: url('https://i.imgur.com/ojZcFas.png?1') center / cover no-repeat;
         }
         .jsBall {
             @include skills (37px, 37px, absolute, 61.9%, 62%, 50%);
             background: url('https://i.imgur.com/i7FYSyW.png?1') center / cover no-repeat;
-            animation: greenPulse 5s infinite;
+            animation: greenPulse 4s infinite;
         }
         .jsBall:hover {
             cursor: default;
             background: url('https://i.imgur.com/RiC9xJn.png?1') center / cover no-repeat;
         }
         .jsBallColor {
-            @include skills (37px, 37px, absolute, 61.9%, 62%, 0);
+            @include skills (37px, 37px, absolute, 61.9%, 62%, 50%);
             background: url('https://i.imgur.com/RiC9xJn.png?1') center / cover no-repeat;
         }
         .jqueryBall {
-            @include skills (37px, 37px, absolute, 68.8%, 39%, 50%);
+            @include skills (37px, 37px, absolute, 68.6%, 39%, 50%);
             background: url('https://i.imgur.com/bSren41.png') center / cover no-repeat;
-            animation: greenPulse 5s infinite;
+            animation: greenPulse 4s infinite;
         }
         .jqueryBall:hover {
             cursor: default;
             background: url('https://i.imgur.com/ZjI7ZjB.png') center / cover no-repeat;
         }
         .jqueryBallColor {
-            @include skills (37px, 37px, absolute, 68.8%, 39%, 0);
+            @include skills (37px, 37px, absolute, 68.6%, 39%, 50%);
             background: url('https://i.imgur.com/ZjI7ZjB.png') center / cover no-repeat;
         }
         .sassBall {
-            @include skills (37px, 37px, absolute, 68.8%, 48%, 50%);
+            @include skills (37px, 37px, absolute, 68.6%, 48%, 50%);
             background: url('https://i.imgur.com/stPZQUY.png') center / cover no-repeat;
-            animation: greenPulse 5s infinite;
+            animation: greenPulse 4s infinite;
         }
         .sassBall:hover {
             cursor: default;
             background: url('https://i.imgur.com/hHnZCVH.png') center / cover no-repeat;
         }
         .sassBallColor {
-            @include skills (37px, 37px, absolute, 68.8%, 48%, 0);
+            @include skills (37px, 37px, absolute, 68.6%, 48%, 50%);
             background: url('https://i.imgur.com/hHnZCVH.png') center / cover no-repeat;
         }
         .bootstrapBall {
-            @include skills (37px, 37px, absolute, 68.8%, 57%, 50%);
+            @include skills (37px, 37px, absolute, 68.6%, 57%, 50%);
             background: url('https://i.imgur.com/ZB4EjFv.png') center / cover no-repeat;
-            animation: greenPulse 5s infinite;
+            animation: greenPulse 4s infinite;
         }
         .bootstrapBall:hover {
             cursor: default;
             background: url('https://i.imgur.com/bYg4b3c.png') center / cover no-repeat;
         }
         .bootstrapBallColor {
-            @include skills (37px, 37px, absolute, 68.8%, 57%, 0);
+            @include skills (37px, 37px, absolute, 68.6%, 57%, 50%);
             background: url('https://i.imgur.com/bYg4b3c.png') center / cover no-repeat;
         }
         .reactBall {
-            @include skills (37px, 37px, absolute, 68.7%, 66%, 50%);
+            @include skills (37px, 37px, absolute, 68.5%, 66%, 50%);
             background: url('https://i.imgur.com/rQyJDDO.png') center / cover no-repeat;
-            animation: greenPulse 5s infinite;
+            animation: greenPulse 4s infinite;
         }
         .reactBall:hover {
             cursor: default;
             background: url('https://i.imgur.com/OfzZq41.png') center / cover no-repeat;
         }
         .reactBallColor {
-            @include skills (37px, 37px, absolute, 68.7%, 66%, 0);
+            @include skills (37px, 37px, absolute, 68.5%, 66%, 50%);
             background: url('https://i.imgur.com/OfzZq41.png') center / cover no-repeat;
         }
         .gitBall {
-            @include skills (37px, 37px, absolute, 77%, 34%, 50%);
+            @include skills (37px, 37px, absolute, 76.6%, 34%, 50%);
             background: url('https://i.imgur.com/a5a7Zhe.png') center / cover no-repeat;
-            animation: greenPulse 5s infinite;
+            animation: greenPulse 4s infinite;
         }
         .gitBall:hover {
             cursor: default;
             background: url('https://i.imgur.com/D53oliB.png') center / cover no-repeat;
         }
         .gitBallColor {
-            @include skills (37px, 37px, absolute, 77%, 34%, 0);
+            @include skills (37px, 37px, absolute, 76.6%, 34%, 50%);
             background: url('https://i.imgur.com/D53oliB.png') center / cover no-repeat;
         }
         .sqlBall {
-            @include skills (37px, 37px, absolute, 76.7%, 44%, 50%);
+            @include skills (37px, 37px, absolute, 76.5%, 44%, 50%);
             background: url('https://i.imgur.com/KaxYm1O.png') center / cover no-repeat;
-            animation: greenPulse 5s infinite;
+            animation: greenPulse 4s infinite;
         }
         .sqlBall:hover {
             cursor: default;
             background: url('https://i.imgur.com/YpNeaNa.png') center / cover no-repeat;
         }
         .sqlBallColor {
-            @include skills (37px, 37px, absolute, 76.7%, 44%, 0);
+            @include skills (37px, 37px, absolute, 76.5%, 44%, 50%);
             background: url('https://i.imgur.com/YpNeaNa.png') center / cover no-repeat;
         }
         .psBall {
             @include skills (37px, 37px, absolute, 76.5%, 54%, 50%);
             background: url('https://i.imgur.com/33mA374.png') center / cover no-repeat;
-            animation: greenPulse 5s infinite;
+            animation: greenPulse 4s infinite;
         }
         .psBall:hover {
             cursor: default;
             background: url('https://i.imgur.com/duMjAaW.png') center / cover no-repeat;
         }
         .psBallColor {
-            @include skills (37px, 37px, absolute, 76.5%, 54%, 0);
+            @include skills (37px, 37px, absolute, 76.5%, 54%, 50%);
             background: url('https://i.imgur.com/duMjAaW.png') center / cover no-repeat;
 }
 
 #typedStrings {
     position: absolute;
+    z-index: -25;
+    height: 50%;
     top: 50%;
     left: 35%;
-    z-index: -25;
     color: transparent;
 }
 
@@ -367,22 +367,17 @@ header {
         @include typed (43%, 25%, 5%, 11px); 
     }    
 }
-
 .typed-cursor {
-    position: absolute;
-    top: 80%;
-    left: 80%;
-    z-index: -25;
-    color: transparent;
+    @extend #typedStrings;
 }
 
 main {
     grid-area: 2 / 1 / 15 / 9;
+    height: 100%; 
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(100, 1fr);
     grid-template-rows: auto;
-    height: 100%; 
-    width: 100%;
     overflow: hidden;
     }   
     .pulseGif {
@@ -424,10 +419,7 @@ main {
     }
     .showIntroButton {
         display: none;
-        height: 27.5px;
-        width: 151px;
-        z-index: 5;
-        align-self: center;
+        @include buttons (5, 27.5px, 151px, center);
         background: url('https://i.imgur.com/JItIDn6.png') center / cover no-repeat;
         @media all and (min-width: 1366px) {
             grid-area: 8 / 64 / 9 / 84;  
@@ -511,11 +503,8 @@ main {
     }
     .skipIntroButton {
         display: none;
-        height: 28px;
-        width: 151px;
         margin-top: 100%;
-        z-index: 25;
-        align-self: center;
+        @include buttons (25, 28px, 151px, center);
         background: url('https://i.imgur.com/ka5PwMd.png') center / cover no-repeat;
         @media all and (min-width: 1366px) {
             grid-area: 8 / 79 / 9 / 91;  
@@ -544,6 +533,14 @@ main {
         cursor: default;
         background: url('https://i.imgur.com/s4G7c66.png') center / cover no-repeat;
     }  
+    .showResumeButton {
+        @extend .showIntroButton;
+        background: url('https://i.imgur.com/QR95ZLe.png') center / cover no-repeat;  
+    }
+    .showResumeButton:hover {
+        cursor: default;
+        background: url('https://i.imgur.com/cSd3kyo.png') center / cover no-repeat;
+    }
     .resume {
         display: none;
         z-index: 15;
@@ -565,10 +562,15 @@ main {
             height: 79%;   
             width: 79%;
         }
-        @media all and (min-width: 770px) and (max-width: 1025px) {
+        @media all and (min-width: 770px) and (max-width: 1025px) and (orientation: landscape) {
             grid-area: 3 / 43 / 9 / 100;
             height: 83%;   
             width: 83%;
+        }
+        @media all and (min-width: 770px) and (max-width: 1025px) and (orientation: portrait) {
+            grid-area: 2 / 43 / 7 / 100;
+            height: 100%;   
+            width: 100%;
         }
         @media all and (min-width: 681px) and (max-width: 769px) {
             grid-area: 3 / 23 / 8 / 100;
@@ -593,53 +595,53 @@ main {
             width: 110%;
         }   
         }
-        .nextIcon { 
-            z-index: 25;
+        .resumeIcons {
+            z-index: inherit;
             position: relative;
-            border-radius: 50%;
-            @include resumeIcons (86%, 85%, 20px, 20px, 5%);
-            background: url('https://i.imgur.com/RtSS8tw.png') center / contain no-repeat;  
-            animation: greenPulse 2s infinite;
-        }
-        @keyframes greenPulse {
-            from { box-shadow: 0 0 7px #333; }
-            50% { box-shadow: 0 0 12px #91bd09; }
-            to { box-shadow: 0 0 7px #333; }
-        }
-        .nextIcon:hover {
-            cursor: default;
-            z-index: 25;
-            position: relative;
-            @include resumeIcons (86%, 85%, 20px, 20px, 5%);
-            background: url('https://i.imgur.com/cpsmSIl.png') center / cover no-repeat;
-        }
-        .pdfDownload {
-            z-index: 25;
-            position: relative;
-            @include resumeIcons (77.3%, 90%, 25px, 22px, 5%);
-            @media all and (min-width: 1366px) {
-                @include resumeIcons (80.2%, 90%, 25px, 22px, 5%);    
+            @media all and (min-width: 760px) {
+                @include resumeIcons (90%, 85%, 30px, 100px);
             }
+            @media all and (min-width: 550px) and (max-width: 759px) {
+                @include resumeIcons (98%, 78%, 30px, 100px);
             }
-            .pdfDownload img {
-                position: relative;
-                height: 25px;
-                width: 22px;  
+            @media all and (min-width: 360px) and (max-width: 549px) {
+                @include resumeIcons (93%, 65%, 30px, 100px);
+            } 
+            @media all and (max-width: 359px) {
+                @include resumeIcons (88%, 63%, 30px, 100px);
+            } 
             }
-            .pdfDownload a:hover {
+            .nextIcon { 
+                position: absolute;
+                border-radius: 50%;
+                background: url('https://i.imgur.com/RtSS8tw.png') center / contain no-repeat;  
+                animation: greenPulse 2s infinite;
+                @include resumeIcons (10%, 5%, 20px, 20px);
+            }
+            @keyframes greenPulse {
+                from { box-shadow: 0 0 7px #333; }
+                50% { box-shadow: 0 0 12px #91bd09; }
+                to { box-shadow: 0 0 7px #333; }
+            }
+            .nextIcon:hover {
                 cursor: default;
+                background: url('https://i.imgur.com/cpsmSIl.png') center / cover no-repeat;
+            }
+            .pdfDownload {
+                position: absolute;
+                @include resumeIcons (3.9%, 40%, 25px, 22px);
+                }
+                .pdfDownload img {
+                    position: relative;
+                    height: 25px;
+                    width: 22px;  
+                }
+                .pdfDownload a:hover {
+                    cursor: default;
     }
     .resume2 {
         @extend .resume;
         background: url('https://i.imgur.com/g0G09dq.png') center / contain no-repeat;
-    }
-    .showResumeButton {
-        @extend .showIntroButton;
-        background: url('https://i.imgur.com/Tr79D6n.png') center / cover no-repeat;  
-    }
-    .showResumeButton:hover {
-        cursor: default;
-        background: url('https://i.imgur.com/QIqZGED.png') center / cover no-repeat;
     }
     .contactMeButton {
         @extend .skipIntroButton;
@@ -695,11 +697,11 @@ main {
         }
         .formExitButton {
             z-index: 40;
-            color: white;
-            font-size: 21px;
             position: relative;
             top: -15%;
             left: 98%;
+            color: white;
+            font-size: 21px;
             @media all and (max-width: 950px) {
                 top: -12%;
                 margin-right: 10%;
@@ -726,10 +728,10 @@ main {
             }
             }
             input, textarea {
-                padding: 5px;
                 width: 80%;
-                font-family: 'Montserrat', sans-serif;
                 font-size: 13px;
+                font-family: 'Montserrat', sans-serif;
+                padding: 5px;
                 margin: 0px 0px 10px 0px;
                 border: 2px solid #ccc;
                 @media all and (max-width: 980px) {
@@ -769,16 +771,16 @@ main {
                 }
         }
         label {
-            float: left;
-            text-align: right;
-            margin-right: 15px;
             width: 100px;
+            margin-right: 15px;
             padding-top: 5px;
             font-size: 12px;
+            float: left;
+            text-align: right;
         }
         .emailAddress {
-            font-size: 12px;
             margin-left: 7%;
+            font-size: 12px;
             text-align: center;
         }
         a {
@@ -792,8 +794,8 @@ aside {
     }
     .photoIdToggle {
         position: absolute;
-        top: 230px;
         z-index: 1;
+        top: 230px;
         padding: 3px;
         border-radius: 100%;
         box-shadow: -6px 6px 8px #808080;
@@ -875,8 +877,8 @@ aside {
     }
     .plantImg2 {
         position: absolute;
-        left: 72px;
         z-index: 15;
+        left: 72px;
         background: url('https://i.imgur.com/pgtPXAB.png') center / cover no-repeat;
         @media all and (min-width: 1800px) {
             @include plants (135px, 106px, 1220px);
@@ -922,10 +924,10 @@ footer {
 }
 .bottomEdgePanelGreen {
     z-index: 2;
+    height: 15px;
+    width: 100%;
     background: url('https://i.imgur.com/wVrzZRC.jpg?3');
     background-size: cover; 
-    width: 100%;
-    height: 15px;
 }
 .bottomEdgePanel:hover {
     cursor: default;
@@ -935,9 +937,9 @@ footer {
     background: url('https://i.imgur.com/0b4x9Sc.jpg?1'); 
 }
 .bottomEdgePanelGray {
-    background: #dbd5c3;
     width: 100%;
     height: 20px;
+    background: #dbd5c3;
 };
 
 

@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-//let $beamLeft = $('.beamLeft');
-//let $beamMiddle = $('.beamMiddle');
 let $pulseGif = $('.pulseGif');
 let $background = $('.background');
 let $photoId = $('.photoIdImg'); 
@@ -12,7 +10,6 @@ let $showResume = $('.showResumeButton');
 let $intro = $('.intro');
 let $resume = $('.resume');
 let $nextIcon = $('.nextIcon');
-
 let $skills = $('.skills');
 let $htmlBall = $('.htmlBall');
 let $cssBall = $('.cssBall');
@@ -24,45 +21,42 @@ let $reactBall = $('.reactBall');
 let $gitBall = $('.gitBall');
 let $sqlBall = $('.sqlBall');
 let $psBall = $('.psBall');
-
 let $contactMe = $('.contactMeButton');
 let $plantImg = $('.plantImg');
 let $plantImg2 = $('.plantImg2');
 let $formExitButton = $('.formExitButton');
 let $contactForm = $('#contactForm');
 let $topEdgePanel = $('.topEdgePanel');
-let $bottomEdgePanelGreen = $('.bottomEdgePanelGreen');
+let $bottomEdgePanel = $('.bottomEdgePanel');
 
 
 $('body').one('click', function() {
-   // $beamLeft.fadeOut(1500);
-   // $beamMiddle.fadeOut(1500);
     $pulseGif.fadeOut(500);
     $photoId.fadeOut(1800).toggleClass('photoIdToggle');
 
     if (screen.width <= 424) {
         setTimeout(function() {
-            $background.css('backgroundImage','url(https://i.imgur.com/jXMSkVl.png), url(https://i.imgur.com/o6ILxdK.jpg)');
+            $background.css('backgroundImage','url(img/backgrounds/b_max424px.png), url(img/backgrounds/darkScreen.jpg)');
             }, 1200); 
     }
     else if (screen.width <= 769) {
         setTimeout(function() {
-            $background.css('backgroundImage','url(https://i.imgur.com/yPY1AWm.png), url(https://i.imgur.com/o6ILxdK.jpg)');
+            $background.css('backgroundImage','url(img/backgrounds/b_max769px.png), url(img/backgrounds/darkScreen.jpg)');
             }, 1200); 
     }
     else if (screen.width <= 1023) {
         setTimeout(function() {
-            $background.css('backgroundImage','url(https://i.imgur.com/CqeWz9c.png), url(https://i.imgur.com/o6ILxdK.jpg)');
+            $background.css('backgroundImage','url(img/backgrounds/b_max1023px.png), url(img/backgrounds/darkScreen.jpg)');
             }, 1200); 
     } 
     else if (screen.width <= 1363) {
         setTimeout(function() {
-            $background.css('backgroundImage','url(https://i.imgur.com/c5SvPV8.png), url(https://i.imgur.com/o6ILxdK.jpg)');
+            $background.css('backgroundImage','url(img/backgrounds/b_max1363px.png), url(img/backgrounds/darkScreen.jpg)');
             }, 1200); 
     }
     else {
         setTimeout(function() {
-            $background.css('backgroundImage','url(https://i.imgur.com/dSKMukN.png?1), url(https://i.imgur.com/o6ILxdK.jpg)');
+            $background.css('backgroundImage','url(img/backgrounds/b_min1364px.png), url(img/backgrounds/darkScreen.jpg)');
             }, 1200);
     }
     
@@ -74,14 +68,13 @@ $('body').one('click', function() {
     setTimeout(function() {
         $skipIntro.fadeIn(1200);
         $showIntro.fadeIn(1200);
-      //  }, 9700); //here change button delay
     }, 1000);
 
 });
 
 $skipIntro.click(function() {
-    $('#typed').fadeOut(1000);
     $(this).fadeOut(1200);
+    $('#typed').fadeOut(1000);
     $intro.fadeOut(1200);
     $resume.fadeIn(1200);
 
@@ -97,10 +90,10 @@ $skipIntro.click(function() {
 });
 
 $showIntro.click(function() {
+    $(this).fadeOut(1000);
     $('#typed').fadeOut(1000);
     $resume.fadeOut(1000);
     $intro.fadeIn(1000);
-    $(this).fadeOut(1000);
     $skipIntro.fadeOut(1000);
     $contactMe.fadeIn(1000);
     $showResume.fadeIn(1000);
@@ -113,9 +106,9 @@ $showIntro.click(function() {
 });
 
 $showResume.click(function() {
+    $(this).fadeOut(1000);
     $intro.fadeOut(1000);
     $resume.fadeIn(1000); 
-    $(this).fadeOut(1000);
     $skipIntro.fadeOut(1000);
     $contactMe.fadeIn(1100);
     $showIntro.fadeIn(1000);
@@ -144,24 +137,11 @@ $plantImg2.click(function() {
 });
 
 $topEdgePanel.click(function() {
-
     $(this).toggleClass('topEdgePanelToggle');
-
-   /* if ($(this).hasClass('topEdgePanel')) {
-        ($(this).removeClass('topEdgePanel').addClass('topEdgePanelToggle1'));
-    } 
-    else if ($(this).hasClass('topEdgePanelToggle1')) {
-        ($(this).removeClass('topEdgePanelTogglel').addClass('topEdgePanelToggle2'));
-    }
-    else {
-        ($(this).addClass('topEdgePanel'));
-    }
-   */
-
 });
 
-$bottomEdgePanelGreen.click(function() {
-    $(this).toggleClass('bottomEdgePanelGreenToggle'); 
+$bottomEdgePanel.click(function() {
+    $(this).toggleClass('bottomEdgePanelToggle'); 
 });
 
 $htmlBall.click(function() {
@@ -213,8 +193,6 @@ $formExitButton.click(function() {
 });
 
 });
-
-
 
 /*
     window.onresize = function() { 
