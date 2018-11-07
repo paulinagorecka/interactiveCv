@@ -5,158 +5,1129 @@
   padding: 0;
   box-sizing: border-box; }
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto; }
+
+body {
+  grid-area: 1 / 1 / 16 / 9; }
+
+body:hover {
+  cursor: crosshair; }
+
+header {
+  grid-area: 1 / 1 / 2 / 9;
+  display: grid; }
+
 .topEdge {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 65px;
+  grid-area: 1 / 1 / 3 / 9;
+  height: 55px;
   width: 100%;
-  flex-wrap: nowrap;
-  padding: 0 30px;
-  background-color: #D3CDBA;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  background: url("img/edges/topEdgeBackground.png") top/cover no-repeat; }
 
-.h1Backdrop {
-  background: url("https://i.imgur.com/264A7Aw.png?3");
-  background-size: cover;
-  width: 35%; }
-  .h1Backdrop h1 {
-    width: 105%;
-    margin-left: -2%;
-    margin-top: -2%;
-    padding: 3%;
-    color: black;
-    font-size: 37px;
-    background: #D3CDBA;
-    mix-blend-mode: lighten; }
+.topEdgeOverlay {
+  background: #dbd5c3;
+  height: 40px;
+  width: 420%; }
 
-.h2Backdrop {
-  background: url("https://i.imgur.com/yJI6iYN.png");
-  background-size: cover;
-  width: 40%; }
-  .h2Backdrop h2 {
-    width: 105%;
-    margin-left: -2%;
-    margin-top: -2%;
-    padding: 3%;
-    font-size: 35px;
-    text-align: right;
-    color: black;
-    background: #D3CDBA;
-    mix-blend-mode: lighten; }
-
-.topEdgePanel {
-  background: url("https://i.imgur.com/wVrzZRC.jpg?3");
+h1 {
+  grid-area: 1 / 1 / 3 / 3;
+  height: 40px;
   width: 100%;
-  height: 14px;
+  padding-left: 10%;
+  line-height: 40px;
+  vertical-align: middle;
+  color: black;
+  background: #dbd5c3;
+  mix-blend-mode: lighten; }
+  @media all and (min-width: 1024px) {
+    h1 {
+      font-size: 27px; } }
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+      font-size: 24px; } }
+  @media all and (max-width: 768px) {
+    h1 {
+      font-size: 24px; } }
+  @media all and (max-width: 425px) {
+    h1 {
+      font-size: 19px;
+      padding-left: 6%; } }
+  @media all and (max-width: 375px) {
+    h1 {
+      font-size: 18px;
+      padding-right: 6%; } }
+  @media all and (max-width: 320px) {
+    h1 {
+      font-size: 17px;
+      padding-left: 6%; } }
+
+h2 {
+  grid-area: 1 / 7 / 3 / 9;
+  height: 40px;
+  width: 100%;
+  padding-right: 10%;
+  text-align: right;
+  line-height: 40px;
+  vertical-align: middle;
+  color: black;
+  background: #dbd5c3;
+  mix-blend-mode: lighten; }
+  @media all and (min-width: 1024px) {
+    h2 {
+      font-size: 23px; } }
+  @media all and (max-width: 768px) {
+    h2 {
+      font-size: 18px; } }
+  @media all and (max-width: 425px) {
+    h2 {
+      font-size: 15px;
+      padding-right: 4%; } }
+  @media all and (max-width: 375px) {
+    h2 {
+      font-size: 13px;
+      padding-right: 4%; } }
+  @media all and (max-width: 320px) {
+    h2 {
+      font-size: 12px;
+      padding-right: 4%; } }
+
+.topEdgePanel, .topEdgePanelToggle {
+  grid-area: 3 / 1 / 3 / 9;
+  z-index: 5;
+  height: 15px;
+  width: 100%;
+  background: url("img/edges/edgePanel.jpg");
   background-size: cover; }
 
-.bottomEdgePanel {
-  background: #BDBDAE;
-  width: 100%;
-  height: 21px; }
+.topEdgePanel:hover, .topEdgePanelToggle:hover {
+  cursor: default; }
+
+.topEdgePanelToggle {
+  background: url("img/edges/edgePanelToggle.jpg"); }
 
 .background {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-self: center;
+  grid-area: 5 / 1 / 15 / 9;
+  z-index: 1;
   width: 100%;
-  height: 620px;
-  background: url("https://i.imgur.com/9tkvEks.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
+  transition: all 0.5s linear; }
+  @media all and (min-width: 1800px) {
+    .background {
+      background: url("img/backgrounds/min1364px.png") left/cover no-repeat;
+      height: 1300px; } }
+  @media all and (min-width: 1364px) and (max-width: 1799px) {
+    .background {
+      background: url("img/backgrounds/min1364px.png") left/cover no-repeat;
+      height: 820px; } }
+  @media all and (min-width: 1024px) and (max-width: 1363px) {
+    .background {
+      background: url("img/backgrounds/min1024px.png") center/cover no-repeat;
+      height: 1000px; } }
+  @media all and (min-width: 1024px) and (max-width: 1363px) and (orientation: landscape) {
+    .background {
+      background: url("img/backgrounds/min1024px.png") center/cover no-repeat;
+      height: 780px; } }
+  @media all and (min-width: 770px) and (max-width: 1023px) {
+    .background {
+      background: url("img/backgrounds/min770px.png") left/cover no-repeat;
+      height: 1200px; } }
+  @media all and (min-width: 770px) and (max-width: 1023px) and (orientation: landscape) {
+    .background {
+      background: url("img/backgrounds/min770px.png") left/cover no-repeat;
+      height: 800px; } }
+  @media all and (min-width: 425px) and (max-width: 769px) {
+    .background {
+      background: url("img/backgrounds/min425px.png") left/cover no-repeat;
+      height: 900px; } }
+  @media all and (max-width: 424px) {
+    .background {
+      background: url("img/backgrounds/max424px.png") center/cover no-repeat;
+      height: 699px; } }
+
+.skills {
+  display: none;
+  position: relative;
+  height: 100%;
+  width: 50%; }
+  @media all and (min-width: 2030px) {
+    .skills {
+      width: 30%;
+      top: 1.5%;
+      left: 14%; } }
+  @media all and (min-width: 1800px) and (max-width: 2030px) {
+    .skills {
+      top: 1.5%;
+      left: 10%; } }
+  @media all and (min-width: 1500px) and (max-width: 1799px) {
+    .skills {
+      width: 30%;
+      left: 10%; } }
+  @media all and (min-width: 1364px) and (max-width: 1499px) {
+    .skills {
+      width: 45%;
+      left: 6.5%; } }
+  @media all and (min-width: 1279px) and (max-width: 1363px) and (orientation: landscape) {
+    .skills {
+      top: -1.5px;
+      left: 2%; } }
+  @media all and (min-width: 1024px) and (max-width: 1278px) and (orientation: landscape) {
+    .skills {
+      top: -1.4px;
+      left: -0.5%; } }
+  @media all and (min-width: 1024px) and (max-width: 1363px) and (orientation: portrait) {
+    .skills {
+      top: 7px;
+      left: -6%; } }
+  @media all and (min-width: 801px) and (max-width: 1023px) and (orientation: landscape) {
+    .skills {
+      width: 60%;
+      top: -0.8px;
+      left: -8.5%; } }
+  @media all and (min-width: 770px) and (max-width: 800px) and (orientation: landscape) {
+    .skills {
+      width: 75%;
+      top: -0.2px;
+      left: -10%; } }
+  @media all and (min-width: 770px) and (max-width: 1023px) and (orientation: portrait) {
+    .skills {
+      width: 80%;
+      top: 1.4%;
+      left: -6%; } }
+
+.htmlBall {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 61.3%;
+  left: 42%;
+  border-radius: 50%;
+  background: url("img/skills/b&w/html.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
+
+.htmlBall:hover {
+  cursor: default;
+  background: url("img/skills/color/html.png") center/cover no-repeat; }
+
+.htmlBallColor {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 61.3%;
+  left: 42%;
+  border-radius: 50%;
+  background: url("img/skills/color/html.png") center/cover no-repeat; }
+
+.cssBall {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 61.6%;
+  left: 52%;
+  border-radius: 50%;
+  background: url("img/skills/b&w/css.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
+
+.cssBall:hover {
+  cursor: default;
+  background: url("img/skills/color/css.png") center/cover no-repeat; }
+
+.cssBallColor {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 61.6%;
+  left: 52%;
+  border-radius: 50%;
+  background: url("img/skills/color/css.png") center/cover no-repeat; }
+
+.jsBall {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 61.9%;
+  left: 62%;
+  border-radius: 50%;
+  background: url("img/skills/b&w/js.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
+
+.jsBall:hover {
+  cursor: default;
+  background: url("img/skills/color/js.png") center/cover no-repeat; }
+
+.jsBallColor {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 61.9%;
+  left: 62%;
+  border-radius: 50%;
+  background: url("img/skills/color/js.png") center/cover no-repeat; }
+
+.jqueryBall {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 68.6%;
+  left: 39%;
+  border-radius: 50%;
+  background: url("img/skills/b&w/jquery.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
+
+.jqueryBall:hover {
+  cursor: default;
+  background: url("img/skills/color/jquery.png") center/cover no-repeat; }
+
+.jqueryBallColor {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 68.6%;
+  left: 39%;
+  border-radius: 50%;
+  background: url("img/skills/color/jquery.png") center/cover no-repeat; }
+
+.sassBall {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 68.6%;
+  left: 48%;
+  border-radius: 50%;
+  background: url("img/skills/b&w/sass.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
+
+.sassBall:hover {
+  cursor: default;
+  background: url("img/skills/color/sass.png") center/cover no-repeat; }
+
+.sassBallColor {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 68.6%;
+  left: 48%;
+  border-radius: 50%;
+  background: url("img/skills/color/sass.png") center/cover no-repeat; }
+
+.bootstrapBall {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 68.6%;
+  left: 57%;
+  border-radius: 50%;
+  background: url("img/skills/b&w/bootstrap.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
+
+.bootstrapBall:hover {
+  cursor: default;
+  background: url("img/skills/color/bootstrap.png") center/cover no-repeat; }
+
+.bootstrapBallColor {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 68.6%;
+  left: 57%;
+  border-radius: 50%;
+  background: url("img/skills/color/bootstrap.png") center/cover no-repeat; }
+
+.reactBall {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 68.5%;
+  left: 66%;
+  border-radius: 50%;
+  background: url("img/skills/b&w/react.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
+
+.reactBall:hover {
+  cursor: default;
+  background: url("img/skills/color/react.png") center/cover no-repeat; }
+
+.reactBallColor {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 68.5%;
+  left: 66%;
+  border-radius: 50%;
+  background: url("img/skills/color/react.png") center/cover no-repeat; }
+
+.gitBall {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 76.6%;
+  left: 34%;
+  border-radius: 50%;
+  background: url("img/skills/b&w/git.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
+
+.gitBall:hover {
+  cursor: default;
+  background: url("img/skills/color/git.png") center/cover no-repeat; }
+
+.gitBallColor {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 76.6%;
+  left: 34%;
+  border-radius: 50%;
+  background: url("img/skills/color/git.png") center/cover no-repeat; }
+
+.sqlBall {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 76.5%;
+  left: 44%;
+  border-radius: 50%;
+  background: url("img/skills/b&w/sql.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
+
+.sqlBall:hover {
+  cursor: default;
+  background: url("img/skills/color/sql.png") center/cover no-repeat; }
+
+.sqlBallColor {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 76.5%;
+  left: 44%;
+  border-radius: 50%;
+  background: url("img/skills/color/sql.png") center/cover no-repeat; }
+
+.psBall {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 76.5%;
+  left: 54%;
+  border-radius: 50%;
+  background: url("img/skills/b&w/ps.png") center/cover no-repeat;
+  animation: greenPulse 4s infinite; }
+
+.psBall:hover {
+  cursor: default;
+  background: url("img/skills/color/ps.png") center/cover no-repeat; }
+
+.psBallColor {
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 76.5%;
+  left: 54%;
+  border-radius: 50%;
+  background: url("img/skills/color/ps.png") center/cover no-repeat; }
+
+#typedStrings, .typed-cursor {
+  display: none;
+  position: absolute;
+  z-index: -25;
+  top: 50%;
+  left: 35%;
+  color: transparent; }
+
+#typed {
+  position: absolute;
+  z-index: 15;
+  color: white;
+  font-family: 'Montserrat', sans-serif; }
+  @media all and (min-width: 1800px) {
+    #typed {
+      top: 45%;
+      left: 40%;
+      margin-right: 0;
+      font-size: 20px; } }
+  @media all and (min-width: 1366px) and (max-width: 1799px) {
+    #typed {
+      top: 44%;
+      left: 37%;
+      margin-right: 15%;
+      font-size: 18px; } }
+  @media all and (min-width: 1024px) and (max-width: 1365px) {
+    #typed {
+      top: 44%;
+      left: 34%;
+      margin-right: 12%;
+      font-size: 14px; } }
+  @media all and (min-width: 770px) and (max-width: 1023px) {
+    #typed {
+      top: 42%;
+      left: 30%;
+      margin-right: 9%;
+      font-size: 14px; } }
+  @media all and (min-width: 770px) and (max-width: 1023px) and (orientation: portrait) {
+    #typed {
+      top: 35%;
+      left: 33%;
+      margin-right: 10%;
+      font-size: 14px; } }
+  @media all and (max-width: 769px) {
+    #typed {
+      top: 35%;
+      left: 30%;
+      margin-right: 10%;
+      font-size: 14px; } }
+  @media all and (max-width: 769px) and (orientation: portrait) {
+    #typed {
+      top: 35%;
+      left: 30%;
+      margin-right: 10%;
+      font-size: 14px; } }
+  @media all and (max-width: 425px) {
+    #typed {
+      top: 33%;
+      left: 39%;
+      margin-right: 5%;
+      font-size: 11px; } }
+  @media all and (max-width: 375px) {
+    #typed {
+      top: 43%;
+      left: 25%;
+      margin-right: 5%;
+      font-size: 11px; } }
+
+main {
+  grid-area: 2 / 1 / 15 / 9;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(100, 1fr);
+  grid-template-rows: auto;
+  overflow: hidden; }
+
+.pulseGif {
+  z-index: -6;
+  background: url("img/buttons/pulseGif.gif") center/cover no-repeat; }
+  @media all and (min-width: 1366px) {
+    .pulseGif {
+      grid-area: 4 / 55 / 7 / 70;
+      height: 80px;
+      width: 106px; } }
+  @media all and (min-width: 1024px) and (max-width: 1365px) {
+    .pulseGif {
+      grid-area: 3 / 50 / 5 / 70;
+      height: 80px;
+      width: 106px; } }
+  @media all and (min-width: 770px) and (max-width: 1023px) {
+    .pulseGif {
+      grid-area: 3 / 48 / 5 / 68;
+      height: 80px;
+      width: 106px; } }
+  @media all and (min-width: 760px) and (max-width: 769px) {
+    .pulseGif {
+      grid-area: 4 / 49 / 7 / 69;
+      height: 80px;
+      width: 106px; } }
+  @media all and (min-width: 548px) and (max-width: 759px) {
+    .pulseGif {
+      grid-area: 4 / 50 / 7 / 70;
+      height: 80px;
+      width: 106px; } }
+  @media all and (max-width: 547px) {
+    .pulseGif {
+      grid-area: 3 / 47 / 6 / 67;
+      height: 80px;
+      width: 106px; } }
+
+.pulseGif:hover {
+  cursor: default; }
+
+.showIntroButton, .showResumeButton {
+  display: none;
+  z-index: 5;
+  height: 27.5px;
+  width: 151px;
+  align-self: center;
+  background: url("img/buttons/showIntro.png") center/cover no-repeat; }
+  @media all and (min-width: 1366px) {
+    .showIntroButton, .showResumeButton {
+      grid-area: 8 / 64 / 9 / 84;
+      margin-top: 179%; } }
+  @media all and (min-width: 1014px) and (max-width: 1365px) {
+    .showIntroButton, .showResumeButton {
+      grid-area: 8 / 58 / 9 / 70;
+      margin-top: 100%; } }
+  @media all and (min-width: 860px) and (max-width: 1013px) {
+    .showIntroButton, .showResumeButton {
+      grid-area: 8 / 75 / 9 / 87;
+      margin-bottom: 30%; } }
+  @media all and (min-width: 760px) and (max-width: 860px) {
+    .showIntroButton, .showResumeButton {
+      grid-area: 8 / 79 / 9 / 89; } }
+  @media all and (min-width: 630px) and (max-width: 759px) {
+    .showIntroButton, .showResumeButton {
+      grid-area: 8 / 75 / 9 / 87; } }
+  @media all and (max-width: 629px) {
+    .showIntroButton, .showResumeButton {
+      grid-area: 8 / 58 / 9 / 70;
+      height: 21px;
+      width: 113px; } }
+
+.showIntroButton:hover, .showResumeButton:hover {
+  cursor: default;
+  background: url("img/buttons/showIntroHover.png") center/cover no-repeat; }
+
+.intro {
+  display: none;
+  z-index: 15;
+  background: url("img/text-screens/introLarge.png") center/contain no-repeat; }
+  @media all and (min-width: 1800px) {
+    .intro {
+      grid-area: 4 / 53 / 9 / 100;
+      height: 78%;
+      width: 78%;
+      margin-top: 3%; } }
+  @media all and (min-width: 1366px) and (max-width: 1799px) {
+    .intro {
+      grid-area: 4 / 43 / 9 / 100;
+      height: 81%;
+      width: 81%;
+      margin-top: 5%; } }
+  @media all and (min-width: 1001px) and (max-width: 1365px) {
+    .intro {
+      grid-area: 3 / 43 / 9 / 100;
+      height: 78%;
+      width: 78%; } }
+  @media all and (min-width: 770px) and (max-width: 1000px) {
+    .intro {
+      grid-area: 2 / 46 / 7 / 100;
+      height: 100%;
+      width: 100%; } }
+  @media all and (min-width: 681px) and (max-width: 769px) {
+    .intro {
+      grid-area: 3 / 23 / 8 / 100;
+      height: 100%;
+      width: 100%;
+      margin-top: 5%; } }
+  @media all and (min-width: 560px) and (max-width: 680px) {
+    .intro {
+      grid-area: 3 / 31 / 8 / 100;
+      height: 90%;
+      width: 90%;
+      margin-top: 5%;
+      background: url("img/text-screens/introSmall.png") center/contain no-repeat; } }
+  @media all and (min-width: 425px) and (max-width: 559px) {
+    .intro {
+      grid-area: 3 / 36 / 8 / 100;
+      height: 100%;
+      width: 100%;
+      background: url("img/text-screens/introSmall.png") center/contain no-repeat; } }
+  @media all and (max-width: 424px) {
+    .intro {
+      grid-area: 3 / 30 / 8 / 100;
+      height: 90%;
+      width: 90%;
+      background: url("img/text-screens/introSmall.png") center/contain no-repeat; } }
+
+.skipIntroButton, .contactMeButton {
+  display: none;
+  margin-top: 100%;
+  z-index: 25;
+  height: 28px;
+  width: 151px;
+  align-self: center;
+  background: url("img/buttons/skipIntro.png") center/cover no-repeat; }
+  @media all and (min-width: 1366px) {
+    .skipIntroButton, .contactMeButton {
+      grid-area: 8 / 79 / 9 / 91;
+      margin-top: 300%; } }
+  @media all and (min-width: 1014px) and (max-width: 1365px) {
+    .skipIntroButton, .contactMeButton {
+      grid-area: 8 / 77 / 9 / 89; } }
+  @media all and (min-width: 860px) and (max-width: 1013px) {
+    .skipIntroButton, .contactMeButton {
+      grid-area: 8 / 75 / 9 / 87;
+      margin-top: 25%; } }
+  @media all and (min-width: 760px) and (max-width: 860px) {
+    .skipIntroButton, .contactMeButton {
+      grid-area: 8 / 79 / 9 / 89; } }
+  @media all and (min-width: 630px) and (max-width: 759px) {
+    .skipIntroButton, .contactMeButton {
+      grid-area: 8 / 75 / 9 / 87; } }
+  @media all and (max-width: 629px) {
+    .skipIntroButton, .contactMeButton {
+      grid-area: 8 / 58 / 9 / 70;
+      height: 21px;
+      width: 113px; } }
+
+.skipIntroButton:hover, .contactMeButton:hover {
+  cursor: default;
+  background: url("img/buttons/skipIntroHover.png") center/cover no-repeat; }
+
+.showResumeButton {
+  background: url("img/buttons/showResume.png") center/cover no-repeat; }
+
+.showResumeButton:hover {
+  cursor: default;
+  background: url("img/buttons/showResumeHover.png") center/cover no-repeat; }
+
+.resume, .resume2 {
+  display: none;
+  z-index: 15;
+  background: url("img/text-screens/resume.png") center/contain no-repeat; }
+  @media all and (min-width: 1800px) {
+    .resume, .resume2 {
+      grid-area: 4 / 53 / 9 / 100;
+      height: 78%;
+      width: 78%;
+      margin-top: 3%; } }
+  @media all and (min-width: 1366px) and (max-width: 1799px) {
+    .resume, .resume2 {
+      grid-area: 4 / 43 / 9 / 100;
+      height: 81%;
+      width: 81%;
+      margin-top: 5%; } }
+  @media all and (min-width: 1026px) and (max-width: 1365px) {
+    .resume, .resume2 {
+      grid-area: 3 / 43 / 9 / 100;
+      height: 79%;
+      width: 79%; } }
+  @media all and (min-width: 770px) and (max-width: 1025px) and (orientation: landscape) {
+    .resume, .resume2 {
+      grid-area: 3 / 43 / 9 / 100;
+      height: 83%;
+      width: 83%; } }
+  @media all and (min-width: 770px) and (max-width: 1025px) and (orientation: portrait) {
+    .resume, .resume2 {
+      grid-area: 2 / 43 / 7 / 100;
+      height: 100%;
+      width: 100%; } }
+  @media all and (min-width: 681px) and (max-width: 769px) {
+    .resume, .resume2 {
+      grid-area: 3 / 23 / 8 / 100;
+      height: 100%;
+      width: 100%;
+      margin-top: 5%; } }
+  @media all and (min-width: 560px) and (max-width: 680px) {
+    .resume, .resume2 {
+      grid-area: 3 / 31 / 8 / 100;
+      height: 100%;
+      width: 100%;
+      margin-top: 5%; } }
+  @media all and (min-width: 425px) and (max-width: 559px) {
+    .resume, .resume2 {
+      grid-area: 3 / 33 / 8 / 100;
+      height: 100%;
+      width: 100%; } }
+  @media all and (max-width: 424px) {
+    .resume, .resume2 {
+      grid-area: 2 / 23 / 8 / 100;
+      height: 110%;
+      width: 110%; } }
+
+      
+.resume2 {
+  background: url("img/text-screens/resume2.png") center/contain no-repeat; }
+
+.resumeIcons {
+  z-index: inherit;
+  position: relative; }
+  @media all and (min-width: 760px) {
+    .resumeIcons {
+      top: 90%;
+      left: 85%;
+      height: 30px;
+      width: 100px; } }
+  @media all and (min-width: 550px) and (max-width: 759px) {
+    .resumeIcons {
+      top: 98%;
+      left: 78%;
+      height: 30px;
+      width: 100px; } }
+  @media all and (min-width: 360px) and (max-width: 549px) {
+    .resumeIcons {
+      top: 93%;
+      left: 65%;
+      height: 30px;
+      width: 100px; } }
+  @media all and (max-width: 359px) {
+    .resumeIcons {
+      top: 88%;
+      left: 63%;
+      height: 30px;
+      width: 100px; } }
+
+.nextIcon {
+  position: absolute;
+  border-radius: 50%;
+  background: url("img/buttons/nextIcon.png") center/contain no-repeat;
+  animation: greenPulse 2s infinite;
+  top: 10%;
+  left: 5%;
+  height: 20px;
+  width: 20px; }
+
+@keyframes greenPulse {
+  from {
+    box-shadow: 0 0 7px #333; }
+  50% {
+    box-shadow: 0 0 12px #91bd09; }
+  to {
+    box-shadow: 0 0 7px #333; } }
+.nextIcon:hover {
+  cursor: default;
+  background: url("img/buttons/nextIconHover.png") center/cover no-repeat; }
+
+.pdfDownload {
+  position: absolute;
+  top: 3.9%;
+  left: 40%;
+  height: 25px;
+  width: 22px; }
+
+.pdfDownload img {
+  position: relative;
+  height: 25px;
+  width: 22px; }
+
+.pdfDownload a:hover {
+  cursor: default; }
+
+.contactMeButton {
+  z-index: 5;
+  background: url("img/buttons/contact.png") center/cover no-repeat; }
+
+.contactMeButton:hover {
+  cursor: default;
+  background: url("img/buttons/contactHover.png") center/cover no-repeat; }
+
+#contactForm {
+  display: none;
+  grid-area: 5 / 20 / 9 / 70;
+  z-index: 20;
+  width: 128%;
+  height: 58%;
+  padding: 20px 10px 20px 5px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 0px 30px rgba(0, 0, 0, 0.3);
+  font-family: 'Montserrat', sans-serif;
+  background: url("img/text-screens/formBackground.jpg") center/cover no-repeat; }
+  @media all and (min-width: 417px) and (max-width: 980px) {
+    #contactForm {
+      width: 110%;
+      height: 63%; } }
+  @media all and (max-width: 430px) {
+    #contactForm {
+      grid-area: 4 / 10 / 8 / 90;
+      width: 100%;
+      height: 70%;
+      padding-right: 10%;
+      box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.3); } }
+  @media all and (max-width: 325px) {
+    #contactForm {
+      height: 70%;
+      padding-left: 14%; } }
+
+.formTitle {
+  z-index: 35;
+  color: white;
+  font-size: 23px;
+  position: relative;
+  left: 40%; }
+  @media all and (max-width: 990px) {
+    .formTitle {
+      left: 35%; } }
+  @media all and (max-width: 785px) {
+    .formTitle {
+      left: 32%; } }
+  @media all and (max-width: 530px) {
+    .formTitle {
+      left: 26%; } }
+
+.formExitButton {
+  z-index: 40;
+  position: relative;
+  top: -15%;
+  left: 98%;
+  color: white;
+  font-size: 21px; }
+  @media all and (max-width: 950px) {
+    .formExitButton {
+      top: -12%;
+      margin-right: 10%; } }
+  @media all and (max-width: 740px) {
+    .formExitButton {
+      top: -12%;
+      left: 97%;
+      margin-right: 10%; } }
+  @media all and (max-width: 430px) {
+    .formExitButton {
+      top: -11%;
+      left: 104%; } }
+
+.formExitButton:hover {
+  cursor: default; }
+
+.contactArea {
+  width: 95%;
+  margin-top: 25px;
+  color: white; }
+  @media all and (max-width: 995px) {
+    .contactArea {
+      margin-top: 7px; } }
+
+input, textarea {
+  width: 80%;
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px;
+  margin: 0px 0px 10px 0px;
+  border: 2px solid #ccc; }
+  @media all and (max-width: 980px) {
+    input, textarea {
+      width: 80%;
+      font-size: 11px;
+      margin-left: 13%; } }
+  @media all and (max-width: 418px) {
+    input, textarea {
+      width: 80%;
+      font-size: 10px; } }
+  @media all and (max-width: 325px) {
+    input, textarea {
+      width: 90%; } }
+
+textarea {
+  height: 90px; }
+
+textarea:focus, input:focus {
+  border: 3px solid #C1FF3A; }
+
+.submitButton {
+  width: 13%;
+  margin-right: 2.4%;
+  background: white;
+  font-size: 12px;
+  font-weight: 800;
+  float: right; }
+  @media all and (min-width: 326px) and (max-width: 990px) {
+    .submitButton {
+      width: 26%;
+      margin-right: 5.4%;
+      margin-bottom: 7%; } }
+  @media all and (max-width: 325px) {
+    .submitButton {
+      width: 32%;
+      margin-right: 10%; } }
+
+label {
+  width: 100px;
+  margin-right: 15px;
+  padding-top: 5px;
+  font-size: 12px;
+  float: left;
+  text-align: right; }
+
+.emailAddress {
+  margin-left: 7%;
+  font-size: 12px;
+  text-align: center; }
+
+a {
+  margin: 5px;
+  text-decoration: none;
+  color: #C1FF3A; }
+
+aside {
+  grid-area: 5 / 1 / 15 / 3; }
+
+.photoIdToggle, .photoIdImg {
+  position: absolute;
+  z-index: 1;
+  top: 230px;
+  padding: 3px;
+  border-radius: 100%;
+  box-shadow: -6px 6px 8px #808080;
+  background: url("img/aside/photoIdToggle.gif") center/cover no-repeat; }
+  @media all and (min-width: 1800px) {
+    .photoIdToggle, .photoIdImg {
+      top: 270px;
+      width: 90px;
+      height: 90px;
+      left: 126px; } }
+  @media all and (min-width: 1366px) {
+    .photoIdToggle, .photoIdImg {
+      width: 90px;
+      height: 90px;
+      left: 88px; } }
+  @media all and (min-width: 1024px) {
+    .photoIdToggle, .photoIdImg {
+      width: 80px;
+      height: 80px;
+      left: 42px; } }
+  @media all and (min-width: 770px) and (max-width: 1023px) {
+    .photoIdToggle, .photoIdImg {
+      width: 70px;
+      height: 70px;
+      left: 27px; } }
+  @media all and (min-width: 600px) and (max-width: 769px) {
+    .photoIdToggle, .photoIdImg {
+      width: 60px;
+      height: 60px;
+      left: 25px; } }
+  @media all and (min-width: 425px) and (max-width: 600px) {
+    .photoIdToggle, .photoIdImg {
+      width: 60px;
+      height: 60px;
+      left: 25px; } }
+  @media all and (max-width: 424px) {
+    .photoIdToggle, .photoIdImg {
+      width: 50px;
+      height: 50px;
+      left: 14px; } }
+  @media all and (max-width: 321px) {
+    .photoIdToggle, .photoIdImg {
+      width: 40px;
+      height: 40px;
+      left: 7px; } }
+
+.photoIdToggle:hover, .photoIdImg:hover {
+  cursor: default; }
 
 .photoIdImg {
-  height: 90px;
-  width: 90px;
-  padding: 6px;
-  margin-top: 210px;
-  margin-left: 90px;
-  border-radius: 100%;
-  box-shadow: -8px 8px 10px #808080;
-  background: url("https://i.imgur.com/uGwgioR.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
+  background: url("img/aside/photoIdImg.png") center/cover no-repeat; }
 
-.photoIdFrame {
-  width: 110px;
-  height: 110px;
-  margin-top: -97px;
-  margin-left: 80px;
-  background: url("https://i.imgur.com/ECaBpSU.png?1");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center; }
+.photoIdImg:hover {
+  cursor: default; }
 
-.plantPhoto {
-  background: url("https://i.imgur.com/nR2Ndn3.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-top: 14px;
-  margin-left: 180px;
-  height: 320px;
-  width: 200px; }
+.plantImg, .plantImgToggle {
+  position: absolute;
+  z-index: 10;
+  background: url("img/aside/plantImg.png") center/cover no-repeat; }
+  @media all and (min-width: 1800px) {
+    .plantImg, .plantImgToggle {
+      width: 158px;
+      height: 270px;
+      top: 1084px; } }
+  @media all and (min-width: 1364px) and (max-width: 1799px) {
+    .plantImg, .plantImgToggle {
+      width: 158px;
+      height: 270px;
+      top: 604px; } }
+  @media all and (min-width: 1024px) and (max-width: 1363px) {
+    .plantImg, .plantImgToggle {
+      width: 158px;
+      height: 270px;
+      top: 565px; } }
+  @media all and (min-width: 1024px) and (max-width: 1363px) and (orientation: portrait) {
+    .plantImg, .plantImgToggle {
+      width: 158px;
+      height: 270px;
+      top: 783px; } }
+  @media all and (min-width: 770px) and (max-width: 1023px) {
+    .plantImg, .plantImgToggle {
+      width: 158px;
+      height: 270px;
+      top: 585px; } }
+  @media all and (min-width: 770px) and (max-width: 1023px) and (orientation: portrait) {
+    .plantImg, .plantImgToggle {
+      width: 158px;
+      height: 270px;
+      top: 985px; } }
+  @media all and (min-width: 425px) and (max-width: 769px) {
+    .plantImg, .plantImgToggle {
+      width: 134px;
+      height: 230px;
+      top: 725px; } }
+  @media all and (max-width: 424px) {
+    .plantImg, .plantImgToggle {
+      width: 114px;
+      height: 195.5px;
+      top: 558px; } }
 
-/*
-.medium {
-   
-   // background-image: url("D:/Peps koduje/CV/cvBckgrd.png");
-  //  background-color: darkslategrey;
-    background-repeat: no-repeat;
-   // background-size: contain;
-  //  height: 100%;    
-   background-size: cover;
-   // display: flex;
-   height: auto;
-    width: auto;
-    justify-content: center;
-    align-self:center; 
-    @media screen and (min-width: 1024px) {
-       
-            display: none;
-      
-    }
-}
+.plantImg:hover, .plantImgToggle:hover {
+  cursor: default; }
 
-.large {
-    @media screen and (max-width: 1023px) {
-        display: none;
-    }
-    @media screen and (min-width: 1024px) {
-        background-repeat: no-repeat;
-        align-self: center;
-        // background-size: contain;
-        //  height: 100%;    
-        justify-content: center;
-      //  display: flex;
-        height: auto;
-        width: auto;
-    
-      
-    }
-} */
-/*
-// For making it happen, I recommend using media queries to select the appropriately sized image from a pool of 2 or 3 sizes.
- //   background-repeat: no-repeat;
- //   background-size: cover;
-    //height: 100%;
-    //width: 100%;
-    
+.plantImgToggle {
+  background: url("img/aside/plantImgToggle.png") center/cover no-repeat; }
 
+.plantImgToggle:hover {
+  cursor: default; }
 
-*/
-   /*
+.plantImg2, .plantImg2Toggle {
+  position: absolute;
+  z-index: 15;
+  left: 72px;
+  background: url("img/aside/plantImg2.png") center/cover no-repeat; }
+  @media all and (min-width: 1800px) {
+    .plantImg2, .plantImg2Toggle {
+      width: 106px;
+      height: 135px;
+      top: 1220px; } }
+  @media all and (min-width: 1364px) and (max-width: 1799px) {
+    .plantImg2, .plantImg2Toggle {
+      width: 106px;
+      height: 135px;
+      top: 740px; } }
+  @media all and (min-width: 1024px) and (max-width: 1363px) {
+    .plantImg2, .plantImg2Toggle {
+      width: 106px;
+      height: 135px;
+      top: 700px; } }
+  @media all and (min-width: 1024px) and (max-width: 1363px) and (orientation: portrait) {
+    .plantImg2, .plantImg2Toggle {
+      width: 106px;
+      height: 135px;
+      top: 920px; } }
+  @media all and (min-width: 770px) and (max-width: 1023px) {
+    .plantImg2, .plantImg2Toggle {
+      width: 106px;
+      height: 135px;
+      top: 720px; } }
+  @media all and (min-width: 770px) and (max-width: 1023px) and (orientation: portrait) {
+    .plantImg2, .plantImg2Toggle {
+      width: 106px;
+      height: 135px;
+      top: 1120px; } }
+  @media all and (min-width: 425px) and (max-width: 769px) {
+    .plantImg2, .plantImg2Toggle {
+      width: 90px;
+      height: 115px;
+      top: 840px;
+      left: 65px; } }
+  @media all and (max-width: 424px) {
+    .plantImg2, .plantImg2Toggle {
+      width: 76.5px;
+      height: 98px;
+      top: 656px;
+      left: 65px; } }
 
-*/
-/*
-/*.prosto {
-    z-index: 1;
-    position: relative;
-    top: 0;
-    left: 0;
-} */
+.plantImg2:hover, .plantImg2Toggle:hover {
+  cursor: default; }
+
+.plantImg2Toggle {
+  background: url("img/aside/plantImg2Toggle.png") center/cover no-repeat; }
+
+.plantImg2Toggle:hover {
+  cursor: default; }
+
+footer {
+  grid-area: 15 / 1 / 16 / 9;
+  overflow: hidden; }
+
+.bottomEdgePanel, .bottomEdgePanelToggle {
+  z-index: 2;
+  height: 15px;
+  width: 100%;
+  background: url("img/edges/edgePanel.jpg");
+  background-size: cover; }
+
+.bottomEdgePanel:hover {
+  cursor: default; }
+
+.bottomEdgePanelToggle {
+  background: url("img/edges/edgePanelToggle.jpg"); }
+
+.bottomEdgePanelGray {
+  width: 100%;
+  height: 20px;
+  background: #dbd5c3; }
 
 /*# sourceMappingURL=cv.css.map */

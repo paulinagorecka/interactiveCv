@@ -1,3 +1,5 @@
+@import'mixins.scss';
+
 *,
 *::after,
 *::before {
@@ -6,169 +8,938 @@
     box-sizing: border-box;
 }
 
-.topEdge {
-    display: flex;
-    justify-content: space-between;
-    align-items:  center;
-    height: 65px;
-    width: 100%;
-    flex-wrap: nowrap;
-    padding: 0 30px;
-    background-color: #D3CDBA;
-    font-family: 'Montserrat', sans-serif;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
 }
 
-.h1Backdrop {
-    background: url('https://i.imgur.com/264A7Aw.png?3');
-    background-size: cover;
-    width: 35%;
-    h1 {
-        width: 105%;
-        margin-left: -2%;
-        margin-top: -2%;
-        padding: 3%;
-        color: black;
-        font-size: 37px;
-        background: #D3CDBA;
-        mix-blend-mode: lighten;
+body {
+    grid-area: 1 / 1 / 16 / 9;
+}
+body:hover {
+    cursor: crosshair;
+}
+
+header {
+    grid-area: 1 / 1 / 2 / 9;
+    display: grid;
     }
+    .topEdge { 
+        grid-area: 1 / 1 / 3 / 9;
+        height: 55px;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        background: url('https://i.imgur.com/OZdhzIA.png') top / cover no-repeat;
+        }
+        .topEdgeOverlay {
+            background: #dbd5c3;
+            height: 40px;
+            width: 420%;
+        }
+        h1 {
+            grid-area: 1 / 1 / 3 / 3;  
+            height: 40px;
+            width: 100%;
+            padding-left: 10%;
+            @include h2 (40px, middle, black, #dbd5c3, lighten);
+            @media all and (min-width: 1024px) {
+                font-size: 27px;
+            }
+            @media all and (min-width: 768px) and (max-width: 1024px) {
+                font-size: 24px;
+            }
+            @media all and (max-width: 768px) {
+                font-size: 24px;
+            }
+            @media all and (max-width: 425px) {
+                font-size: 19px;
+                padding-left: 6%;
+            }
+            @media all and (max-width: 375px) {
+                font-size: 18px;
+                padding-right: 6%;
+            }
+            @media all and (max-width: 320px) {
+                font-size: 17px;
+                padding-left: 6%;
+            }
+        }
+        h2 {
+            grid-area: 1 / 7 / 3 / 9;
+            height: 40px;
+            width: 100%;
+            padding-right: 10%;
+            text-align: right;
+            @include h2 (40px, middle, black, #dbd5c3, lighten);
+            @media all and (min-width: 1024px) {
+                font-size: 23px;
+            }
+            @media all and (max-width: 768px) {
+                font-size: 18px;
+            }
+            @media all and (max-width: 425px) {
+                font-size: 15px;
+                padding-right: 4%;
+            }
+            @media all and (max-width: 375px) {
+                font-size: 13px;
+                padding-right: 4%;
+            }
+            @media all and (max-width: 320px) {
+                font-size: 12px;
+                padding-right: 4%;
+            }
+        }
+        .topEdgePanel {
+            grid-area: 3 / 1 / 3 / 9;
+            z-index: 5;
+            height: 15px;
+            width: 100%;
+            background: url('https://i.imgur.com/wVrzZRC.jpg?3');
+            background-size: cover; 
+        }
+        .topEdgePanel:hover {
+            cursor: default;
+        }
+        .topEdgePanelToggle {
+            @extend .topEdgePanel;
+            background: url('https://i.imgur.com/0b4x9Sc.jpg?1');    
 }
-
-.h2Backdrop {
-    background: url('https://i.imgur.com/yJI6iYN.png');
-    background-size: cover;
-    width: 40%;
-    h2 {
-        width: 105%;
-        margin-left: -2%;
-        margin-top: -2%;
-        padding: 3%;
-        font-size: 35px;
-        text-align: right;
-        color: black;
-        background: #D3CDBA;
-        mix-blend-mode: lighten;
-    }
-}
-
-.topEdgePanel {
-    background: url('https://i.imgur.com/wVrzZRC.jpg?3');
-    width: 100%;
-    height: 14px;
-    background-size: cover;
-}
-
-.bottomEdgePanel {
-    background: #BDBDAE;
-    width: 100%;
-    height: 21px;
-    
-}
-
 .background {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-self: center;
-    width: 100%;
-    height: 620px;
-    background: url('https://i.imgur.com/9tkvEks.png');
-    background-repeat: no-repeat;   
-    background-size: cover;
-    background-position: center;
-}
-
-.photoIdImg { 
-    height: 90px;
-    width: 90px;
-    padding: 6px;
-    margin-top: 210px;  
-    margin-left: 90px;
-    border-radius: 100%; 
-    box-shadow: -8px 8px 10px #808080;
-    background: url('https://i.imgur.com/uGwgioR.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.photoIdFrame {
-    width: 110px;
-    height: 110px;
-    margin-top: -97px;
-    margin-left: 80px;
-    background: url('https://i.imgur.com/ECaBpSU.png?1');
-    background-size: contain;
-    background-repeat: no-repeat; 
-    background-position: center;
-    //box-shadow: none;
-}
-
-.plantPhoto {  // todo move leaves on hover
-    background: url('https://i.imgur.com/nR2Ndn3.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-top: 14px;
-    margin-left: 180px;
-    height: 320px;
-    width: 200px
-}
-
-/*
-.medium {
-   
-   // background-image: url("D:/Peps koduje/CV/cvBckgrd.png");
-  //  background-color: darkslategrey;
-    background-repeat: no-repeat;
-   // background-size: contain;
-  //  height: 100%;    
-   background-size: cover;
-   // display: flex;
-   height: auto;
-    width: auto;
-    justify-content: center;
-    align-self:center; 
-    @media screen and (min-width: 1024px) {
-       
-            display: none;
-      
-    }
-}
-
-.large {
-    @media screen and (max-width: 1023px) {
-        display: none;
-    }
-    @media screen and (min-width: 1024px) {
-        background-repeat: no-repeat;
-        align-self: center;
-        // background-size: contain;
-        //  height: 100%;    
-        justify-content: center;
-      //  display: flex;
-        height: auto;
-        width: auto;
-    
-      
-    }
-} */
-
-/*
-// For making it happen, I recommend using media queries to select the appropriately sized image from a pool of 2 or 3 sizes.
- //   background-repeat: no-repeat;
- //   background-size: cover;
-    //height: 100%;
-    //width: 100%;
-    
-
-
-*/ /*
-
-*/
-/*
-/*.prosto {
+    grid-area: 5 / 1 / 15 / 9;
     z-index: 1;
-    position: relative;
-    top: 0;
-    left: 0;
-} */
+    width: 100%;
+    transition: all 0.5s linear;
+    @media all and (min-width: 1800px) {
+        background: url('https://i.imgur.com/FZyaDUd.png') left / cover no-repeat;
+        height: 1300px;
+    }
+    @media all and (min-width: 1364px) and (max-width: 1799px) {
+        background: url('https://i.imgur.com/FZyaDUd.png') left / cover no-repeat; 
+        height: 820px;  
+    }
+    @media all and (min-width: 1024px) and (max-width: 1363px) {
+        background: url('https://i.imgur.com/f4MAFfS.png') center / cover no-repeat;
+        height: 1000px;
+    }
+    @media all and (min-width: 1024px) and (max-width: 1363px) and (orientation: landscape) {
+        background: url('https://i.imgur.com/f4MAFfS.png') center / cover no-repeat;
+        height: 780px;
+    }
+    @media all and (min-width: 770px) and (max-width: 1023px) {
+        background: url('https://i.imgur.com/MMrSgOX.png') left / cover no-repeat;
+        height: 1200px;
+    }
+    @media all and (min-width: 770px) and (max-width: 1023px) and (orientation: landscape) {
+        background: url('https://i.imgur.com/MMrSgOX.png') left / cover no-repeat;
+        height: 800px;
+    }
+    @media all and (min-width: 425px) and (max-width: 769px) {
+        background: url('https://i.imgur.com/arsK0BQ.png') left / cover no-repeat;
+        height: 900px;
+    }
+    @media all and (max-width: 424px) {
+        background: url('https://i.imgur.com/Fm4Csxd.png') center / cover no-repeat;
+        height: 699px;
+    }   
+    }
+    .skills {
+        display: none;
+        position: relative;
+        height: 100%;
+        width: 50%;
+        @media all and (min-width: 2030px) { 
+            width: 30%;
+            top: 1.5%;
+            left: 14%;
+        }
+        @media all and (min-width: 1800px) and (max-width: 2030px) { 
+            top: 1.5%;
+            left: 10%;
+        }
+        @media all and (min-width: 1500px) and (max-width: 1799px) {
+            width: 30%;
+            left: 10%;   
+        }
+        @media all and (min-width: 1364px) and (max-width: 1499px) { 
+            width: 45%;
+            left: 6.5%;   
+        }
+        @media all and (min-width: 1279px) and (max-width: 1363px) and (orientation: landscape) { 
+            top: -1.5px;
+            left: 2%;   
+        }
+        @media all and (min-width: 1024px) and (max-width: 1278px) and (orientation: landscape) { 
+            top: -1.4px;
+            left: -0.5%;   
+        }
+        @media all and (min-width: 1024px) and (max-width: 1363px) and (orientation: portrait) { 
+            top: 7px;
+            left: -6%;   
+        }
+        @media all and (min-width: 801px) and (max-width: 1023px) and (orientation: landscape) { 
+            width: 60%;
+            top: -0.8px;
+            left: -8.5%;
+        }
+        @media all and (min-width: 770px) and (max-width: 800px) and (orientation: landscape) { 
+            width: 75%;
+            top: -0.2px;
+            left: -10%;
+        }
+        @media all and (min-width: 770px) and (max-width: 1023px) and (orientation: portrait) {
+            width: 80%;
+            top: 1.4%;
+            left: -6%;   
+        } 
+        }
+        .htmlBall {
+            @include skills (37px, 37px, absolute, 61.3%, 42%, 50%);
+            background: url('https://i.imgur.com/T1YEvK2.png?1') center / cover no-repeat;
+            animation: greenPulse 4s infinite;
+        }
+        .htmlBall:hover {
+            cursor: default;
+            background: url('https://i.imgur.com/mN4m3Ep.png?1') center / cover no-repeat;
+        }
+        .htmlBallColor {
+            @include skills (37px, 37px, absolute, 61.3%, 42%, 50%);
+            background: url('https://i.imgur.com/mN4m3Ep.png?1') center / cover no-repeat;
+        }
+        .cssBall {
+            @include skills (37px, 37px, absolute, 61.6%, 52%, 50%);
+            background: url('https://i.imgur.com/H9o6qb2.png?3') center / cover no-repeat;
+            animation: greenPulse 4s infinite;
+        }
+        .cssBall:hover {
+            cursor: default;
+            background: url('https://i.imgur.com/ojZcFas.png?1') center / cover no-repeat;
+        }
+        .cssBallColor {
+            @include skills (37px, 37px, absolute, 61.6%, 52%, 50%);
+            background: url('https://i.imgur.com/ojZcFas.png?1') center / cover no-repeat;
+        }
+        .jsBall {
+            @include skills (37px, 37px, absolute, 61.9%, 62%, 50%);
+            background: url('https://i.imgur.com/i7FYSyW.png?1') center / cover no-repeat;
+            animation: greenPulse 4s infinite;
+        }
+        .jsBall:hover {
+            cursor: default;
+            background: url('https://i.imgur.com/RiC9xJn.png?1') center / cover no-repeat;
+        }
+        .jsBallColor {
+            @include skills (37px, 37px, absolute, 61.9%, 62%, 50%);
+            background: url('https://i.imgur.com/RiC9xJn.png?1') center / cover no-repeat;
+        }
+        .jqueryBall {
+            @include skills (37px, 37px, absolute, 68.6%, 39%, 50%);
+            background: url('https://i.imgur.com/bSren41.png') center / cover no-repeat;
+            animation: greenPulse 4s infinite;
+        }
+        .jqueryBall:hover {
+            cursor: default;
+            background: url('https://i.imgur.com/ZjI7ZjB.png') center / cover no-repeat;
+        }
+        .jqueryBallColor {
+            @include skills (37px, 37px, absolute, 68.6%, 39%, 50%);
+            background: url('https://i.imgur.com/ZjI7ZjB.png') center / cover no-repeat;
+        }
+        .sassBall {
+            @include skills (37px, 37px, absolute, 68.6%, 48%, 50%);
+            background: url('https://i.imgur.com/stPZQUY.png') center / cover no-repeat;
+            animation: greenPulse 4s infinite;
+        }
+        .sassBall:hover {
+            cursor: default;
+            background: url('https://i.imgur.com/hHnZCVH.png') center / cover no-repeat;
+        }
+        .sassBallColor {
+            @include skills (37px, 37px, absolute, 68.6%, 48%, 50%);
+            background: url('https://i.imgur.com/hHnZCVH.png') center / cover no-repeat;
+        }
+        .bootstrapBall {
+            @include skills (37px, 37px, absolute, 68.6%, 57%, 50%);
+            background: url('https://i.imgur.com/ZB4EjFv.png') center / cover no-repeat;
+            animation: greenPulse 4s infinite;
+        }
+        .bootstrapBall:hover {
+            cursor: default;
+            background: url('https://i.imgur.com/bYg4b3c.png') center / cover no-repeat;
+        }
+        .bootstrapBallColor {
+            @include skills (37px, 37px, absolute, 68.6%, 57%, 50%);
+            background: url('https://i.imgur.com/bYg4b3c.png') center / cover no-repeat;
+        }
+        .reactBall {
+            @include skills (37px, 37px, absolute, 68.5%, 66%, 50%);
+            background: url('https://i.imgur.com/rQyJDDO.png') center / cover no-repeat;
+            animation: greenPulse 4s infinite;
+        }
+        .reactBall:hover {
+            cursor: default;
+            background: url('https://i.imgur.com/OfzZq41.png') center / cover no-repeat;
+        }
+        .reactBallColor {
+            @include skills (37px, 37px, absolute, 68.5%, 66%, 50%);
+            background: url('https://i.imgur.com/OfzZq41.png') center / cover no-repeat;
+        }
+        .gitBall {
+            @include skills (37px, 37px, absolute, 76.6%, 34%, 50%);
+            background: url('https://i.imgur.com/a5a7Zhe.png') center / cover no-repeat;
+            animation: greenPulse 4s infinite;
+        }
+        .gitBall:hover {
+            cursor: default;
+            background: url('https://i.imgur.com/D53oliB.png') center / cover no-repeat;
+        }
+        .gitBallColor {
+            @include skills (37px, 37px, absolute, 76.6%, 34%, 50%);
+            background: url('https://i.imgur.com/D53oliB.png') center / cover no-repeat;
+        }
+        .sqlBall {
+            @include skills (37px, 37px, absolute, 76.5%, 44%, 50%);
+            background: url('https://i.imgur.com/KaxYm1O.png') center / cover no-repeat;
+            animation: greenPulse 4s infinite;
+        }
+        .sqlBall:hover {
+            cursor: default;
+            background: url('https://i.imgur.com/YpNeaNa.png') center / cover no-repeat;
+        }
+        .sqlBallColor {
+            @include skills (37px, 37px, absolute, 76.5%, 44%, 50%);
+            background: url('https://i.imgur.com/YpNeaNa.png') center / cover no-repeat;
+        }
+        .psBall {
+            @include skills (37px, 37px, absolute, 76.5%, 54%, 50%);
+            background: url('https://i.imgur.com/33mA374.png') center / cover no-repeat;
+            animation: greenPulse 4s infinite;
+        }
+        .psBall:hover {
+            cursor: default;
+            background: url('https://i.imgur.com/duMjAaW.png') center / cover no-repeat;
+        }
+        .psBallColor {
+            @include skills (37px, 37px, absolute, 76.5%, 54%, 50%);
+            background: url('https://i.imgur.com/duMjAaW.png') center / cover no-repeat;
+}
+
+#typedStrings {
+    position: absolute;
+    z-index: -25;
+    height: 50%;
+    top: 50%;
+    left: 35%;
+    color: transparent;
+}
+
+#typed {
+    position: absolute; 
+    z-index: 15;
+    color: white; 
+    font-family: 'Montserrat', sans-serif;
+    @media all and (min-width: 1800px) {
+        @include typed (45%, 40%, 0, 20px); 
+    }
+    @media all and (min-width: 1366px) and (max-width: 1799px) {
+        @include typed (44%, 37%, 15%, 18px);  
+    }
+    @media all and (min-width: 1024px) and (max-width: 1365px){
+        @include typed (44%, 34%, 12%, 14px);    
+    }
+    @media all and (min-width: 770px) and (max-width: 1023px) {
+        @include typed (42%, 30%, 9%, 14px);   
+    }
+    @media all and (min-width: 770px) and (max-width: 1023px) and (orientation: portrait) {
+        @include typed (35%, 33%, 10%, 14px); 
+    }
+    @media all and (max-width: 769px) {
+        @include typed (35%, 30%, 10%, 14px);        
+    }
+    @media all and (max-width: 769px) and (orientation: portrait) {
+        @include typed (35%, 30%, 10%, 14px);             
+    }
+    @media all and (max-width: 425px) {
+        @include typed (33%, 39%, 5%, 11px);    
+    }
+    @media all and (max-width: 375px) {
+        @include typed (43%, 25%, 5%, 11px); 
+    }    
+}
+.typed-cursor {
+    @extend #typedStrings;
+}
+
+main {
+    grid-area: 2 / 1 / 15 / 9;
+    height: 100%; 
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(100, 1fr);
+    grid-template-rows: auto;
+    overflow: hidden;
+    }   
+    .pulseGif {
+        z-index: -6;
+        background: url('https://s2.gifyu.com/images/pulseGif.gif') center / cover no-repeat; 
+        @media all and (min-width: 1366px) {
+            grid-area: 4 / 55 / 7 / 70;
+            height: 80px;
+            width: 106px;     
+        }
+        @media all and (min-width: 1024px) and (max-width: 1365px) {
+            grid-area: 3 / 50 / 5 / 70;
+            height: 80px;
+            width: 106px;  
+        }
+        @media all and (min-width: 770px) and (max-width: 1023px) {
+            grid-area: 3 / 48 / 5 / 68;
+            height: 80px;
+            width: 106px;  
+        }
+        @media all and (min-width: 760px) and (max-width: 769px) {
+            grid-area: 4 / 49 / 7 / 69;
+            height: 80px;
+            width: 106px;  
+        }
+        @media all and (min-width: 548px) and (max-width: 759px) {
+            grid-area: 4 / 50 / 7 / 70;
+            height: 80px;
+            width: 106px; 
+        }
+        @media all and (max-width: 547px) {
+            grid-area: 3 / 47 / 6 / 67;
+            height: 80px;
+            width: 106px; 
+        }   
+    }
+    .pulseGif:hover {
+        cursor: default;
+    }
+    .showIntroButton {
+        display: none;
+        @include buttons (5, 27.5px, 151px, center);
+        background: url('https://i.imgur.com/JItIDn6.png') center / cover no-repeat;
+        @media all and (min-width: 1366px) {
+            grid-area: 8 / 64 / 9 / 84;  
+            margin-top: 179%;
+        }
+        @media all and (min-width: 1014px) and (max-width: 1365px) {
+            grid-area: 8 / 58 / 9 / 70; 
+            margin-top: 100%; 
+        }
+        @media all and (min-width: 860px) and (max-width: 1013px) {
+            grid-area: 8 / 75 / 9 / 87; 
+            margin-bottom: 30%;
+        }
+        @media all and (min-width: 760px) and (max-width: 860px) {
+            grid-area: 8 / 79 / 9 / 89; 
+        }
+        @media all and (min-width: 630px) and (max-width: 759px) {
+            grid-area: 8 / 75 / 9 / 87; 
+        } 
+        @media all and (max-width: 629px) {
+            grid-area: 8 / 58 / 9 / 70; 
+            height: 21px;
+            width: 113px;
+        }   
+    }
+    .showIntroButton:hover {
+        cursor: default;
+        background: url('https://i.imgur.com/FSpXdVA.png') center / cover no-repeat;
+    }  
+    .intro {
+        display: none;
+        z-index: 15; 
+        background: url('https://i.imgur.com/3ozUY89.png') center / contain no-repeat;
+        @media all and (min-width: 1800px) {
+            grid-area: 4 / 53 / 9 / 100;
+            height: 78%;   
+            width: 78%;
+            margin-top: 3%;
+        }
+        @media all and (min-width: 1366px) and (max-width: 1799px) {
+            grid-area: 4 / 43 / 9 / 100;
+            height: 81%;   
+            width: 81%;
+            margin-top: 5%;
+        }
+        @media all and (min-width: 1001px) and (max-width: 1365px) {
+            grid-area: 3 / 43 / 9 / 100;
+            height: 78%;   
+            width: 78%;
+        }
+        @media all and (min-width: 770px) and (max-width: 1000px) {
+            grid-area: 2 / 46 / 7 / 100;
+            height: 100%;   
+            width: 100%;
+        }
+        @media all and (min-width: 681px) and (max-width: 769px) {
+            grid-area: 3 / 23 / 8 / 100;
+            height: 100%;   
+            width: 100%;
+            margin-top: 5%;
+        }
+        @media all and (min-width: 560px) and (max-width: 680px) {
+            grid-area: 3 / 31 / 8 / 100;
+            height: 90%;   
+            width: 90%;
+            margin-top: 5%;
+            background: url('https://i.imgur.com/SoKupT7.png') center / contain no-repeat;
+        }   
+        @media all and (min-width: 425px) and (max-width: 559px) {
+            grid-area: 3 / 36 / 8 / 100;
+            height: 100%;   
+            width: 100%;
+            background: url('https://i.imgur.com/SoKupT7.png') center / contain no-repeat;
+        }   
+        @media all and (max-width: 424px) {
+            grid-area: 3 / 30 / 8 / 100;
+            height: 90%;   
+            width: 90%;
+            background: url('https://i.imgur.com/SoKupT7.png') center / contain no-repeat;
+        }   
+    }
+    .skipIntroButton {
+        display: none;
+        margin-top: 100%;
+        @include buttons (25, 28px, 151px, center);
+        background: url('https://i.imgur.com/ka5PwMd.png') center / cover no-repeat;
+        @media all and (min-width: 1366px) {
+            grid-area: 8 / 79 / 9 / 91;  
+            margin-top: 300%;
+        }
+        @media all and (min-width: 1014px) and (max-width: 1365px) {
+            grid-area: 8 / 77 / 9 / 89;  
+        }
+        @media all and (min-width: 860px) and (max-width: 1013px) {
+            grid-area: 8 / 75 / 9 / 87; 
+            margin-top: 25%;
+        }
+        @media all and (min-width: 760px) and (max-width: 860px) {
+            grid-area: 8 / 79 / 9 / 89; 
+        }
+        @media all and (min-width: 630px) and (max-width: 759px) {
+            grid-area: 8 / 75 / 9 / 87; 
+        } 
+        @media all and (max-width: 629px) {
+            grid-area: 8 / 58 / 9 / 70; 
+            height: 21px;
+            width: 113px;
+        }   
+    }
+    .skipIntroButton:hover {
+        cursor: default;
+        background: url('https://i.imgur.com/s4G7c66.png') center / cover no-repeat;
+    }  
+    .showResumeButton {
+        @extend .showIntroButton;
+        background: url('https://i.imgur.com/QR95ZLe.png') center / cover no-repeat;  
+    }
+    .showResumeButton:hover {
+        cursor: default;
+        background: url('https://i.imgur.com/cSd3kyo.png') center / cover no-repeat;
+    }
+    .resume {
+        display: none;
+        z-index: 15;
+        background: url('https://i.imgur.com/HIl4z5B.png') center / contain no-repeat;
+        @media all and (min-width: 1800px) {
+            grid-area: 4 / 53 / 9 / 100;
+            height: 78%;   
+            width: 78%;
+            margin-top: 3%;
+        }
+        @media all and (min-width: 1366px) and (max-width: 1799px) {
+            grid-area: 4 / 43 / 9 / 100;
+            height: 81%;   
+            width: 81%;
+            margin-top: 5%;
+        }
+        @media all and (min-width: 1026px) and (max-width: 1365px) {
+            grid-area: 3 / 43 / 9 / 100;
+            height: 79%;   
+            width: 79%;
+        }
+        @media all and (min-width: 770px) and (max-width: 1025px) and (orientation: landscape) {
+            grid-area: 3 / 43 / 9 / 100;
+            height: 83%;   
+            width: 83%;
+        }
+        @media all and (min-width: 770px) and (max-width: 1025px) and (orientation: portrait) {
+            grid-area: 2 / 43 / 7 / 100;
+            height: 100%;   
+            width: 100%;
+        }
+        @media all and (min-width: 681px) and (max-width: 769px) {
+            grid-area: 3 / 23 / 8 / 100;
+            height: 100%;   
+            width: 100%;
+            margin-top: 5%;
+        }
+        @media all and (min-width: 560px) and (max-width: 680px) {
+            grid-area: 3 / 31 / 8 / 100;
+            height: 100%;   
+            width: 100%;
+            margin-top: 5%;
+        }   
+        @media all and (min-width: 425px) and (max-width: 559px) {
+            grid-area: 3 / 33 / 8 / 100;
+            height: 100%;   
+            width: 100%;
+        }   
+        @media all and (max-width: 424px) {
+            grid-area: 2 / 23 / 8 / 100;
+            height: 110%;   
+            width: 110%;
+        }   
+        }
+        .resumeIcons {
+            z-index: inherit;
+            position: relative;
+            @media all and (min-width: 760px) {
+                @include resumeIcons (90%, 85%, 30px, 100px);
+            }
+            @media all and (min-width: 550px) and (max-width: 759px) {
+                @include resumeIcons (98%, 78%, 30px, 100px);
+            }
+            @media all and (min-width: 360px) and (max-width: 549px) {
+                @include resumeIcons (93%, 65%, 30px, 100px);
+            } 
+            @media all and (max-width: 359px) {
+                @include resumeIcons (88%, 63%, 30px, 100px);
+            } 
+            }
+            .nextIcon { 
+                position: absolute;
+                border-radius: 50%;
+                background: url('https://i.imgur.com/RtSS8tw.png') center / contain no-repeat;  
+                animation: greenPulse 2s infinite;
+                @include resumeIcons (10%, 5%, 20px, 20px);
+            }
+            @keyframes greenPulse {
+                from { box-shadow: 0 0 7px #333; }
+                50% { box-shadow: 0 0 12px #91bd09; }
+                to { box-shadow: 0 0 7px #333; }
+            }
+            .nextIcon:hover {
+                cursor: default;
+                background: url('https://i.imgur.com/cpsmSIl.png') center / cover no-repeat;
+            }
+            .pdfDownload {
+                position: absolute;
+                @include resumeIcons (3.9%, 40%, 25px, 22px);
+                }
+                .pdfDownload img {
+                    position: relative;
+                    height: 25px;
+                    width: 22px;  
+                }
+                .pdfDownload a:hover {
+                    cursor: default;
+    }
+    .resume2 {
+        @extend .resume;
+        background: url('https://i.imgur.com/g0G09dq.png') center / contain no-repeat;
+    }
+    .contactMeButton {
+        @extend .skipIntroButton;
+        z-index: 5;
+        background: url('https://i.imgur.com/Psj0wL1.png') center / cover no-repeat;
+    }
+    .contactMeButton:hover {
+        cursor: default;
+        background: url('https://i.imgur.com/GT5Tkbs.png') center / cover no-repeat;
+    }  
+    #contactForm {
+        display: none;
+        grid-area: 5 / 20 / 9 / 70;
+        z-index: 20;
+        width: 128%;
+        height: 58%;
+        padding: 20px 10px 20px 5px;
+        margin: 20px auto;
+        box-shadow: 0px 0px 0px 30px rgba(0,0,0,0.3);   
+        font-family: 'Montserrat', sans-serif;
+        background: url('https://i.imgur.com/o6ILxdK.jpg') center / cover no-repeat;
+        @media all and (min-width:417px) and (max-width: 980px) {
+            width: 110%;
+            height: 63%;
+        }
+        @media all and (max-width: 430px) {
+            grid-area: 4 / 10 / 8 / 90;
+            width: 100%;
+            height: 70%;
+            padding-right: 10%;
+            box-shadow: 0px 0px 0px 15px rgba(0,0,0,0.3);   
+        }
+        @media all and (max-width: 325px) {
+            height: 70%;
+            padding-left: 14%;
+        }
+        }
+        .formTitle {
+            z-index: 35;
+            color: white;
+            font-size: 23px;
+            position: relative;
+            left: 40%;
+            @media all and (max-width: 990px) {
+                left: 35%;
+            }
+            @media all and (max-width: 785px) {
+                left: 32%;
+            }
+            @media all and (max-width: 530px) {
+                left: 26%;
+            }
+        }
+        .formExitButton {
+            z-index: 40;
+            position: relative;
+            top: -15%;
+            left: 98%;
+            color: white;
+            font-size: 21px;
+            @media all and (max-width: 950px) {
+                top: -12%;
+                margin-right: 10%;
+            }
+            @media all and (max-width: 740px) {
+                top: -12%;
+                left: 97%;
+                margin-right: 10%;
+            }
+            @media all and (max-width: 430px) {
+                top: -11%;
+                left: 104%;
+            }
+        }
+        .formExitButton:hover {
+            cursor: default;
+        }
+        .contactArea {
+            width: 95%;
+            margin-top: 25px;
+            color: white;
+            @media all and (max-width: 995px) {
+                margin-top: 7px;
+            }
+            }
+            input, textarea {
+                width: 80%;
+                font-size: 13px;
+                font-family: 'Montserrat', sans-serif;
+                padding: 5px;
+                margin: 0px 0px 10px 0px;
+                border: 2px solid #ccc;
+                @media all and (max-width: 980px) {
+                    width: 80%;
+                    font-size: 11px;
+                    margin-left: 13%;
+                }
+                @media all and (max-width: 418px) {
+                    width: 80%;
+                    font-size: 10px;
+                }
+                @media all and (max-width: 325px) {
+                    width: 90%;    
+                }
+            }  
+            textarea {
+                height: 90px;
+            }
+            textarea:focus, input:focus {
+                border: 3px solid #C1FF3A;
+            }
+            .submitButton {
+                width: 13%;
+                margin-right: 2.4%;
+                background: white;
+                font-size: 12px;
+                font-weight: 800;
+                float: right;
+                @media all and (min-width: 326px) and (max-width: 990px) {
+                    width: 26%;
+                    margin-right: 5.4%;
+                    margin-bottom: 7%;
+                }
+                @media all and (max-width: 325px) {
+                    width: 32%;
+                    margin-right: 10%;
+                }
+        }
+        label {
+            width: 100px;
+            margin-right: 15px;
+            padding-top: 5px;
+            font-size: 12px;
+            float: left;
+            text-align: right;
+        }
+        .emailAddress {
+            margin-left: 7%;
+            font-size: 12px;
+            text-align: center;
+        }
+        a {
+            margin: 5px;
+            text-decoration: none;
+            color: #C1FF3A;
+}
+     
+aside {
+    grid-area: 5 / 1 / 15 / 3;
+    }
+    .photoIdToggle {
+        position: absolute;
+        z-index: 1;
+        top: 230px;
+        padding: 3px;
+        border-radius: 100%;
+        box-shadow: -6px 6px 8px #808080;
+        background: url('https://s2.gifyu.com/images/photoImgToggle2.gif') center / cover no-repeat;
+        @media all and (min-width: 1800px) {
+            top: 270px;
+            @include photoId (90px, 90px, 126px);
+        }
+        @media all and (min-width: 1366px) {
+            @include photoId (90px, 90px, 88px);
+        }
+        @media all and (min-width: 1024px) {
+            @include photoId (80px, 80px, 42px);
+        }
+        @media all and (min-width: 770px) and (max-width: 1023px) {
+            @include photoId (70px, 70px, 27px);
+        }
+        @media all and (min-width: 600px) and (max-width: 769px) {
+            @include photoId (60px, 60px, 25px);
+        }
+        @media all and (min-width: 425px) and (max-width: 600px) {
+            @include photoId (60px, 60px, 25px);
+        }
+        @media all and (max-width: 424px) {
+            @include photoId (50px, 50px, 14px);
+        }
+        @media all and (max-width: 321px) {
+            @include photoId (40px, 40px, 7px);
+        } 
+    }
+    .photoIdToggle:hover {
+        cursor: default;
+    }
+    .photoIdImg { 
+        @extend .photoIdToggle;
+        background: url('https://i.imgur.com/uGwgioR.png') center / cover no-repeat;
+    }
+    .photoIdImg:hover {
+        cursor: default;
+    }
+    .plantImg {
+        position: absolute;
+        z-index: 10;
+        background: url('https://i.imgur.com/nR2Ndn3.png') center / cover no-repeat;    
+        @media all and (min-width: 1800px) {
+            @include plants (270px, 158px, 1084px);
+        }
+        @media all and (min-width: 1364px) and (max-width: 1799px) {
+            @include plants (270px, 158px, 604px);
+        } 
+        @media all and (min-width: 1024px) and (max-width: 1363px) { 
+            @include plants (270px, 158px, 565px);
+        } 
+        @media all and (min-width: 1024px) and (max-width: 1363px) and (orientation: portrait) {
+            @include plants (270px, 158px, 783px);
+        } 
+        @media all and (min-width: 770px) and (max-width: 1023px) {
+            @include plants (270px, 158px, 585px);
+        }
+        @media all and (min-width: 770px) and (max-width: 1023px) and (orientation: portrait) {
+            @include plants (270px, 158px, 985px);
+        }
+        @media all and (min-width: 425px) and (max-width: 769px) {
+            @include plants (230px, 134px, 725px);
+        }
+        @media all and (max-width: 424px) {
+            @include plants (195.5px, 114px, 558px);
+        }
+    }
+    .plantImg:hover {
+        cursor: default;
+    }
+    .plantImgToggle {
+        @extend .plantImg;
+        background: url('https://i.imgur.com/gJowXXK.png') center / cover no-repeat;
+    }
+    .plantImgToggle:hover {
+        cursor: default;
+    }
+    .plantImg2 {
+        position: absolute;
+        z-index: 15;
+        left: 72px;
+        background: url('https://i.imgur.com/pgtPXAB.png') center / cover no-repeat;
+        @media all and (min-width: 1800px) {
+            @include plants (135px, 106px, 1220px);
+        }
+        @media all and (min-width: 1364px) and (max-width: 1799px) {
+            @include plants (135px, 106px, 740px);
+        } 
+        @media all and (min-width: 1024px) and (max-width: 1363px) { 
+            @include plants (135px, 106px, 700px);
+        } 
+        @media all and (min-width: 1024px) and (max-width: 1363px) and (orientation: portrait) {
+            @include plants (135px, 106px, 920px);
+        } 
+        @media all and (min-width: 770px) and (max-width: 1023px) {
+            @include plants (135px, 106px, 720px);
+        }
+        @media all and (min-width: 770px) and (max-width: 1023px) and (orientation: portrait) {
+            @include plants (135px, 106px, 1120px);
+        }
+        @media all and (min-width: 425px) and (max-width: 769px) {
+            @include plants (115px, 90px, 840px);
+            left: 65px;
+        }
+        @media all and (max-width: 424px) {
+            @include plants (98px, 76.5px, 656px);
+            left: 65px; 
+        }         
+    }
+    .plantImg2:hover {
+        cursor: default;
+    }   
+    .plantImg2Toggle {
+        @extend .plantImg2;
+        background: url('https://i.imgur.com/DNQSZ5u.png') center / cover no-repeat;        
+    } 
+    .plantImg2Toggle:hover {
+        cursor: default;
+}  
+       
+footer {
+    grid-area: 15 / 1 / 16 / 9;
+    overflow: hidden;
+}
+.bottomEdgePanelGreen {
+    z-index: 2;
+    height: 15px;
+    width: 100%;
+    background: url('https://i.imgur.com/wVrzZRC.jpg?3');
+    background-size: cover; 
+}
+.bottomEdgePanel:hover {
+    cursor: default;
+}
+.bottomEdgePanelGreenToggle {
+    @extend .bottomEdgePanelGreen;
+    background: url('https://i.imgur.com/0b4x9Sc.jpg?1'); 
+}
+.bottomEdgePanelGray {
+    width: 100%;
+    height: 20px;
+    background: #dbd5c3;
+};
+
+
